@@ -1,0 +1,7 @@
+FlowDocument
+OpenFileDialog
+	CheckFileExists
+	Filter
+	ShowDialog
+SaveFileDialog
+	* (like OFD)

@@ -1,0 +1,31 @@
+Brushes – collection of brushes, can’t be changed
+Color.
+	FromRgb
+	FromArgb
+Colors - enum
+LinearGradientBrush.
+	EndPoint
+	GradientStops
+		Add(Parameters)
+	SpreadMethod
+	Startpoint
+Point.
+	X
+	Y
+RadialGradientBrush
+	Center 
+GradientOrigin
+	RadiusX
+	RadiusY	
+SolidColorBrush.
+	Color
+SystemColors.
+	WindowBrush
+	WindowColor
+	WindowTextBrush
+	WindowTextColor
+Vector.
+	Length
+	Normalize()
+	X
+	Y 

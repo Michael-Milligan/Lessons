@@ -1,0 +1,14 @@
+Shape
+	Ellipse
+		Fill
+		Stroke
+		StrokeThickness
+		Width
+		Height
+		HorizontalAlignment
+		VerticalAllignment
+	Line
+	Path
+	Polygon
+	Polyline
+	Rectangle

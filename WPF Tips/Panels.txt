@@ -1,0 +1,7 @@
+StackPanel
+	AddHandler(RoutedEvent, RoutedEventHandler)
+	Background
+	Children - Collection
+		Add
+	Margin
+	Orientation

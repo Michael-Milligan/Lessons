@@ -1,0 +1,24 @@
+DataFormats
+	Rtf
+	Xaml
+RichTextBox
+	Document
+Run – to create Inline
+Stream
+TextBlock
+	AcceptsReturn
+	Foregrounds
+	Inlines
+		Add()
+	TextWrapping
+		NoWrap
+		Wrap
+		WrapWithOverflow
+TextBox
+	CaretIndex
+	SelectionLength
+	SelectionStart
+	SelectedText
+	Text 
+TextRange
+	Load

@@ -1,0 +1,93 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="utf-8" >
+   <title>Форма заказа</title>
+   <style type="text/css">
+	
+   </style>
+</head>
+
+<body>
+<form action="" method="">
+<h2>Форма заказа</h2>
+
+<ul>
+	<li>
+		<label for="form-name">Имя:</label>
+		<input type="text" name="username" id="form-name" class="textinput">
+	</li>
+	<br>
+	<li>
+		<label for="form-email">Email:</label>
+		<input type="email" name="emailaddress" id="form-email" class="textinput">
+	</li>
+	<br>
+	<li>
+		<label for="form-tel">Телефон:</label>
+		<input type="tel" name="telephone" id="form-tel"class="textinput">
+	</li>
+	<br>
+	<li>
+		<label for="form-story">Примечание:</label>
+		<textarea name="story" maxlength="300" id="form-story" rows="3" cols="30" placeholder="Не более 300 символов..."></textarea>
+	</li>
+	<br>
+	<li>
+		<label for="sizes">Размер:</label>
+		<select name="size">
+			<option>35</option>
+			<option>36</option>
+			<option>37</option>
+			<option>38</option>
+			<option>39</option>
+			<option>40</option>
+			<option>41</option>
+			<option>42</option>
+			<option>43</option>
+			<option>44</option>
+			<option>45</option>
+		</select>
+		<em>Стандартные российские размеры</em>
+	</li>
+	<br>
+	<li>
+		<fieldset id="colors">
+			<legend>Цвет</legend>
+			<ul>
+				<li><label><input type="radio" name="color" value="red"> Красный</label> </li>
+				<li><label><input type="radio" name="color" value="blue"> Синий</label> </li>
+				<li><label><input type="radio" name="color" value="black"> Черный</label></li>
+				<li><label><input type="radio" name="color" value="silver"> Серебрянный</label></li>
+			</ul>
+		</fieldset>
+	</li>
+	<br>
+	<li>	
+		<fieldset id="features">
+		<legend>Характеристики</legend>
+			<ul>
+				<li>
+					<label><input type="checkbox" name="feature" value="laces"> Глянцевые ободки</label>
+				</li>
+				<li>
+					<label><input type="checkbox" name="feature" value="logo" checked> Металлическая бляшка</label>
+				</li>
+				<li>
+					<label><input type="checkbox" name="feature" value="heels"> Светящаяся подошва</label>
+				</li>
+				<li>
+					<label><input type="checkbox" name="feature" value="mp3"> Mp3-проигрыватель</label>
+				</li>
+			</ul>
+		</fieldset>
+	</li>
+	<br>
+	<li class="buttons">
+		<input type="submit" value="Заказать!">
+		<input type="reset">
+	</li>
+</ul>
+</form>	
+</body>
+</html>

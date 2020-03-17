@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Веб-приложение</title>
+</head>
+
+<body>
+
+	<script>
+var originalTitle = document.title;
+function showUnreadCount( unread ) {
+document.title = originalTitle + " (" + unread
++ " новых сообщений!) ";
+}
+showUnreadCount(5);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+Application. – Can be only one in one program
+	Current.MainWindow 
+	Run()
+	ShutdownMode
+CommandBinding
+	Add
+	new: Command, OnExecute, CanExecute
+DispatcherTimer
+	Interval – in milliseconds
+	Start()
+	Tick – event
+FrameworkElement
+	RenderSize
+		Height
+		Width
+SystemParameters.
+	CaptionHeight
+	ResizeFrameVerticalBorderWidth
+	ResizeFrameHorizontalBorderHeight
+	PrimaryScreenWidth – real screen width
+	PrimaryScreenHeight
+	WorkArea
+
+Window.
+	ActualWidth – readonly, is set by system
+	ActualHeight 
+	Background
+	BorderBrush
+	BorderThickness
+	Content – only one object
+	FontFamily
+	FontSize
+	FontStretch
+	FontStyle
+	FontWeight
+	Foreground – the color of text
+	Height 
+	Left
+	Owner
+	ResizeMode
+	Show()
+	ShowDialog()
+	ShowInTaskbar
+	Title 
+	Top
+	Width – changeable
+	WindowStartupLocation
+	WindowStyle – changes the style of borders

@@ -1,0 +1,6 @@
+D:\Google Drive\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.exe.config
+D:\Google Drive\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.exe
+D:\Google Drive\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.pdb
+D:\Google Drive\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csprojAssemblyReference.cache
+D:\Google Drive\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.exe
+D:\Google Drive\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.pdb

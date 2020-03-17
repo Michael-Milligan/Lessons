@@ -1,0 +1,15 @@
+BitmapImage
+	Format
+	Palette
+Image (Uri->BitmapImage->Image)
+	HorizontalAlignment
+	LayoutTransform(RotateTransform)
+	Margin 
+	Opacity
+	Source
+	Stretch
+	StretchDirection	
+	VerticalAlignment
+RotateTransform
+Uri
+	“pack://application:,,/1.jpeg”

@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="utf-8" >
+   <title>Форма заказа</title>
+   <style type="text/css">
+      ol, ul { 
+     list-style-type: none;
+      }
+   </style>
+</head>
+
+<body>
+
+<h1>Форма заказа &ldquo;Сандали&rdquo;</h1>
+
+<p>Хотите приобрести такие сандали, которых ни у кого нет? Закажите обувь у <em>нас</em> - и вам будут завидовать все окружающие!</p>
+
+
+<form action="http://rightman.p.ht/lwd/contest.php" method="post">
+
+<fieldset>
+<legend>Сведения о заказчике</legend>
+
+<ul>
+<li><label for="form-name">Имя:</label> <input type="text" name="username" id="form-name"></li>
+<li><label for="form-email">Email:</label> <input type="email" name="emailaddress" id="form-email"></li>
+<li><label for="form-tel">Телефон:</label> <input type="tel" name="telephone" id="form-tel"></li>
+<li><label for="form-story">Я хочу такие сандали, потому что...</label><br>
+<textarea name="story" rows="4" cols="60" maxlength="300" id="form-story" placeholder="Не более 300 символов..."></textarea></li>
+</ul>
+</fieldset>
+
+<h2>Выберите дизайн сандалей:</h2>
+
+<fieldset>
+<legend>Характеристики</legend>
+
+<fieldset>
+<legend>Цвет <em>(выберите один пункт)</em>:</legend>
+  <ul>
+  <li><label><input type="radio" name="color" value="red"> Красный</label></li>
+  <li><label><input type="radio" name="color" value="blue"> Синий</label></li>
+  <li><label><input type="radio" name="color" value="black"> Черный</label></li>
+  <li><label><input type="radio" name="color" value="silver"> Серебрянный</label></li>
+  </ul>
+</fieldset>
+
+<fieldset>
+<legend>Дополнительно <em>(выберите один или несколько пунктов)</em></legend>
+  <ul>
+  <li><label><input type="checkbox" name="features[]" value="laces"> Глянцевые ободки</label></li>
+  <li><label><input type="checkbox" name="features[]" value="logo" checked> Металлическая бляшка</label></li>
+  <li><label><input type="checkbox" name="features[]" value="heels"> Светящаяся подошва</label></li>
+  <li><label><input type="checkbox" name="features[]" value="mp3"> Mp3-проигрыватель</label></li>
+  </ul>
+</fieldset>
+
+<fieldset>
+<legend>Размер</legend>
+<label for="form-size"><p>Стандартные российские размеры:</label>
+<select id="form-size" name="size" size="1">
+<option>33</option>
+<option>34</option>
+<option>35</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+</select>
+</p>
+</fieldset>
+
+</fieldset>
+
+<p><input type="submit" value="Заказать!">
+<input type="reset"></p>
+</form>
+</body>
+</html>
