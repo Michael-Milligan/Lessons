@@ -10,3 +10,10 @@ D:\Google Drive\C-like lessons\CS lessons\Lesson\bin\Debug\Lesson.pdb
 D:\Google Drive\C-like lessons\CS lessons\Lesson\obj\Debug\WPF.csprojAssemblyReference.cache
 D:\Google Drive\C-like lessons\CS lessons\Lesson\obj\Debug\Lesson.exe
 D:\Google Drive\C-like lessons\CS lessons\Lesson\obj\Debug\Lesson.pdb
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\bin\Debug\Lesson.exe.config
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\bin\Debug\Lesson.exe
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\bin\Debug\Lesson.pdb
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\obj\Debug\WPF.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\obj\Debug\WPF.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\obj\Debug\Lesson.exe
+C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lesson\obj\Debug\Lesson.pdb
