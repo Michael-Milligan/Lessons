@@ -1,3 +1,2 @@
-﻿  Lesson.cpp
-C:\Users\комп\Google Drive\C-like lessons\C++ lessons\Lesson\Lesson.cpp(16,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Lesson.vcxproj -> C:\Users\комп\Google Drive\C-like lessons\C++ lessons\Debug\Lesson.exe
+﻿  Graph.cpp
+  Lesson.vcxproj -> D:\GitHub\projects\C-like lessons\C++ lessons\Debug\Lesson.exe

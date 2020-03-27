@@ -147,10 +147,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lesson.cpp" />
+    <Text Include="st.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="st.txt" />
+    <ClCompile Include="Graph.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
