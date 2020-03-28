@@ -150,7 +150,7 @@
     <Text Include="st.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="N.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

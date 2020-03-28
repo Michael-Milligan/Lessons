@@ -1,69 +1,124 @@
-#include <stdio.h>
-#include <conio.h>
+#include <iostream>
+#include <windows.h>
+#define NMAX 10 /* максимальное число вершин графа */
+#define RMAX 100 /* максимальное число ребер */
+using namespace std;
 
-#define MAX_NUMBER_OF_NODES 10
+void SMEJNOST(int g1[NMAX][NMAX], int n)
 
-int EnterGraph(int AdjacencyMatrix[MAX_NUMBER_OF_NODES][MAX_NUMBER_OF_NODES])
-{ 
-	int NumberOfNodes;
-	puts("Enter the number of nodes");
-	scanf_s("%d", &NumberOfNodes);
-	int i, j; /* номера вершин */
-	/* ќбнуление матрицы смежности */
-	for (i = 0; i < NumberOfNodes; i++)
-		for (j = 0; j < NumberOfNodes; j++)
-		{
-			AdjacencyMatrix[i][j] = 0;
-		}
-	puts("Enter the sequence of the lines");
-	for (int i = 0; i < NumberOfNodes; ++i)
+{
+	int i, j;
+	cout << "Ќомера смежных вершин" << endl;
+	for (i = 0; i < n; i++)
 	{
-		for (int j = 0; j < NumberOfNodes; ++j)
+		cout << "ƒл€ " << i << " " << "вершины смежны: ";
+		for (j = 0; j < n; j++)
 		{
-			scanf_s("%d", &AdjacencyMatrix[i][j]);
+			if (g1[i][j] == 1)
+			{
+				cout << j << " ";
+			}
 		}
+		cout << endl;
 	}
-	return NumberOfNodes;
+
+
 }
+
+/*---------------------------------------------------------*/
+/* функци€ ввода матрицы смежности */
+/*---------------------------------------------------------*/
+void VVOD_MATR_SM(int g1[NMAX][NMAX], int n)
+/* ¬ходные данные: n Ц количество вершин */
+/* ¬ыходные данные: g1 Ц матрица смежности */
+{
+	int i, j; /* параметры циклов */
+	/* ќбнуление матрицы смежности */
+	for (i = 0; i < n; i++)
+		for (j = 0; j < n; j++) g1[i][j] = 0;
+	cout << "введите последовательность: ";
+	while (cin >> i >> j)
+	{
+		if (i == -1 || j == -1)
+			break;
+		else
+			g1[i][j] = g1[j][i] = 1;
+	}
+	cout << " ";
+	for (j = 0; j < n; j++)
+		cout << j;
+	cout << endl;
+	cout << " ";
+	for (j = 0; j < n; j++)
+		cout << "-";
+
+	for (i = 0; i < n; i++)
+	{
+		cout << endl << i << "|";
+		for (j = 0; j < n; j++) cout << g1[i][j];
+	}
+}
+/*------------------------------------------------------------*/
+/* функци€ вывода матрицы инцидентности */
+/*------------------------------------------------------------*/
+void VIVOD_MATR_IN(int g2[NMAX][RMAX], int n, int k)
+/* ¬ходные данные: g2 Ц матрица инцидентности ,
+n Ц количество вершин ,
+k Ц количество ребер */
+{
+	int i, j; /* параметры циклов */
+	cout << "ћатрица инцидентности\n\n";
+	cout << " ";
+	for (j = 0; j < k; j++)
+		cout << j;
+	cout << endl;
+	cout << " ";
+	for (j = 0; j < k; j++)
+		cout << "-";
+
+	for (i = 0; i < n; i++)
+	{
+		cout << endl << i << "|";
+		for (j = 0; j < k; j++) cout << g2[i][j];
+	}
+}
+/*------------------------------*/
+/* главна€ функци€ */
+/*------------------------------*/
 
 int main()
 {
-	int AdjacencyMatrix[MAX_NUMBER_OF_NODES][MAX_NUMBER_OF_NODES]; 
-	int NumberOfNodes = EnterGraph(AdjacencyMatrix);
-	
-	int NumberOfNodesLinkedInBothDirections = 0;
-	int NodesLinkedInBothDirections[MAX_NUMBER_OF_NODES];
-	bool IsInVector = false;
-	int h = 0;
-	for (int i = 0; i < NumberOfNodes; ++i)
-	{
-		for (int j = 0; j < NumberOfNodes; ++j)
-		{
-			if (AdjacencyMatrix[i][j] == AdjacencyMatrix[j][i] && AdjacencyMatrix[i][j] != 0)
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int g1[NMAX][NMAX], g2[NMAX][RMAX] = { 0 }, n, k;
+	int i, j;
+	cout << "\n¬ведите количество вершин:";
+	cin >> n;
+
+	VVOD_MATR_SM(g1, n); /* ввод матрицы смежности g1 */
+
+	/* ‘ормировавание матрицы инц-ти g2 */
+	SMEJNOST(g1, n);
+
+	k = 0;
+	for (i = 0; i < n; i++)
+		for (j = i; j < n; j++)
+			if (g1[i][j])
 			{
-				for (int k = 0; k < NumberOfNodes; ++k)
+				if (i == j && g1[i][j] == 1)
 				{
-					if (i == NodesLinkedInBothDirections[k]) IsInVector = true;
+
+					g2[i][k] = 2;
+					k++;
 				}
-				if (!IsInVector)
+				else
 				{
-					NodesLinkedInBothDirections[h] = i;
-					++h;
+					g2[i][k] = 1;
+					g2[j][k] = 1;
+					k++;
 				}
-				IsInVector = false;
 			}
-		}
-	}
-
-	h = 0;
-
-	while (NodesLinkedInBothDirections[h] > -10)
-	{
-		++NumberOfNodesLinkedInBothDirections;
-		++h;
-	}
-
-	printf("The number of nodes linked in both directions: %d\n", NumberOfNodesLinkedInBothDirections);
-
-	return 0;
+	VIVOD_MATR_IN(g2, n, k); /* вывод м-цы g2 */
+	cout << endl;
+	system("pause");
 }
