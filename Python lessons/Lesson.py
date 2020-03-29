@@ -1,9 +1,5 @@
-requested_toppings = []
+from Cars import Electric_car
 
-active = True
-while active:
-    answer = input('Enter the topping you want: ')
-    if answer.lower() == 'quit':
-        break
-    requested_toppings.append(answer.lower())
-print(requested_toppings)
+tesla = Electric_car('tesla', 'model s', 2016)
+print(tesla.get_description())
+

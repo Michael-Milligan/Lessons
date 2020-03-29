@@ -20,7 +20,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="N.cpp">
+    <ClCompile Include="A.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
