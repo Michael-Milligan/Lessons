@@ -7,9 +7,6 @@ using System.Windows.Shapes;
 
 class Program : Window
 {
-    static DispatcherTimer Timer = new DispatcherTimer();
-    static Ellipse ellipse;
-
     [STAThread]
     static void Main()
     {
@@ -18,33 +15,38 @@ class Program : Window
 
     public Program()
     {
-        Button button = new Button();
-        button.Content = "Press me!";
-        button.HorizontalAlignment = HorizontalAlignment.Center;
-        button.VerticalAlignment = VerticalAlignment.Center;
-        button.Click += ButtonOnClick;
+        Title = "Program";
+        Grid grid = new Grid();
 
-        RadialGradientBrush brush = new RadialGradientBrush(Colors.Red, Colors.Blue);
-         ellipse = new Ellipse();
-        ellipse.Height = ellipse.Width = 5;
-        ellipse.Fill = brush;
+        for (int i = 0; i < 3; ++i)
+        {
+            grid.RowDefinitions.Add(new RowDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+        }
 
-        Timer.Interval = new TimeSpan(500000);
-        Timer.Tick += TimerOnTick;
+        for (int i = 0; i < 3; ++i)
+        {
+            for (int j = 0; j < 3; ++j)
+            {
+                Button button = new Button();
+                button.Content = "Row " + (i + 1) + " Column " + (j + 1);
+                grid.Children.Add(button);
+                Grid.SetRow(button, i);
+                Grid.SetColumn(button, j);
+            }
+        }
 
-        Content = button;
-    }
+        GridSplitter Splitter = new GridSplitter();
+        grid.Children.Add(Splitter);
+        Splitter.Width = 4;
+        Grid.SetRow(Splitter, 0);
+        Grid.SetColumn(Splitter, 1);
+        Grid.SetRowSpan(Splitter, 3);
+        Splitter.Margin = new Thickness(1);
 
-    void ButtonOnClick(object Sender, RoutedEventArgs Args)
-    {
-        Application.Current.MainWindow.Content = ellipse;
-        Timer.Start();
-    }
+        Splitter.HorizontalAlignment = HorizontalAlignment.Center;
 
-    void TimerOnTick(object Sender, EventArgs Args)
-    {
-        ellipse.Width = 1.05 * ellipse.Width;
-        ellipse.Height = 1.05 * ellipse.Height;
+        Content = grid;
     }
 }
 

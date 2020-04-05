@@ -11,3 +11,15 @@ C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\De
 C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.exe
 C:\Users\User\Documents\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.exe.config
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Lessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\EntityFramework.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\EntityFramework.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.CopyComplete
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.pdb

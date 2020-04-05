@@ -23,3 +23,10 @@ D:\GitHub\C-like lessons\CS lessons\WPF\bin\Debug\Lesson.pdb
 D:\GitHub\C-like lessons\CS lessons\WPF\obj\Debug\WPF.csprojAssemblyReference.cache
 D:\GitHub\C-like lessons\CS lessons\WPF\obj\Debug\Lesson.exe
 D:\GitHub\C-like lessons\CS lessons\WPF\obj\Debug\Lesson.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\bin\Debug\Lesson.exe.config
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\bin\Debug\Lesson.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\bin\Debug\Lesson.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\obj\Debug\WPF.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\obj\Debug\WPF.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\obj\Debug\Lesson.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF\obj\Debug\Lesson.pdb

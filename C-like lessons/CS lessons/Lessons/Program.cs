@@ -1,21 +1,45 @@
 ﻿using System;
-using System.Threading;
-using System.IO;
-using System.Text;
-using System.Windows.Forms;
+using System.Collections.Generic;
 
-class Program
-{ 
-    static void Main()
+namespace Lessons
+{
+    class Program
     {
-        using (StreamWriter Writer = new StreamWriter("C:\\Users\\User\\Desktop\\1.txt", true, Encoding.UTF8))
+        static void Main()
         {
-            Writer.WriteLine("Hello, Admin");
-            Writer.Write("Hello, User");
-        }
-        using (StreamReader Reader = new StreamReader("C:\\Users\\User\\Desktop\\1.txt"))
-        {
-            MessageBox.Show(Reader.ReadToEnd(), "Info");
+            using (var Context = new MyDatabaseContext())
+            {
+                #region groups
+                Group group1 = new Group()
+                {
+                    Name = "Rammstein",
+                    BeginYear = 1994
+                };
+
+                Context.Groups.Add(group1);
+
+                Group group2 = new Group()
+                {
+                    Name = "Linkin Park",
+                    BeginYear = 1996
+                };
+
+                Context.Groups.Add(group2);
+                Context.SaveChanges();
+                #endregion
+
+                var Songs = new List<Song>
+                {
+                    new Song() {Name = "In the end", GroupID = group2.ID},
+                    new Song() {Name = "Numb", GroupID = group2.ID},
+                    new Song() {Name = "Mutter", GroupID = group1.ID}
+                };
+
+                Context.Songs.AddRange(Songs);
+                Context.SaveChanges();
+
+                Console.WriteLine($"ID: {group2.ID}, Name: {group2.Name},  year: {group2.BeginYear}");
+            }
         }
     }
 }
