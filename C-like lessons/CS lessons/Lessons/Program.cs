@@ -3,42 +3,38 @@ using System.Collections.Generic;
 
 namespace Lessons
 {
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
-            using (var Context = new MyDatabaseContext())
+            using (var Context = new DBContext())
             {
-                #region groups
-                Group group1 = new Group()
+                #region Countries
+                Country USA = new Country()
                 {
-                    Name = "Rammstein",
-                    BeginYear = 1994
+                    Name = "USA"
                 };
-
-                Context.Groups.Add(group1);
-
-                Group group2 = new Group()
+                Country Germany = new Country()
                 {
-                    Name = "Linkin Park",
-                    BeginYear = 1996
+                    Name = "Germany"
                 };
+                List<Country> Countries = new List<Country>();
+                Countries.Add(USA);
+                Countries.Add(Germany);
+                Context.Country.AddRange(Countries);
 
-                Context.Groups.Add(group2);
-                Context.SaveChanges();
                 #endregion
 
-                var Songs = new List<Song>
+                Tank M4A2 = new Tank()
                 {
-                    new Song() {Name = "In the end", GroupID = group2.ID},
-                    new Song() {Name = "Numb", GroupID = group2.ID},
-                    new Song() {Name = "Mutter", GroupID = group1.ID}
+                    Name = "M4A2",
+                    CountryID = 1,
+                    GunCaliber = 75
                 };
 
-                Context.Songs.AddRange(Songs);
-                Context.SaveChanges();
+                Context.Tank.Add(M4A2);
 
-                Console.WriteLine($"ID: {group2.ID}, Name: {group2.Name},  year: {group2.BeginYear}");
+                Context.SaveChanges();
             }
         }
     }

@@ -1,20 +1,13 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <conio.h>
-#include <clocale>
+#define MAX_NUMBER 10
 
-int Increment(int Number)
-{
-	return ++Number;
-}
-
-int Increment(int Number, int Increment)
-{
-	return Number + Increment;
-}
+char Queue[MAX_NUMBER + 1];
+int Head = 8, Tail = 2;
 
 
 int main()
 {
 
-	return 0;
+
 }

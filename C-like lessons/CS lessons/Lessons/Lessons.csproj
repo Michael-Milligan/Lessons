@@ -54,12 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="DBContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="MyDatabaseContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Song.cs" />
+    <Compile Include="Tank.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
