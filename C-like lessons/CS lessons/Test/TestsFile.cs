@@ -1,4 +1,5 @@
 ﻿using System;
+using Lessons;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Test
@@ -6,17 +7,12 @@ namespace Test
     [TestClass]
     public class TestsFile
     {
-        int Expected = 3;
+        int Expected = 1;
+        string[] Input = { "%", "140", "45" };
         [TestMethod]
-        public void TestForIncrementFunctionWithOneParameter()
+        public void Test_For_Find()
         {
-
-        }
-
-        [TestMethod]
-        public void TestForIncrementFunctionWithTwoParameters()
-        {
-
+            Assert.AreEqual(Expected, Input[1].Find('4'));
         }
     }
 }

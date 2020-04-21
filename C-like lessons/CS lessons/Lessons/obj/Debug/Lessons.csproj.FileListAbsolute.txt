@@ -23,3 +23,7 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.Cor
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.CopyComplete
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.exe
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml

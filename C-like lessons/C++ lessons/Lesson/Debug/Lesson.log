@@ -1,10 +1,7 @@
 ﻿  Lesson.cpp
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char *(*)[9]'
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): message : this argument is used by a conversion specifier
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): warning C4473: 'scanf_s' : not enough arguments passed for format string
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): message : the missing variadic argument 2 is required by format string '%s'
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(29,11): message : this argument is used as a buffer size
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(35,33): error C2665: 'strcpy_s': none of the 2 overloads could convert all the argument types
-D:\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(124,1): message : could be 'errno_t strcpy_s<9>(char (&)[9],const char *) throw()'
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(35,33): message : while trying to match the argument list '(char [9], char *[9])'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(8,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(44,40): warning C4305: '+=': truncation from 'double' to 'float'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(46,12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(47,12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lesson\Lesson.cpp(43,10): warning C4101: 't': unreferenced local variable
+  Lesson.vcxproj -> D:\GitHub\Lessons\C-like lessons\C++ lessons\Debug\Lesson.exe
