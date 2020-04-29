@@ -5,90 +5,74 @@ using System.IO;
 
 namespace Lessons
 {
-    public class UnusualProgram
-    {
-        static string BracketString = "()[]{}<>";
+    //public class UnusualProgram
+    //{
+    //    static string BracketString = "()[]{}<>";
 
-        public static void Main()
-        {
-            string Path = "Resources.txt";
+    //    public static void Main()
+    //    {
+    //        #region Debugged
+    //        string Path = "Resources.txt";
 
-            string[] RawInput = File.ReadAllLines(Path);
+    //        string[] RawInput = File.ReadAllLines(Path);
 
-            int NumberOfElements = Convert.ToInt32(RawInput[0]);
+    //        int NumberOfElements = Convert.ToInt32(RawInput[0]);
 
-            string[] Strings = new string[NumberOfElements];
+    //        string[] Strings = new string[NumberOfElements];
 
-            for (int i = 0; i < NumberOfElements; ++i)
-            {
-                Strings[i] = RawInput[i + 1];
-            }
+    //        for (int i = 0; i < NumberOfElements; ++i)
+    //        {
+    //            Strings[i] = RawInput[i + 1];
+    //        } 
 
-            Stack<char> Brackets = new Stack<char>();
+    //        Stack<char> Brackets = new Stack<char>();
 
-            List<int> Results = new List<int>();
+    //        List<int> Results = new List<int>();
 
-            for (int i = 0; i < NumberOfElements; ++i)
-            {
-                Strings[i] = new string(Strings[i].Where(Char => BracketString.Contains(Char)).ToArray());
-            }
+    //        for (int i = 0; i < NumberOfElements; ++i)
+    //        {
+    //            Strings[i] = new string(Strings[i].Where(Char => BracketString.Contains(Char)).ToArray());
+    //        }
 
-            foreach (var String in Strings)
-            {
-                while (String != "")
-                {
-                    if (String.First() == AnotherBracket(String.Last()))
-                    {
-                        String.Remove(0, 1);
-                        String.Remove(String.Length, 1);
-                    }
+    //        #endregion
 
-                    //if ()
+    //        bool IsNotMatch = false;
 
-                }
+    //        for (int i = 0; i<Strings.Length; ++i)
+    //        {
+    //            IsNotMatch = false;
 
-                foreach (var result in Results)
-                {
-                    Console.Write(result + " ");
-                }
-            }
-        }
+    //            for (int j = 0; Strings[i].Length > 0; ++j)
+    //            {
+    //                if (IsOpening(Strings[i][j]))
+    //                {
+    //                    Brackets.Push(Strings[i][j]);
+    //                    Strings[i] = Strings[i].Remove(0, 1);
+    //                    --j;
+    //                }
+    //                else if (!IsOpening(Strings[i][j]) && Brackets.Peek() == AnotherBracket(Strings[i][j]))
+    //                {
+    //                    Brackets.Pop();
+    //                    Strings[i] = Strings[i].Remove(0, 1);
+    //                    --j;
+    //                }
+    //                else
+    //                {
+    //                    IsNotMatch = true;
+    //                    break;
+    //                }
+    //            }
 
-        public static char AnotherBracket(char Bracket)
-        {
-            for (int i = 0; i < BracketString.Length; ++i)
-            {
-                if (BracketString[i] == Bracket) return BracketString[i - 1];
-            }
-            return ' ';
-        }
-    }
+    //            if (IsNotMatch) Results.Add(0);
+    //            else Results.Add(1);
+    //        }
+            
+    //        foreach (var result in Results)
+    //            {
+    //                Console.Write(result + " ");
+    //            }
+    //    }
 
-    public static class Extension_Methods
-    {
-        public static int Find(this Array array, object Object)
-        {
-            var enumerator = array.GetEnumerator();
-            int i = 0;
-
-            while (enumerator.MoveNext())
-            {
-                if (enumerator.Current == Object) return i;
-                ++i;
-            }
-            return -1;
-        }
-
-        public static int Find(this string String, char Char)
-        {
-            int Index = 0;
-
-            for (int i = 0; i < String.Length; ++i)
-            {
-                if (String[Index] == Char) return Index;
-                ++Index;
-            }
-            return -1;
-        }
-    }
+        
+    //}
 }
