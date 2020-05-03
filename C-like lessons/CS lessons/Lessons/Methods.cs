@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace Lessons
@@ -150,5 +151,79 @@ namespace Lessons
 
         public static bool IsOpening(char Bracket)
         { return "{[(<".Contains(Bracket); }
+
+        public static int Checksum(int[] Numbers, int Begin, int End)
+        {
+            int Result = 0;
+            for (int i = Begin; i < End; ++i)
+            {
+                Result += Numbers[i];
+                Result *= 113;
+                Result %= 10000007;
+            }
+            return Result;
+        }
+
+        public static int Neumann(int Number)
+        {
+            string NumberInString = Convert.ToString(Number);
+
+            Number *= Number;
+            Number /= 100;
+            Number %= 10000;
+            return Number;
+        }
+
+        public static string ReverseString(ref string String)
+        {
+            char[] Chars = String.ToCharArray();
+
+            char temp = ' ';
+
+            for (int i = 0; i < Chars.Length / 2; ++i)
+            {
+                temp = Chars[i];
+                Chars[i] = Chars[Chars.Length - i - 1];
+                Chars[Chars.Length - i - 1] = temp;
+            }
+            String = new string(Chars);
+            return String;
+        }
+
+        public static string RotateString(ref string String, int Number)
+        {
+            char[] Chars = String.ToCharArray();
+
+            char temp = ' ';
+            int Counter = 0;
+
+            if (Number > 0)
+            {
+                for (Counter = 0; Counter < Number;++Counter)
+                {
+                    for (int i = 1; i < Chars.Length; ++i)
+                    {
+                        temp = Chars[i];
+                        Chars[i] = Chars[i - 1];
+                        Chars[i - 1] = temp;
+                    }
+                }
+            }
+            else if (Number < 0)
+            {
+                for (Counter = 0; Counter < Math.Abs(Number); ++Counter)
+                {
+                    for (int i = Chars.Length - 1; i >= 1; --i)
+                    {
+                        temp = Chars[i];
+                        Chars[i] = Chars[i - 1];
+                        Chars[i - 1] = temp;
+                    }
+                }
+            }
+
+            String = new string(Chars);
+            return String;
+        }
     }
 }

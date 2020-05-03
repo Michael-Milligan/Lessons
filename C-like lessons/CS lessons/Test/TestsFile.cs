@@ -7,12 +7,12 @@ namespace Test
     [TestClass]
     public class TestsFile
     {
-        int Expected = 1;
-        string[] Input = { "%", "140", "45" };
+        string Expected = "KingThe";
+        string Input = "TheKing";
         [TestMethod]
         public void Test_For_Find()
         {
-            Assert.AreEqual(Expected, Input[1].Find('4'));
+            Assert.AreEqual(Expected, Methods.RotateString(ref Input, -4));
         }
     }
 }
