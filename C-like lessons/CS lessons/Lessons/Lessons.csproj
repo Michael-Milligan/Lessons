@@ -60,10 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JosephusProblem.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Extension_Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RotateString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
