@@ -60,7 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JosephusProblem.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Extension_Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
