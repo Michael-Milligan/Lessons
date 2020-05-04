@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Methods.cs" />
     <Compile Include="Extension_Methods.cs" />
-    <Compile Include="ParityControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
