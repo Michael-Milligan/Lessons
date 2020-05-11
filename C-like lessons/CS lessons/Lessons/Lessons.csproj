@@ -63,6 +63,7 @@
     <Compile Include="BinarySearch.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Extension_Methods.cs" />
+    <Compile Include="Palindromes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

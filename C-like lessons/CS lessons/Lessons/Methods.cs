@@ -225,5 +225,10 @@ namespace Lessons
             String = new string(Chars);
             return String;
         }
+
+        public static double Function(double x, double a, double b, double c, double d)
+        {
+            return a * x + b * Math.Sqrt(Math.Pow(x, 3)) - c * Math.Exp(-x / 50) - d;
+        }
     }
 }
