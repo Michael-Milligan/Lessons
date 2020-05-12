@@ -262,5 +262,11 @@ namespace Lessons
 
             return 0;
         }
+
+        public static double CalculateFunction
+            (double x, double a, double b, double c, double d)
+        {
+            return a * x + b * Math.Pow(x, 1.5) - c * Math.Exp(-x / 50) - d;
+        }
     }
 }

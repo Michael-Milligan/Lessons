@@ -2,53 +2,67 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Lessons
 {
     class BinarySearch
     {
-        //public static void Main()
-        //{
-        //    string Path = "Resources.txt";
-        //    string[] RawInput = File.ReadAllLines(Path);
+        public static void Main()
+        {
+            string Path = "Resources.txt";
+            string[] RawInput = File.ReadAllLines(Path);
 
-        //    double[][] Numbers = new double[RawInput.Length - 1][];
-        //    for (int i = 0; i < Numbers.Length; ++i)
-        //    {
-        //        Numbers[i] = RawInput[i + 1].
-        //            Split().Select(number => Convert.ToDouble(number)).
-        //            ToArray();
-        //    }
+            double[][] Numbers = new double[RawInput.Length - 1][];
+            for (int i = 0; i < Numbers.Length; ++i)
+            {
+                Numbers[i] = RawInput[i + 1].
+                    Split().Select(number => Convert.ToDouble(number)).
+                    ToArray();
+            }
 
-        //    double x = 0, a = 0, b = 0, c = 0, d = 0, PreviousX = 1, y = 0, PreviousY = 1;
+            double a = 0, b = 0, c = 0, d = 0,
+                yRight = 1, yLeft = 1, yCenter = 0,
+                RightBorder = 100, LeftBorder = 0;
 
-        //    List<double> Results = new List<double>();
+            foreach (var Condition in Numbers)
+            {
+                a = Condition[0];
+                b = Condition[1];
+                c = Condition[2];
+                d = Condition[3];
 
-        //    for (int i = 0; i < Numbers.Length; ++i)
-        //    {
-        //        x = 0;
-        //        PreviousX = 1;
-        //        a = Numbers[i][0];
-        //        b = Numbers[i][1];
-        //        c = Numbers[i][2];
-        //        d = Numbers[i][3];
+                yRight = 1;
+                yLeft = 1;
+                yCenter = 0;
+                RightBorder = 100;
+                LeftBorder = 0;
 
-        //        while(y > 0.0000001)
-        //        {
-        //            PreviousX = x;
-        //            PreviousY = y;
-        //            y = Methods.Function(x, a, b, c, d);
-        //            if (y < PreviousY) x += 0.0000001;
-        //            else x -= 0.0000001;
-        //        }
+                while (true)
+                {
+                    yLeft = Methods.CalculateFunction(LeftBorder, a, b, c, d);
+                    yRight = Methods.CalculateFunction(RightBorder, a, b, c, d);
+                    yCenter = Methods.CalculateFunction((RightBorder + LeftBorder)/2, 
+                        a, b, c, d);
 
-        //        Results.Add(x);
-        //    }
+                    if (yCenter < 0.0000001 && yCenter > -0.0000001) break;
 
-        //    foreach (var result in Results)
-        //    {
-        //        Console.Write(result + " ");
-        //    }
-        //}
+                    if (yCenter > 0)
+                    {
+                        RightBorder = (RightBorder + LeftBorder) / 2;
+                    }
+                    else
+                    {
+                        LeftBorder = (RightBorder + LeftBorder) / 2;
+                    }
+                }
+                Console.WriteLine((RightBorder + LeftBorder)/2);
+            }
+
+            //foreach (var result in Results)
+            //{
+            //    Console.Write(result + " ");
+            //}
+        }
     }
 }
