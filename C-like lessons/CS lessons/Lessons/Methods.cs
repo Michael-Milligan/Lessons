@@ -230,5 +230,37 @@ namespace Lessons
         {
             return a * x + b * Math.Sqrt(Math.Pow(x, 3)) - c * Math.Exp(-x / 50) - d;
         }
+
+        public static double[] CalculateSides(int x1, int y1, int x2, int y2, int x3, int y3)
+        {
+            double[] Sides = new double[3];
+
+            Sides[0] = Math.Pow(Math.Pow(x1-x2, 2) + Math.Pow(y1-y2, 2), 0.5);
+            Sides[1] = Math.Pow(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2), 0.5);
+            Sides[2] = Math.Pow(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2), 0.5);
+
+            return Sides;
+        }
+
+        public static double CalculateArea(double[] Sides)
+        {
+            double Halfperimeter = (Sides[0] + Sides[1] + Sides[2])/2;
+
+            return Math.Pow(Halfperimeter * 
+                (Halfperimeter - Sides[0]) * 
+                (Halfperimeter - Sides[1]) * 
+                (Halfperimeter - Sides[2]), 0.5);
+        }
+
+        public static int WhoWon(string Round)
+        {
+            if (Round[0] == 'S' && Round[1] == 'R') return 1;
+            if (Round[0] == 'P' && Round[1] == 'S') return 1;
+            if (Round[0] == 'R' && Round[1] == 'P') return 1;
+
+            if (Round[0] == Round[1]) return 2;
+
+            return 0;
+        }
     }
 }
