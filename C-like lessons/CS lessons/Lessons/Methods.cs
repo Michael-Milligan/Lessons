@@ -268,5 +268,28 @@ namespace Lessons
         {
             return a * x + b * Math.Pow(x, 1.5) - c * Math.Exp(-x / 50) - d;
         }
+
+        public static int Factorial(int Number)
+        {
+            int Result = 1;
+            for (int i = 1; i <= Number; ++i)
+            {
+                Result *= i;
+            }
+            return Result;
+        }
+
+        public static int GetPoints(string Card, string[] Condition, int Sum)
+        {
+            if ("123456789".Contains(Card)) return Convert.ToInt32(Card);
+            else if ("JQKT".Contains(Card)) return 10;
+            else 
+            {
+                if (Condition.Where(letter => letter == "A").Count() > 1 || 
+                    Sum + 11 > 22)
+                    return 1;
+                else return 11;
+            }
+        }
     }
 }
