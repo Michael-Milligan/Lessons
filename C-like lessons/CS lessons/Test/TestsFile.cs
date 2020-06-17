@@ -2,17 +2,17 @@
 using Lessons;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test
+namespace Tests
 {
     [TestClass]
     public class TestsFile
     {
-        string Expected = "KingThe";
-        string Input = "TheKing";
+        bool Expected = true;
+        int[] Input = {368, 276, 460};
         [TestMethod]
-        public void Test_For_Find()
+        public void Test()
         {
-            Assert.AreEqual(Expected, Methods.RotateString(ref Input, -4));
+            Assert.AreEqual(Expected, Methods.IsRightTriangle(Input));
         }
     }
 }

@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearch.cs" />
+    <Compile Include="Caesar%27s Cipher.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Extension_Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

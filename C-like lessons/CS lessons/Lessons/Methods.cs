@@ -225,5 +225,22 @@ namespace Lessons
             String = new string(Chars);
             return String;
         }
+
+        public static bool IsRightTriangle(int[] Triangle)
+        {
+            Triangle = Triangle.OrderBy(number => number).ToArray();
+
+            if (Triangle[2] == Math.Pow(Triangle[0]*Triangle[0] + Triangle[1]*Triangle[1], 0.5)) return true;
+            else return false;
+        }
+
+        public static bool IsObtuse(int[] Triangle)
+        {
+            Triangle = Triangle.OrderBy(number => number).ToArray();
+
+            double Hypotenuse = Math.Pow((Triangle[0] * Triangle[0] + Triangle[1] * Triangle[1]), 0.5);
+
+            return Hypotenuse < Triangle[2];
+        }
     }
 }
