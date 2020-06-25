@@ -42,3 +42,5 @@ D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csprojAss
 D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.csproj.CopyComplete
 D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.exe
 D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\Lessons.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\System.ValueTuple.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\System.ValueTuple.xml
