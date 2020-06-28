@@ -226,70 +226,21 @@ namespace Lessons
             return String;
         }
 
-        public static double Function(double x, double a, double b, double c, double d)
+        public static bool IsRightTriangle(int[] Triangle)
         {
-            return a * x + b * Math.Sqrt(Math.Pow(x, 3)) - c * Math.Exp(-x / 50) - d;
+            Triangle = Triangle.OrderBy(number => number).ToArray();
+
+            if (Triangle[2] == Math.Pow(Triangle[0]*Triangle[0] + Triangle[1]*Triangle[1], 0.5)) return true;
+            else return false;
         }
 
-        public static double[] CalculateSides(int x1, int y1, int x2, int y2, int x3, int y3)
+        public static bool IsObtuse(int[] Triangle)
         {
-            double[] Sides = new double[3];
+            Triangle = Triangle.OrderBy(number => number).ToArray();
 
-            Sides[0] = Math.Pow(Math.Pow(x1-x2, 2) + Math.Pow(y1-y2, 2), 0.5);
-            Sides[1] = Math.Pow(Math.Pow(x1 - x3, 2) + Math.Pow(y1 - y3, 2), 0.5);
-            Sides[2] = Math.Pow(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2), 0.5);
+            double Hypotenuse = Math.Pow((Triangle[0] * Triangle[0] + Triangle[1] * Triangle[1]), 0.5);
 
-            return Sides;
-        }
-
-        public static double CalculateArea(double[] Sides)
-        {
-            double Halfperimeter = (Sides[0] + Sides[1] + Sides[2])/2;
-
-            return Math.Pow(Halfperimeter * 
-                (Halfperimeter - Sides[0]) * 
-                (Halfperimeter - Sides[1]) * 
-                (Halfperimeter - Sides[2]), 0.5);
-        }
-
-        public static int WhoWon(string Round)
-        {
-            if (Round[0] == 'S' && Round[1] == 'R') return 1;
-            if (Round[0] == 'P' && Round[1] == 'S') return 1;
-            if (Round[0] == 'R' && Round[1] == 'P') return 1;
-
-            if (Round[0] == Round[1]) return 2;
-
-            return 0;
-        }
-
-        public static double CalculateFunction
-            (double x, double a, double b, double c, double d)
-        {
-            return a * x + b * Math.Pow(x, 1.5) - c * Math.Exp(-x / 50) - d;
-        }
-
-        public static int Factorial(int Number)
-        {
-            int Result = 1;
-            for (int i = 1; i <= Number; ++i)
-            {
-                Result *= i;
-            }
-            return Result;
-        }
-
-        public static int GetPoints(string Card, string[] Condition, int Sum)
-        {
-            if ("123456789".Contains(Card)) return Convert.ToInt32(Card);
-            else if ("JQKT".Contains(Card)) return 10;
-            else 
-            {
-                if (Condition.Where(letter => letter == "A").Count() > 1 || 
-                    Sum + 11 > 22)
-                    return 1;
-                else return 11;
-            }
+            return Hypotenuse < Triangle[2];
         }
     }
 }

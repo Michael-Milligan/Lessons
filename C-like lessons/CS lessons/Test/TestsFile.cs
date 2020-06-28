@@ -1,26 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test
+namespace Tests
 {
     [TestClass]
     public class TestsFile
     {
-        int Expected = 720;
-        int Input = 6;
+        bool Expected = true;
+        int[] Input = {368, 276, 460};
         [TestMethod]
-        public void Test_For_Function()
+        public void Test()
         {
-            Assert.AreEqual(Expected, Factorial(Input));
-        }
-
-        public static int Factorial(int Number)
-        {
-            int Result = 1;
-            for (int i = 1; i <= Number; ++i)
-            {
-                Result *= i;
-            }
-            return Result;
+            //Assert.AreEqual(Expected, Methods.IsRightTriangle(Input));
         }
     }
 }
