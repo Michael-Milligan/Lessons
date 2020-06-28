@@ -7,12 +7,22 @@ namespace Lessons
 {
     class Lesson
     {
+        delegate int MyDelegate(int x);
         public static void Main()
         {
-            DirectoryInfo Info = new DirectoryInfo("C:\\Users\\User\\Desktop\\1.txt");
-            using (StreamReader Reader = new StreamReader(Info.))
-            {
+            var list = new List<int>();
+            
+        }
 
+        public static void GraphFunction(MyDelegate Function)
+        {
+            for (int i = 0; i < 10; ++i)
+            {
+                Console.WriteLine(i + " | ");
+                for (int j = 0; j < length; j++)
+                {
+
+                }
             }
         }
     }
