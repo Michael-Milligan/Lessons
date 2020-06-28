@@ -20,11 +20,8 @@ D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStud
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Test.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Test.pdb
-D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Lessons.exe
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Lessons.pdb
-D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Lessons.exe.config
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 D:\GitHub\projects\C-like lessons\CS lessons\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 D:\GitHub\projects\C-like lessons\CS lessons\Test\obj\Debug\Test.csprojAssemblyReference.cache
