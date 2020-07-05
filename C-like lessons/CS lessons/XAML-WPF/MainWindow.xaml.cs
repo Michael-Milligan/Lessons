@@ -20,9 +20,25 @@ namespace XAML_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random random = new Random(DateTime.Now.Millisecond);
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Send_Click(object sender, RoutedEventArgs e)
+        {
+            Answer.Content = (Answers)random.Next(0,2);
+        }
+        enum Answers
+        {
+            Yes,
+            No
         }
     }
 }

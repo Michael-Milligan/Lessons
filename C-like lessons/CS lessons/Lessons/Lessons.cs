@@ -13,8 +13,7 @@ namespace Lessons
     {
         public static void Main()
         {
-            
-            
+
         }
     }
 }
