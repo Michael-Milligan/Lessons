@@ -1,0 +1,15 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\WPFLessons.exe.config
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\WPFLessons.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\WPFLessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\MainWindow.g.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\App.g.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons_MarkupCompile.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons_MarkupCompile.lref
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\MainWindow.baml
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.g.resources
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.Properties.Resources.resources
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.csproj.GenerateResource.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.pdb
