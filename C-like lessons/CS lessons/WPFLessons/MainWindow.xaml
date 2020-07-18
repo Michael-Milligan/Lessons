@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLessons"
         mc:Ignorable="d"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ToggleButton FontSize="54">
-            Hey</ToggleButton>
+        
     </Grid>
 </Window>
