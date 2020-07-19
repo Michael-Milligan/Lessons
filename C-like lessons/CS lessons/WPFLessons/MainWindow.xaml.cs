@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPFLessons
 {
@@ -23,6 +24,15 @@ namespace WPFLessons
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime? selectedDate = calendar1.SelectedDate;
+
+            MessageBox.Show(selectedDate.Value.Date.ToShortDateString());
+        }
+
     }
 }

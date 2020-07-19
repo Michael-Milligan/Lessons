@@ -8,6 +8,11 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Calendar x:Name="calendar1" FirstDayOfWeek="Monday"
+        SelectedDatesChanged="calendar_SelectedDatesChanged">
+            <Calendar.BlackoutDates>
+                <CalendarDateRange Start="10/5/2013" End="10/8/2013"></CalendarDateRange>
+            </Calendar.BlackoutDates>
+        </Calendar>
     </Grid>
 </Window>
