@@ -4,15 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLessons"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Calendar x:Name="calendar1" FirstDayOfWeek="Monday"
-        SelectedDatesChanged="calendar_SelectedDatesChanged">
-            <Calendar.BlackoutDates>
-                <CalendarDateRange Start="10/5/2013" End="10/8/2013"></CalendarDateRange>
-            </Calendar.BlackoutDates>
-        </Calendar>
-    </Grid>
+        Title="MainWindow" Height="370" Width="500">
+
+    <Window.DataContext>
+        <local:VM/>
+    </Window.DataContext>
+
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <TextBox Width="100" Name="AddField"></TextBox>
+            <Button
+                Command="{Binding AddCommand}"
+                CommandParameter="{Binding ElementName=AddField, Path=Text}">Add</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <ListBox Width="400" Height="300" ItemsSource="{Binding MyValues}"
+                     Name="List"></ListBox>
+            <Button VerticalAlignment="Top" Width="100"
+                    Command="{Binding RemoveCommand}"
+                    CommandParameter="{Binding ElementName=List, Path=SelectedIndex}">Remove</Button>
+        </StackPanel>
+        <TextBlock DockPanel.Dock="Bottom" Text="{Binding Sum}"></TextBlock>
+    </DockPanel>
 </Window>

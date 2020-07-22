@@ -27,3 +27,15 @@ D:\GitHub\projects\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.Pro
 D:\GitHub\projects\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.csproj.GenerateResource.cache
 D:\GitHub\projects\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.exe
 D:\GitHub\projects\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\CommonServiceLocator.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.Wpf.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\System.ValueTuple.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\System.Windows.Interactivity.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.Wpf.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\Prism.Wpf.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\bin\Debug\System.ValueTuple.xml
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPFLessons\obj\Debug\WPFLessons.csproj.CopyComplete

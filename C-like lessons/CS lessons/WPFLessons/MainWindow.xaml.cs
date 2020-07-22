@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Prism.Common;
 
 namespace WPFLessons
 {
@@ -27,12 +28,10 @@ namespace WPFLessons
 
         }
 
-        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        private void Second_Click(object sender, RoutedEventArgs e)
         {
-            DateTime? selectedDate = calendar1.SelectedDate;
-
-            MessageBox.Show(selectedDate.Value.Date.ToShortDateString());
+            var Counter = Resources["Counter"] as string;
+            Counter = Convert.ToString(Convert.ToInt32(Counter) + 1);
         }
-
     }
 }
