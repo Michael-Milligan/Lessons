@@ -1,0 +1,36 @@
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Hello Core.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Animation.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Base.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Controls.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.DesignerSupport.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.DesktopRuntime.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Diagnostics.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Dialogs.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Input.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Interactivity.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Layout.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Logging.Serilog.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Markup.Xaml.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Markup.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.OpenGL.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Styling.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Themes.Default.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Visuals.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Avalonia.Remote.Protocol.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\JetBrains.Annotations.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\Serilog.Sinks.Trace.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\bin\Debug\netcoreapp3.1\System.Reactive.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Hello Core\obj\Debug\netcoreapp3.1\Hello Core.csproj.CopyComplete

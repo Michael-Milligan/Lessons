@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0518: Predefined type 'System.Range' is not defined or imported
+dotnet_diagnostic.CS0518.severity = silent
