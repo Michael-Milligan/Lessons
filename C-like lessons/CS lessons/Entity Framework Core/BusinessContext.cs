@@ -16,12 +16,13 @@ namespace Entity_Framework_Core
         }
 
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("businessdb");
+                optionsBuilder.UseSqlServer("businessbd");
             }
         }
 
@@ -56,7 +57,7 @@ namespace Entity_Framework_Core
 
                 entity.Property(e => e.Phone)
                     .HasColumnName("phone")
-                    .HasMaxLength(20)
+                    .HasMaxLength(11)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Secondname)
@@ -64,6 +65,33 @@ namespace Entity_Framework_Core
                     .HasColumnName("secondname")
                     .HasMaxLength(20)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Orders>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("orders");
+
+                entity.Property(e => e.Customerid).HasColumnName("customerid");
+
+                entity.Property(e => e.Dateoforder)
+                    .HasColumnName("dateoforder")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Productid).HasColumnName("productid");
+
+                entity.Property(e => e.Quantity).HasColumnName("quantity");
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany()
+                    .HasForeignKey(d => d.Customerid)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_customerid");
             });
 
             OnModelCreatingPartial(modelBuilder);

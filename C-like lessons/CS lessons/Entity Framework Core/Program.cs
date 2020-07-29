@@ -34,21 +34,14 @@ namespace Entity_Framework_Core
             {
                 try
                 {
-                    FillDatabase(ref Context);
+                    FillCustomers(ref Context);
                 }
-                catch (Exception)
-                {
-
-                }
+                catch (Exception) { }
                 
             }
-            
-            
-
-            
         }
 
-        public static void ClearDatabase(ref BusinessContext Context)
+        public static void ClearCustomers(ref BusinessContext Context)
         {
             for (int i = 0; i < 10; ++i)
             {
@@ -57,7 +50,7 @@ namespace Entity_Framework_Core
             Context.SaveChanges();
         }
 
-        public static void FillDatabase(ref BusinessContext Context)
+        public static void FillCustomers(ref BusinessContext Context)
         {
             Customer[] Customers = new Customer[10];
             Random random = new Random((int)DateTime.Now.Ticks);
