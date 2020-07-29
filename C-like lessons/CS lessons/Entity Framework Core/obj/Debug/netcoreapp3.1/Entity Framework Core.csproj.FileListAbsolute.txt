@@ -1,0 +1,50 @@
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csproj.CopyComplete
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.genruntimeconfig.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csproj.CoreCompileInputs.cache
