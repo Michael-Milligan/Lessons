@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Entity_Framework_Core
+namespace Entity_Framework
 {
     public partial class Customer
     {

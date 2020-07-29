@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Entity_Framework_Core;
 
-namespace Entity_Framework_Core
+namespace Entity_Framework
 {
     class Program
     {
@@ -32,11 +31,7 @@ namespace Entity_Framework_Core
 
             for (int i = 0; i < 20; ++i)
             {
-                try
-                {
-                    FillCustomers(ref Context);
-                }
-                catch (Exception) { }
+                FillOrders(ref Context);
                 
             }
         }
@@ -70,6 +65,26 @@ namespace Entity_Framework_Core
             }
             
             Context.SaveChanges();
+        }
+
+        public static void FillOrders(ref BusinessContext Context)
+        {
+            Order[] Orders = new Order[100];
+            Random random = new Random((int)DateTime.Now.Ticks);
+
+            for (int i = 0; i < Orders.Length; ++i)
+            {
+                Orders[i] = new Order()
+                {
+                    Customerid = Context.Customers.ElementAt(random.Next(1,5)).Id,
+                    Dateoforder = new DateTime(random.Next(1800, 2021), random.Next(1, 13), random.Next(1,29)),
+                    Quantity = random.Next(1, 1000)
+                };
+                
+                Context.Orders.Add(Orders[i]);
+            }
+
+            Context.SaveChanges(); 
         }
     }
 }

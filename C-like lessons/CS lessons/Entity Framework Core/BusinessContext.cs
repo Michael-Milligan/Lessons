@@ -1,8 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System.Data.Entity;
 
-namespace Entity_Framework_Core
+namespace Entity_Framework
 {
     public partial class BusinessContext : DbContext
     {
@@ -16,13 +14,13 @@ namespace Entity_Framework_Core
         }
 
         public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("businessbd");
+                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=business;Trusted_Connection=True;");
             }
         }
 
@@ -67,10 +65,8 @@ namespace Entity_Framework_Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Orders>(entity =>
+            modelBuilder.Entity<Order>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("orders");
 
                 entity.Property(e => e.Customerid).HasColumnName("customerid");

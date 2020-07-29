@@ -1,0 +1,12 @@
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\obj\Debug\Entity Framework.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\obj\Debug\Entity Framework.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\Entity Framework.exe.config
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\Entity Framework.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\Entity Framework.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\EntityFramework.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\EntityFramework.xml
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\obj\Debug\Entity Framework.csproj.CopyComplete
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\obj\Debug\Entity Framework.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework\obj\Debug\Entity Framework.pdb
