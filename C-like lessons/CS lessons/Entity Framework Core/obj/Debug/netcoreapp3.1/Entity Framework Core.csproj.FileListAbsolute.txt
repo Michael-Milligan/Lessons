@@ -48,3 +48,4 @@ D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\net
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.dll.config

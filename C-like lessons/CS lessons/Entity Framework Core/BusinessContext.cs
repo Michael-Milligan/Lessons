@@ -21,7 +21,7 @@ namespace Entity_Framework_Core
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=business;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("businessdb");
             }
         }
 
