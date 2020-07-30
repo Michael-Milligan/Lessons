@@ -33,7 +33,7 @@ namespace Entity_Framework
         {
             var Context = new BusinessContext();
 
-            Regex Query = new Regex(@"([ABC]\w+)@hey\.us");
+            Regex Query = new Regex(@"([ABC][^W]|[A-Z]\w+)@hey\.us");
 
             string Result = "";
 
