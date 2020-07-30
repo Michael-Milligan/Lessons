@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,80 +32,69 @@ namespace Entity_Framework
         static void Main(string[] args)
         {
             var Context = new BusinessContext();
-            ClearOrders(ref Context);
 
-            FillOrders(50000);
-        }
+            Regex Query = new Regex(@"([ABC]\w+)@hey\.us");
 
-        /// <summary>
-        /// Clears the whole table customers
-        /// </summary>
-        /// <param name="Context"></param>
-        public static void ClearCustomers(ref BusinessContext Context)
-        {
-            var CustomersBD = Context.Customers.ToArray();
-            for (int i = 0; i < 10; ++i)
+            string Result = "";
+
+            foreach (var Customer in Context.Customers)
             {
-                Context.Customers.Remove(Context.Customers.Remove(CustomersBD[i]));
+                Result += Customer.Email;
             }
-            Context.SaveChanges();
-        }
 
-        /// <summary>
-        /// Clears the whole table orders
-        /// </summary>
-        /// <param name="Context"></param>
-        public static void ClearOrders(ref BusinessContext Context)
-        {
-            var OrdersBD = Context.Orders.ToArray();
-            for (int i = 0; i < OrdersBD.Length; ++i)
+            var Matches = Query.Matches(Result);
+            foreach (var Match in Matches)
             {
-                Context.Orders.Remove(OrdersBD[i]);
+                Console.WriteLine(Match);
             }
-            Context.SaveChanges();
         }
 
+        #region Functions
         /// <summary>
         /// Fills the customers table with the random data
         /// </summary>
         /// <param name="Context"></param>
-        public static void FillCustomers(ref BusinessContext Context)
+        public static void FillCustomers(ref BusinessContext Context, int NumberOfClients)
         {
-            Customer[] Customers = new Customer[10];
+            Customer Customer;
             Random random = new Random((int)DateTime.Now.Ticks);
 
-            for (int i = 0; i < Customers.Length; ++i)
+            for (int i = 0; i < NumberOfClients;)
             {
-                Customers[i] = new Customer()
+                Customer = new Customer()
                 {
                     Firstname = FirstNames[random.Next(0, 600000)%6],
                     Secondname = LastNames[random.Next(0, 600000)%6],
                     Age = random.Next(16, 32),
                     Phone = $"8999{random.Next(1000000, 9999999)}"
                 };
-                Customers[i].Email = $"{Customers[i].Firstname[0]}{Customers[i].Secondname}@hey.us";
-                Customers = Customers.Distinct().ToArray();
-                Context.Customers.Add(Customers[i]);
+                Customer.Email = $"{Customer.Firstname[0]}{Customer.Secondname}@hey.us";
+
+                var CustomersEmails = Context.Customers.Select(item => item.Email).ToArray();
+                var CustomersPhones = Context.Customers.Select(item => item.Phone).ToArray();
+
+                if (!CustomersEmails.Contains(Customer.Email) && !(CustomersPhones.Contains(Customer.Phone)))
+                {
+                    ++i;
+                    Context.Customers.Add(Customer);
+                    Context.SaveChanges();
+                }
             }
-            
-            Context.SaveChanges();
         }
 
         /// <summary>
         /// Adds one random order, but doesn't save the data
         /// </summary>
         /// <param name="Context"></param>
-        public static void AddOrder()
+        public static void AddOrder(Customer[] CustomersBD)
         {
             Random random = new Random((int)DateTime.Now.Ticks);
-
             var Context = new BusinessContext();
-            var CustomersBD = Context.Customers.ToArray();
 
             Order Order = new Order()
             {
                 Customerid = CustomersBD[random.Next(0, CustomersBD.Length)].Id,
-                Dateoforder = new DateTime(random.Next(1800, 2021), random.Next(1, 13), random.Next(1,29)),
+                Dateoforder = new DateTime(random.Next(2000, 2021), random.Next(1, 13), random.Next(1,29)),
                 Quantity = random.Next(1, 1000)
             };
             Context.Orders.Add(Order);
@@ -113,12 +104,13 @@ namespace Entity_Framework
         /// <summary>
         /// Fills the orders table with random data in different threads
         /// </summary>
-        public static void FillOrders(int NumberOfOrders)
+        public static void FillOrders(int NumberOfOrders, Customer[] CustomersBD)
         {
             for (int i = 0; i < NumberOfOrders; ++i)
             {
-                new Thread(() => AddOrder()).Start();
+                new Thread(() => AddOrder(CustomersBD)).Start();
             }
         }
+        #endregion
     }
 }
