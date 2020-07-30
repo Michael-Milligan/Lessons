@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Entity_Framework
@@ -28,15 +29,10 @@ namespace Entity_Framework
 
         static void Main(string[] args)
         {
-
             var Context = new BusinessContext();
-            var CustomersBD = Context.Customers.ToArray();
             ClearOrders(ref Context);
-            for (int i = 0; i < 50000; ++i)
-            {
-                AddOrderAsync(CustomersBD);
-            }
-            
+
+            FillOrders(50000);
         }
 
         /// <summary>
@@ -97,9 +93,12 @@ namespace Entity_Framework
         /// Adds one random order, but doesn't save the data
         /// </summary>
         /// <param name="Context"></param>
-        public static void AddOrder(ref BusinessContext Context, Customer[] CustomersBD)
+        public static void AddOrder()
         {
             Random random = new Random((int)DateTime.Now.Ticks);
+
+            var Context = new BusinessContext();
+            var CustomersBD = Context.Customers.ToArray();
 
             Order Order = new Order()
             {
@@ -111,10 +110,15 @@ namespace Entity_Framework
             Context.SaveChanges();
         }
 
-        public static async void AddOrderAsync(Customer[] CustomersBD)
+        /// <summary>
+        /// Fills the orders table with random data in different threads
+        /// </summary>
+        public static void FillOrders(int NumberOfOrders)
         {
-            var Context = new BusinessContext();
-            await Task.Run(() => AddOrder(ref Context, CustomersBD));
+            for (int i = 0; i < NumberOfOrders; ++i)
+            {
+                new Thread(() => AddOrder()).Start();
+            }
         }
     }
 }
