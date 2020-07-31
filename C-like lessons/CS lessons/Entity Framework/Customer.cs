@@ -29,7 +29,7 @@ namespace Entity_Framework
         [StringLength(20)]
         public string Email { get; set; }
 
-        [StringLength(11)]
+        [StringLength(20)]
         public string Phone { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

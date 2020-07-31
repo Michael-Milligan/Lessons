@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -33,20 +34,18 @@ namespace Entity_Framework
         {
             var Context = new BusinessContext();
 
-            Regex Query = new Regex(@"([ABC][^W]|[A-Z]\w+)@hey\.us");
-
-            string Result = "";
-
-            foreach (var Customer in Context.Customers)
+            var Dates = Context.Orders.
+                Select(order => order.Dateoforder).
+                OrderBy(item => item).
+                ToArray();
+            int i = 0;
+            foreach (var Order in Context.Orders)
             {
-                Result += Customer.Email;
+                Order.Dateoforder = Dates[i++];
             }
+            Context.SaveChanges();
 
-            var Matches = Query.Matches(Result);
-            foreach (var Match in Matches)
-            {
-                Console.WriteLine(Match);
-            }
+            //FillOrders(50000, Context.Customers.ToArray());
         }
 
         #region Functions
