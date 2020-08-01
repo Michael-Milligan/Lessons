@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Entity_Framework
+namespace Entity_Framework_Core
 {
     public partial class BusinessContext : DbContext
     {
@@ -15,11 +17,13 @@ namespace Entity_Framework
 
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=business;Trusted_Connection=True;");
             }
         }
@@ -28,8 +32,6 @@ namespace Entity_Framework
         {
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.ToTable("customers");
-
                 entity.HasIndex(e => e.Email)
                     .HasName("UQ__customer__AB6E6164024EFC48")
                     .IsUnique();
@@ -38,56 +40,60 @@ namespace Entity_Framework
                     .HasName("UQ__customer__B43B145FD4CD722E")
                     .IsUnique();
 
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.Age).HasColumnName("age");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Email)
-                    .HasColumnName("email")
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Firstname)
+                entity.Property(e => e.FirstName)
                     .IsRequired()
-                    .HasColumnName("firstname")
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Phone)
-                    .HasColumnName("phone")
-                    .HasMaxLength(11)
+                    .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Secondname)
+                entity.Property(e => e.SecondName)
                     .IsRequired()
-                    .HasColumnName("secondname")
                     .HasMaxLength(20)
                     .IsUnicode(false);
             });
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.ToTable("orders");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.Customerid).HasColumnName("customerid");
+                entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
 
-                entity.Property(e => e.Dateoforder)
-                    .HasColumnName("dateoforder")
-                    .HasColumnType("datetime");
+                entity.Property(e => e.DateOfOrder).HasColumnType("datetime");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedOnAdd();
-
-                entity.Property(e => e.Productid).HasColumnName("productid");
-
-                entity.Property(e => e.Quantity).HasColumnName("quantity");
+                entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
                 entity.HasOne(d => d.Customer)
-                    .WithMany()
-                    .HasForeignKey(d => d.Customerid)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.CustomerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_customerid");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK_Orders_Products");
+            });
+
+            modelBuilder.Entity<Product>(entity =>
+            {
+                entity.HasIndex(e => e.ProductName)
+                    .HasName("UQ__Products__DD5A978A68AA894F")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.ProductName)
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

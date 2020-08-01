@@ -47,5 +47,12 @@ D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\net
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.genruntimeconfig.cache
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
-D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csproj.CoreCompileInputs.cache
 D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Entity Framework Core.dll.config
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Entity Framework Core\obj\Debug\netcoreapp3.1\Entity Framework Core.csproj.CoreCompileInputs.cache
