@@ -1,22 +1,14 @@
 #include <iostream>
 #include <list>
+#include <regex>
+#include <string>
 using namespace std;
-
-int get_result(int number, bool sign);
 
 int main()
 {
-	cout << get_result(1, true);
+	string a = "89991648759";
+	tr1::regex query("8999(\d{3})(\d{2})(\d{2})");
+	tr1::cmatch match;
+	auto matches = regex_search(a.c_str(), match, query);
 	return 0;
-}
-
-/// <summary>
-/// Returns exactly the same value of the parameter with the sign chosen
-/// </summary>
-/// <param name="number: ">The number which must be returned</param>
-/// <param name="sign: ">The sign of the result: true for -, false for +</param>
-/// <returns>The same number with the chosen sign</returns>
-int get_result(int number, bool sign)
-{
-	return number * (int)sign * (-1);
 }
