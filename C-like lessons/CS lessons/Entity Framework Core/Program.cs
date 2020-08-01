@@ -44,7 +44,7 @@ namespace Entity_Framework
             RenewPrices();
         }
 
-        #region Functions
+        #region RandomFunctions
         /// <summary>
         /// Fills the Customers table with the random data
         /// </summary>
@@ -81,7 +81,7 @@ namespace Entity_Framework
         /// Adds one random order, but doesn't save the data
         /// </summary>
         /// <param name="Context"></param>
-        public static void AddOrder(Customer[] CustomersBD)
+        public static void AddRandomOrder(Customer[] CustomersBD)
         {
             Random random = new Random((int)DateTime.Now.Ticks);
             var Context = new BusinessContext();
@@ -105,7 +105,7 @@ namespace Entity_Framework
         {
             for (int i = 0; i < NumberOfOrders; ++i)
             {
-                new Thread(() => AddOrder(CustomersBD)).Start();
+                new Thread(() => AddRandomOrder(CustomersBD)).Start();
             }
         }
 
@@ -165,6 +165,21 @@ namespace Entity_Framework
                 product.Price = random.NextDouble() * 3 + 2;
             }
             Context.SaveChanges();
+        }
+        #endregion
+
+        #region OneByOneFunction
+        public static void AddCustomer(ref BusinessContext Context)
+        {
+
+        }
+        public static void AddOrder(ref BusinessContext Context)
+        {
+
+        }
+        public static void AddProduct(ref BusinessContext Context)
+        {
+
         }
         #endregion
     }
