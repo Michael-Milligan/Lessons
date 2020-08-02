@@ -1,6 +1,7 @@
 ﻿using Entity_Framework_Core;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 
 namespace Entity_Framework
@@ -40,7 +41,7 @@ namespace Entity_Framework
         static void Main(string[] args)
         {
             var Context = new BusinessContext();
-
+            AddCustomer(ref Context, "Alice", "Walker", 27, "AWalker@hey.us", "89991649576");
         }
 
         #region RandomFunctions
@@ -174,13 +175,16 @@ namespace Entity_Framework
                 string.IsNullOrEmpty(secondName) ||
                 string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(phone)) throw new ArgumentNullException();
+            Regex Query = new Regex(@"(\d)\(?(\d{3})\)?\s?(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})");
+            var Match = Query.Match(phone);
+            if (Match == null) throw new ArgumentException();
             Context.Add(new Customer()
             {
                 FirstName = firstName,
                 SecondName = secondName,
                 Age = age,
                 Email = email,
-                Phone = phone
+                Phone = $"{Match.Groups[0]}({Match.Groups[1]}) {Match.Groups[2]}-{Match.Groups[3]}-{Match.Groups[4]}"
             });
 
             Context.SaveChanges();
