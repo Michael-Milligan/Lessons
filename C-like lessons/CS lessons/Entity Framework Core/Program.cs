@@ -207,6 +207,7 @@ namespace Entity_Framework
         {
             if (string.IsNullOrEmpty(productName) ||
                 price == 0) throw new ArgumentNullException();
+            if (Context.Products.Select(item => item.ProductName.ToLower()).Contains(productName.ToLower())) throw new ArgumentException();
             Context.Products.Add(new Product()
             {
                 ProductName = productName,
