@@ -41,7 +41,6 @@ namespace Entity_Framework
         {
             var Context = new BusinessContext();
 
-            RenewPrices();
         }
 
         #region RandomFunctions
@@ -169,17 +168,46 @@ namespace Entity_Framework
         #endregion
 
         #region OneByOneFunction
-        public static void AddCustomer(ref BusinessContext Context)
+        public static void AddCustomer(ref BusinessContext Context, string firstName, string secondName, int age, string email, string phone)
         {
+            if (string.IsNullOrEmpty(firstName) || 
+                string.IsNullOrEmpty(secondName) ||
+                string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(phone)) throw new ArgumentNullException();
+            Context.Add(new Customer()
+            {
+                FirstName = firstName,
+                SecondName = secondName,
+                Age = age,
+                Email = email,
+                Phone = phone
+            });
 
+            Context.SaveChanges();
         }
-        public static void AddOrder(ref BusinessContext Context)
+        public static void AddOrder(ref BusinessContext Context, Customer customer, DateTime dateOfOrder, int quantity, Product product)
         {
+            if (customer == null || dateOfOrder == null || quantity == 0 || product == null) throw new ArgumentNullException();
+            Context.Orders.Add(new Order()
+            {
+                Customer = customer,
+                DateOfOrder = dateOfOrder,
+                Quantity = quantity,
+                ProductId = product.Id,
+                Value = quantity * product.Price
+            }) ;
 
+            Context.SaveChanges();
         }
-        public static void AddProduct(ref BusinessContext Context)
+        public static void AddProduct(ref BusinessContext Context, string productName, float price)
         {
-
+            if (string.IsNullOrEmpty(productName) ||
+                price == 0) throw new ArgumentNullException();
+            Context.Products.Add(new Product()
+            {
+                ProductName = productName,
+                Price = price
+            });
         }
         #endregion
     }
