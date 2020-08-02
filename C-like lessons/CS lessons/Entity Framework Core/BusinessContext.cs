@@ -18,12 +18,12 @@ namespace Entity_Framework_Core
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductsPrice> ProductsPrices { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=business;Trusted_Connection=True;");
             }
         }
@@ -94,6 +94,13 @@ namespace Entity_Framework_Core
                 entity.Property(e => e.ProductName)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<ProductsPrice>(entity =>
+            {
+                entity.HasKey(e => e.Date);
+
+                entity.Property(e => e.Date).HasColumnType("datetime");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -1,6 +1,9 @@
 ﻿using Entity_Framework_Core;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
+using System.Configuration;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
 
@@ -41,7 +44,10 @@ namespace Entity_Framework
         static void Main(string[] args)
         {
             var Context = new BusinessContext();
-            AddCustomer(ref Context, "Alice", "Walker", 27, "AWalker@hey.us", "89991649576");
+            for (int i = 0; i < 1500; ++i)
+            {
+                RenewPrices(); 
+            }
         }
 
         #region RandomFunctions
@@ -158,8 +164,21 @@ namespace Entity_Framework
         /// </summary>
         public static void RenewPrices()
         {
+            Thread.Sleep(3);
             var random = new Random();
             var Context = new BusinessContext();
+            var OldPrices = new ProductsPrice()
+            {
+                Date = DateTime.Now,
+                Apple = Context.Products.Find(1).Price,
+                Banana = Context.Products.Find(2).Price,
+                Lemon = Context.Products.Find(3).Price,
+                Orange = Context.Products.Find(4).Price,
+                Pineapple = Context.Products.Find(5).Price,
+                Strawberry = Context.Products.Find(6).Price
+            };
+            Context.ProductsPrices.Add(OldPrices);
+
             foreach (var product in Context.Products)
             {
                 product.Price = random.NextDouble() * 3 + 2;
