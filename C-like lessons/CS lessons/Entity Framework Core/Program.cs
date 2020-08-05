@@ -1,6 +1,7 @@
 ﻿using Entity_Framework_Core;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Reflection;
@@ -43,11 +44,9 @@ namespace Entity_Framework
 
         static void Main(string[] args)
         {
-            var Context = new BusinessContext();
-            for (int i = 0; i < 1500; ++i)
-            {
-                RenewPrices(); 
-            }
+            //var Context = new BusinessContext();
+
+            
         }
 
         #region RandomFunctions
@@ -234,5 +233,7 @@ namespace Entity_Framework
             });
         }
         #endregion
+
+        
     }
 }

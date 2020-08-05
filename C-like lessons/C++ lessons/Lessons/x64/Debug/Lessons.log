@@ -1,0 +1,42 @@
+﻿  Lessons.cpp
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(10,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(12,3): error C2065: 'section': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,3): error C2146: syntax error: missing ';' before identifier 'msg'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,3): error C2065: 'msg': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,7): error C2146: syntax error: missing ';' before identifier 'db'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,7): error C2065: 'db': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,11): error C2143: syntax error: missing ';' before 'string'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(14,3): error C2146: syntax error: missing ';' before identifier 'section'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(14,3): error C2065: 'section': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(15,3): error C2146: syntax error: missing ';' before identifier 'section'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(15,3): error C2065: 'section': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(16,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(16,3): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(16,8): error C2146: syntax error: missing ';' before identifier 'rax'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(16,8): error C2065: 'rax': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(17,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(17,4): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(17,9): error C2146: syntax error: missing ';' before identifier 'rdi'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(17,9): error C2065: 'rdi': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(18,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(18,4): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(18,9): error C2146: syntax error: missing ';' before identifier 'rsi'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(18,9): error C2065: 'rsi': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(18,14): error C2065: 'msg': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(19,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(19,4): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(19,9): error C2146: syntax error: missing ';' before identifier 'rdx'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(19,9): error C2065: 'rdx': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(20,4): error C2146: syntax error: missing ';' before identifier 'syscall'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(20,4): error C2065: 'syscall': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(21,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(21,4): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(21,9): error C2146: syntax error: missing ';' before identifier 'rax'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(21,9): error C2065: 'rax': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(22,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(22,4): error C2065: 'mov': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(22,9): error C2146: syntax error: missing ';' before identifier 'rdi'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(22,9): error C2065: 'rdi': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(23,4): error C2146: syntax error: missing ';' before identifier 'syscall'
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(23,4): error C2065: 'syscall': undeclared identifier
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(24,2): error C2143: syntax error: missing ';' before '}'
