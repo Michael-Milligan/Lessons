@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj": {}
+    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj": {
+    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj",
+        "projectUniqueName": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj",
         "projectName": "Network Usage",
-        "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Network Usage\\obj\\",
+        "projectPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Network Usage\\Network Usage.csproj",
+        "packagesPath": "C:\\Users\\комп\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Network Usage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\комп\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

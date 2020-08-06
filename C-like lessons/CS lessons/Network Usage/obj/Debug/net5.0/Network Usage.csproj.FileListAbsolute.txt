@@ -11,3 +11,16 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Netwo
 D:\GitHub\Lessons\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.pdb
 D:\GitHub\Lessons\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.genruntimeconfig.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\bin\Debug\net5.0\Network Usage.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Network Usage\obj\Debug\net5.0\Network Usage.genruntimeconfig.cache
