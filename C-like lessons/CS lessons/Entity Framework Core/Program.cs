@@ -1,5 +1,7 @@
 ﻿using Entity_Framework_Core;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -44,9 +46,9 @@ namespace Entity_Framework
 
         static void Main(string[] args)
         {
-            //var Context = new BusinessContext();
+            var Context = new BusinessContext();
 
-            
+            Context.GetService<ILoggerFactory>().AddProvider(new LoggerProvider());
         }
 
         #region RandomFunctions

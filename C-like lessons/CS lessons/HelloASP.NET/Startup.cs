@@ -31,9 +31,11 @@ namespace HelloASP.NET
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
+                int x = 2;
+                app.Run(async (context) =>
                 {
-                    await context.Response.WriteAsync("Hello World!");
+                    x *= 2;
+                    await context.Response.WriteAsync($"Result: {x}");
                 });
             });
         }

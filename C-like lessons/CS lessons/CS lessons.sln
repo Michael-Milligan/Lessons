@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloASP.NET", "HelloASP.NET\HelloASP.NET.csproj", "{7F2D6C46-3F84-48A5-A188-888CD638906A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Framework Core", "Entity Framework Core\Entity Framework Core.csproj", "{FBB61371-BA8D-482D-BC61-8D9F8FCDB304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F2D6C46-3F84-48A5-A188-888CD638906A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F2D6C46-3F84-48A5-A188-888CD638906A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F2D6C46-3F84-48A5-A188-888CD638906A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F2D6C46-3F84-48A5-A188-888CD638906A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB61371-BA8D-482D-BC61-8D9F8FCDB304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB61371-BA8D-482D-BC61-8D9F8FCDB304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB61371-BA8D-482D-BC61-8D9F8FCDB304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB61371-BA8D-482D-BC61-8D9F8FCDB304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
