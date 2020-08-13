@@ -13,9 +13,7 @@ namespace Lessons
     {
         public static void Main()
         {
-            int[] a = {1, 2, 3};
-            a = a[1..3];
-            Span<int> b;
+            
         }
     }
 }

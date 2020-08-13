@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "OIoMOlmOh1nd1pWNqY6tTAvAunbOagxadA0vjMEgTjySWV+1XNUxL0XNsuj7QQ9Q/WSoZpLxI3ZGXkdlRnatEw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Fuzzy logic\\Fuzzy logic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\accord.fuzzy\\3.8.0\\accord.fuzzy.3.8.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,20 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.dll.config
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Fuzzy logic.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.Fuzzy.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.Math.Core.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.Math.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\bin\Debug\net5.0\Accord.Statistics.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.csproj.CopyComplete
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Fuzzy logic\obj\Debug\net5.0\Fuzzy logic.genruntimeconfig.cache

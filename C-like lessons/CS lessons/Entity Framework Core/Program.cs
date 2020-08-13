@@ -47,8 +47,9 @@ namespace Entity_Framework
         static void Main(string[] args)
         {
             var Context = new BusinessContext();
-
             Context.GetService<ILoggerFactory>().AddProvider(new LoggerProvider());
+            Context.SaveChanges();
+
         }
 
         #region RandomFunctions
