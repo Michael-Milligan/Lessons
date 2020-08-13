@@ -15,24 +15,34 @@ namespace Neural_Network_and_AI
 
     public class Neuron
     {
-        public List<double> _Weights { get; set; }
+        public double[] _Weights { get; set; }
 
         public NeuronType _NeuronType { get; set; }
 
         public double _Output { get; set; }
 
+        /// <summary>
+        /// Initialises the new neuron with all weights equal to 1
+        /// </summary>
+        /// <param name="InputsCount"></param>
+        /// <param name="NeuronType"></param>
         public Neuron(int InputsCount, NeuronType NeuronType = NeuronType.Hidden)
         {
             if (InputsCount == 0) throw new ArgumentNullException("InputsCount");
             _NeuronType = NeuronType;
-            _Weights = new List<double>();
+            _Weights = new double[InputsCount];
 
             for (int i = 0; i < InputsCount; ++i)
             {
-                _Weights.Add(1);
+                _Weights[i] = 1;
             }
         }
 
+        /// <summary>
+        /// An activation function for neuron which sums the inputs multiplied by corresponding weight
+        /// </summary>
+        /// <param name="Inputs">The collection of input signals</param>
+        /// <returns></returns>
         public double FeedForward(IEnumerable<double> Inputs)
         {
             double Sum = 0;
@@ -42,11 +52,11 @@ namespace Neural_Network_and_AI
                 Sum += _Weights[i] * Inputs.ElementAt(i);
             }
 
-            _Output = Sigmoid(Sum);
+            _Output = SigmoidFunction(Sum);
             return _Output;
         }
 
-        public static double Sigmoid(double x)
+        public static double SigmoidFunction(double x)
         {
             return 1.0 / (1.0 + Math.Exp(-x));
         }
