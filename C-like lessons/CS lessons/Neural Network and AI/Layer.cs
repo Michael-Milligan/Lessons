@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Neural_Network_and_AI
 {
-    class Layer
+    public class Layer
     {
         public Neuron[] _Neurons { get; set; }
 
@@ -18,6 +18,13 @@ namespace Neural_Network_and_AI
             if (Neurons == null || Neurons.Count() == 0) throw new ArgumentNullException("Neurons");
             if (Neurons.Select(item => item._NeuronType).Any(item => item != NeuronType)) throw new ArgumentException("Not all neurons are of a specified type");
             _Neurons = Neurons.ToArray();
+        }
+
+        public int NeuronCount { get { return _Neurons.Length; } }
+
+        public double[] GetOutputs()
+        {
+            return _Neurons.Select(Item => Item._Output).ToArray();
         }
     }
 }
