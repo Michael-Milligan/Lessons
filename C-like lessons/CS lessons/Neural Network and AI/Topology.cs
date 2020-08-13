@@ -12,6 +12,12 @@ namespace Neural_Network_and_AI
         public int _OutputCount { get;  }
         public int[] _HiddenLayers { get;  }
 
+        /// <summary>
+        /// Specify the number of neurons in the arguments
+        /// </summary>
+        /// <param name="InputCount"></param>
+        /// <param name="OutputCount"></param>
+        /// <param name="HiddenLayers"></param>
         public Topology(int InputCount, int OutputCount, params int[] HiddenLayers)
         {
             _InputCount = InputCount;
