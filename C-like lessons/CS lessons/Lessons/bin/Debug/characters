@@ -1,9 +1,0 @@
-{"Attack":80,"Class":{"Name":"Magical characters"},"HP":50,"Name":"Mage","TypeOfAttack":1}lns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Mage</Name>
-  <HP>50</HP>
-  <TypeOfAttack>Magical</TypeOfAttack>
-  <Attack>80</Attack>
-  <Class>
-    <Name>Magical characters</Name>
-  </Class>
-</Character>

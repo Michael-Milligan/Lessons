@@ -93,6 +93,5 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\obj\Debug\net5.0\Tests.csproj.
 D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\obj\Debug\net5.0\Tests.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\obj\Debug\net5.0\Tests.pdb
 D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\obj\Debug\net5.0\Tests.genruntimeconfig.cache
-D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\bin\Debug\net5.0\Neural Network and AI.exe
 D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\bin\Debug\net5.0\Neural Network and AI.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Tests\bin\Debug\net5.0\Neural Network and AI.pdb

@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Neural_Network_and_AI
 {
     public class NeuralNetwork
     {
-        public List<Layer> _Layers { get; set; }
+        internal List<Layer> _Layers { get; set; }
 
-        public Topology _Topology { get; set; }
+        internal Topology _Topology { get; set; }
 
         public NeuralNetwork(Topology Topology)
         {
@@ -21,7 +23,7 @@ namespace Neural_Network_and_AI
             CreateHiddenLayers();
             CreateOutputLayer();
 
-
+            RandomlySetWeights();
         }
 
         /// <summary>
@@ -76,9 +78,9 @@ namespace Neural_Network_and_AI
         /// </summary>
         /// <param name="InputSignals"></param>
         /// <returns></returns>
-        private IEnumerable<double> PassSignalsThroughNetwork(double[] InputSignals)
+        public IEnumerable<double> PushSignalsThroughNetwork(IEnumerable<double> InputSignals)
         {
-            SendSignalsToInput(InputSignals);
+            SendSignalsToInput(InputSignals.ToArray());
 
             Layer CurrentLayer;
             double[] PreviousSignals;
@@ -89,7 +91,7 @@ namespace Neural_Network_and_AI
 
                 foreach (var Neuron in CurrentLayer._Neurons)
                 {
-                    Neuron.FeedForward(PreviousSignals);
+                    Neuron.FeedForward(PreviousSignals, Neuron.SigmoidFunction);
                 }
             }
 
@@ -100,17 +102,15 @@ namespace Neural_Network_and_AI
         private void SendSignalsToInput(double[] InputSignals)
         {
             double CurrentSignal;
-            Neuron CurrentNeuron;
             for (int i = 0; i < InputSignals.Length; ++i)
             {
                 CurrentSignal = InputSignals[i];
-                CurrentNeuron = _Layers[0]._Neurons[i];
 
-                CurrentNeuron.FeedForward(new List<double>());
+                _Layers[0]._Neurons[i].FeedForward(new double[] { CurrentSignal }, Neuron.SigmoidFunction);
             }
         }
 
-        public void RandomlySetWeights()
+        internal void RandomlySetWeights()
         {
             Random random = new Random();
             var LayersCount = _Layers.Count;
@@ -124,10 +124,62 @@ namespace Neural_Network_and_AI
                     WeightCount = _Layers[i]._Neurons[j]._Weights.Length;
                     for (int k = 0; k < WeightCount; ++k)
                     {
-                        _Layers[i]._Neurons[j]._Weights[k] = random.NextDouble();
+                        _Layers[i]._Neurons[j]._Weights[k] = random.NextDouble() * 2 - 1;
                     }
                 }
             }
         }
+
+        public double LearnNetwork(double[][] Dataset, double[] Expected, int Epochs)
+        {
+            if (Dataset.GetLength(0) != Expected.GetLength(0)) throw new ArgumentException("The inputs don't have the same lengthes");
+            var Result = 0.0;
+            for (int i = 0; i < Epochs; ++i)
+            {
+                Console.SetCursorPosition(0, 0);
+                Console.WriteLine($"Current epoch: {i + 1}");
+                for (int j = 0; j < Dataset.GetLength(0); ++j)
+                {
+                    Result += BackPropagation(Expected[j], Dataset[j]);
+                }
+            }
+            return Result / Epochs;
+        }
+
+        /// <summary>
+        /// Gets the biggest actual result from the network and makes the BackPropagation algorithms
+        /// </summary>
+        /// <param name="Expected"></param>
+        /// <param name="Inputs"></param>
+        internal double BackPropagation(double Expected, IEnumerable<double> Inputs)
+        {
+            var ActualResult = PushSignalsThroughNetwork(Inputs).Max();
+
+            var OutputError = ActualResult - Expected;
+
+            foreach (var Neuron in _Layers.Last()._Neurons)
+            {
+                Neuron.SetNewWeights(OutputError, _Topology._LearningRate);
+            }
+
+            for (int i = _Layers.Count - 2; i >= 0; --i)
+            {
+                var Layer = _Layers[i];
+                var PreviousLayer = _Layers[i + 1];
+                Neuron PreviousNeuron;
+
+                for (int j = 0; j < Layer._Neurons.Length; ++j)
+                {
+                    for (int k = 0; k < PreviousLayer._Neurons.Length; ++k)
+                    {
+                        PreviousNeuron = PreviousLayer._Neurons[k];
+                        var Error = PreviousNeuron._Weights[j] * PreviousNeuron._Delta;
+                        Layer._Neurons[j].SetNewWeights(Error, _Topology._LearningRate);
+                    }
+                }
+            }
+            return OutputError * OutputError;
+        }
+
     }
 }

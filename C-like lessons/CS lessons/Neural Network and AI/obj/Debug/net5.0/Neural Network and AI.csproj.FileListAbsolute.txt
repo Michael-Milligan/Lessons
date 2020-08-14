@@ -1,7 +1,4 @@
-D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.exe
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.deps.json
-D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.runtimeconfig.json
-D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.runtimeconfig.dev.json
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\bin\Debug\net5.0\Neural Network and AI.pdb
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5.0\Neural Network and AI.csprojAssemblyReference.cache
@@ -10,4 +7,3 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5.0\Neural Network and AI.csproj.CoreCompileInputs.cache
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5.0\Neural Network and AI.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5.0\Neural Network and AI.pdb
-D:\GitHub\Lessons\C-like lessons\CS lessons\Neural Network and AI\obj\Debug\net5.0\Neural Network and AI.genruntimeconfig.cache

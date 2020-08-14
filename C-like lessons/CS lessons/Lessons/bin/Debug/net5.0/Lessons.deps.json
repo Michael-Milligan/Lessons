@@ -1,0 +1,33 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Lessons/1.0.0": {
+        "runtime": {
+          "Lessons.dll": {}
+        }
+      },
+      "Neural Network and AI/1.0.0": {
+        "runtime": {
+          "Neural Network and AI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lessons/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Neural Network and AI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Neural Network and AI.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Neural Network and AI.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csproj.CopyComplete
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.genruntimeconfig.cache
