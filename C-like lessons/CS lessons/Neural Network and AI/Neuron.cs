@@ -14,6 +14,7 @@ namespace Neural_Network_and_AI
         Output
     }
 
+    [Serializable]
     public class Neuron
     {
         internal double[] _Weights { get; set; }

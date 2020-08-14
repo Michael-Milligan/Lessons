@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using Neural_Network_and_AI;
 
 namespace Lessons
@@ -9,7 +11,9 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            NeuralNetwork NeuralNetwork = new NeuralNetwork(new Topology(0.1, 4, 1, 5));
+            NeuralNetwork NeuralNetwork;
+                //= new NeuralNetwork(new Topology(0.001, 4, 1, 3));
+            Methods.DeserializeNetwork(out NeuralNetwork);
 
             double[][] Dataset =
             {
@@ -35,8 +39,11 @@ namespace Lessons
                 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1
             };
 
-            Console.WriteLine(NeuralNetwork.LearnNetwork(Dataset, Expected, 2000));
-            Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 0, 0, 1}).Max());
+            //NeuralNetwork.LearnWhileStandardErrorMoreThan(Dataset, Expected, 2000, 0.02);
+            
+
+            
+            Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 1, 1, 1}).Max());
         }
     }
 }

@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Neural_Network_and_AI
 {
+    [Serializable]
     public class NeuralNetwork
     {
         internal List<Layer> _Layers { get; set; }
 
         internal Topology _Topology { get; set; }
+
+        public double _StandardError { get; set; }
 
         public NeuralNetwork(Topology Topology)
         {
@@ -143,7 +147,8 @@ namespace Neural_Network_and_AI
                     Result += BackPropagation(Expected[j], Dataset[j]);
                 }
             }
-            return Result / Epochs;
+            _StandardError = Result / Epochs;
+            return _StandardError;
         }
 
         /// <summary>
@@ -181,5 +186,22 @@ namespace Neural_Network_and_AI
             return OutputError * OutputError;
         }
 
+        public void LearnWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StadardError)
+        {
+            do
+            {
+                if (this.LearnNetwork(Dataset, Expected, 2000) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
+                {
+                    var Formatter = new BinaryFormatter();
+                    using (FileStream File = new FileStream("1.dat", FileMode.Create))
+                    {
+                        Formatter.Serialize(File, this);
+                    }
+                    File.WriteAllText("PreviousError.txt", _StandardError.ToString());
+                }
+                Console.WriteLine(this._StandardError);
+            }
+            while (this._StandardError > StadardError);
+        }
     }
 }

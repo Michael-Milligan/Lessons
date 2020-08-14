@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace Neural_Network_and_AI
 {
+    [Serializable]
     public class Layer
     {
         public Neuron[] _Neurons { get; set; }

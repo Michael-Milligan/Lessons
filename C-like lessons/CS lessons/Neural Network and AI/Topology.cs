@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Neural_Network_and_AI
 {
+    [Serializable]
     public class Topology
     {
         public int _InputCount { get;  }
