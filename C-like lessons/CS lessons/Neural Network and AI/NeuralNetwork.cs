@@ -134,7 +134,7 @@ namespace Neural_Network_and_AI
             }
         }
 
-        public double LearnNetwork(double[][] Dataset, double[] Expected, int Epochs)
+        public double TrainNetwork(double[][] Dataset, double[] Expected, int Epochs)
         {
             if (Dataset.GetLength(0) != Expected.GetLength(0)) throw new ArgumentException("The inputs don't have the same lengthes");
             var Result = 0.0;
@@ -186,11 +186,11 @@ namespace Neural_Network_and_AI
             return OutputError * OutputError;
         }
 
-        public void LearnWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StadardError)
+        public void TrainWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StadardError)
         {
             do
             {
-                if (this.LearnNetwork(Dataset, Expected, 2000) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
+                if (this.TrainNetwork(Dataset, Expected, 2000) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
                 {
                     var Formatter = new BinaryFormatter();
                     using (FileStream File = new FileStream("1.dat", FileMode.Create))

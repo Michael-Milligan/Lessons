@@ -39,22 +39,26 @@ namespace Neural_Network_and_AI
                 Data[i] = Strings[i].Split(',');
             }
 
-            DataObject[] Results = new DataObject[Strings.Length];
+            DataObject[] Results = new DataObject[Strings.Length - 1];
 
             for (int i = 0; i < Results.Length; ++i)
             {
                 Results[i] = new DataObject()
                 {
-                    Age = Convert.ToInt32(Data[i][0]),
-                    Sex = Convert.ToInt32(Data[i][1]),
-                    ChestPainType = Convert.ToInt32(Data[i][2]),
-                    RestingBloodPressure = Convert.ToInt32(Data[i][3]),
-                    Cholesterol = Convert.ToInt32(Data[i][4]),
-                    Sugar = Convert.ToInt32(Data[i][5]),
-                    RestingECG = Convert.ToInt32(Data[i][6]),
-                    MaxHeartRate = Convert.ToInt32(Data[i][7]),
-                    ExerciseInducedAngina = Convert.ToInt32(Data[i][8]),
-                    OldPeak = Convert.ToDouble(Data[i][9])
+                    Age = Convert.ToInt32(Data[i + 1][0]),
+                    Sex = Convert.ToInt32(Data[i + 1][1]),
+                    ChestPainType = Convert.ToInt32(Data[i + 1][2]),
+                    RestingBloodPressure = Convert.ToInt32(Data[i + 1][3]),
+                    Cholesterol = Convert.ToInt32(Data[i + 1][4]),
+                    Sugar = Convert.ToInt32(Data[i + 1][5]),
+                    RestingECG = Convert.ToInt32(Data[i + 1][6]),
+                    MaxHeartRate = Convert.ToInt32(Data[i + 1][7]),
+                    ExerciseInducedAngina = Convert.ToInt32(Data[i + 1][8]),
+                    OldPeak = Convert.ToDouble(Data[i + 1][9]),
+                    SlopeOfThePeak = Convert.ToInt32(Data[i + 1][10]),
+                    NumberOfMajorVessel = Convert.ToInt32(Data[i + 1][11]),
+                    Defect = Convert.ToInt32(Data[i + 1][12]),
+                    Target = Convert.ToInt32(Data[i + 1][13])
                 };
             }
             return Results;
@@ -72,6 +76,10 @@ namespace Neural_Network_and_AI
             public int MaxHeartRate;
             public int ExerciseInducedAngina;
             public double OldPeak;
+            public int SlopeOfThePeak;
+            public int NumberOfMajorVessel;
+            public int Defect;
+            public int Target;
         }
     }
 }
