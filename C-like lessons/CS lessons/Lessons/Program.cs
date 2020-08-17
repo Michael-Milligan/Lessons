@@ -39,11 +39,11 @@ namespace Lessons
                 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1
             };
 
-            //NeuralNetwork.LearnWhileStandardErrorMoreThan(Dataset, Expected, 2000, 0.02);
+            //NeuralNetwork.LearnWhileStandardErrorMoreThan(Dataset, Expected, 20000, 0.0001);
             
 
             
-            Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 1, 1, 1}).Max());
+            Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 0, 0, 1}).Max());
         }
     }
 }
