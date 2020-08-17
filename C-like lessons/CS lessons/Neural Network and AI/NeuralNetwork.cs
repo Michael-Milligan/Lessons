@@ -190,7 +190,7 @@ namespace Neural_Network_and_AI
         {
             do
             {
-                if (this.TrainNetwork(Dataset, Expected, 2000) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
+                if (this.TrainNetwork(Dataset, Expected, Epochs) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
                 {
                     var Formatter = new BinaryFormatter();
                     using (FileStream File = new FileStream("1.dat", FileMode.Create))

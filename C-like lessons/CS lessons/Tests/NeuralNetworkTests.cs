@@ -10,10 +10,9 @@ namespace Tests
         [TestMethod]
         public void FirstLaunchTest()
         {
-            var Network = new NeuralNetwork(new Topology(14, 1, 16));
-            Network.
-
-            var Result = Methods.ReadCSV("heart.csv");
+            var Network = new NeuralNetwork(new Topology(0.0001, 13, 1, 16));
+            var Data = Methods.ReadCSV("heart.csv");
+            Network.TrainWhileStandardErrorMoreThan(Data.Item2, Data.Item1, 200, 0.0001);
         }
     }
 }

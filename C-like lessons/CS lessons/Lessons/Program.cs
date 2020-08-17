@@ -11,39 +11,18 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            NeuralNetwork NeuralNetwork;
-                //= new NeuralNetwork(new Topology(0.001, 4, 1, 3));
-            Methods.DeserializeNetwork(out NeuralNetwork);
-
-            double[][] Dataset =
-            {
-                new double[] {0, 0, 0, 0},
-                new double[] {0, 0, 0, 1},
-                new double[] {0, 0, 1, 0},
-                new double[] {0, 0, 1, 1},
-                new double[] {0, 1, 0, 0},
-                new double[] {0, 1, 0, 1},
-                new double[] {0, 1, 1, 0},
-                new double[] {0, 1, 1, 1},
-                new double[] {1, 0, 0, 0},
-                new double[] {1, 0, 1, 0},
-                new double[] {1, 0, 1, 1},
-                new double[] {1, 1, 0, 0},
-                new double[] {1, 1, 0, 1},
-                new double[] {1, 1, 1, 0},
-                new double[] {1, 1, 1, 1}
-            };
-
-            double[] Expected = 
-            {
-                0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1
-            };
-
-            //NeuralNetwork.LearnWhileStandardErrorMoreThan(Dataset, Expected, 20000, 0.0001);
-            
+            NeuralNetwork NeuralNetwork
+                = new NeuralNetwork(new Topology(0.0001, 13, 1, 16));
+            //Methods.DeserializeNetwork(out NeuralNetwork);
 
             
-            Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 0, 0, 1}).Max());
+            var Data = Methods.ReadCSV("heart.csv");
+
+            NeuralNetwork.TrainWhileStandardErrorMoreThan(Data.Item2, Data.Item1, 2000,  0.0001);
+
+
+
+            //Console.WriteLine(NeuralNetwork.PushSignalsThroughNetwork(new double[] { 1, 0, 0, 1}).Max());
         }
     }
 }
