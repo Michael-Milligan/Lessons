@@ -99,8 +99,7 @@ namespace Neural_Network_and_AI
                 }
             }
 
-            if (_Topology._OutputCount == 1) return new List<double> { _Layers.Last()._Neurons[0]._Output };
-            else return _Layers.Last().GetOutputs();
+            return _Layers.Last().GetOutputs();
         }
 
         private void SendSignalsToInput(double[] InputSignals)
@@ -136,12 +135,12 @@ namespace Neural_Network_and_AI
 
         public double TrainNetwork(double[][] Dataset, double[] Expected, int Epochs)
         {
-            if (Dataset.GetLength(0) != Expected.GetLength(0)) throw new ArgumentException("The inputs don't have the same lengthes");
-            var Result = 0.0;
+            if (Dataset.GetLength(0) != Expected.Length) throw new ArgumentException("The inputs don't have the same lengthes");
+            double Result = 0.0;
             for (int i = 0; i < Epochs; ++i)
             {
                 Console.SetCursorPosition(0, 0);
-                Console.WriteLine($"Current epoch: {i + 1}");
+                Console.WriteLine($"Current epoch: {i + 1}                                       ");
                 for (int j = 0; j < Dataset.GetLength(0); ++j)
                 {
                     Result += BackPropagation(Expected[j], Dataset[j]);
@@ -186,22 +185,36 @@ namespace Neural_Network_and_AI
             return OutputError * OutputError;
         }
 
-        public void TrainWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StadardError)
+        /// <summary>
+        /// Trains the network with the Backpropagation method
+        /// </summary>
+        /// <param name="Dataset"></param>
+        /// <param name="Expected"></param>
+        /// <param name="Epochs">The number which defines the period of training</param>
+        /// <param name="StandardError"></param>
+        public void TrainWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StandardError)
         {
+            File.WriteAllText("PreviousError.txt", TrainNetwork(Dataset, Expected, Epochs).ToString());
             do
             {
-                if (this.TrainNetwork(Dataset, Expected, Epochs) < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
+                NeuralNetwork CopiedNetwork;
+                Methods.CopyNetwork(this, out CopiedNetwork);
+
+                var CurrentError = TrainNetwork(Dataset, Expected, Epochs);
+                if (_StandardError < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
                 {
-                    var Formatter = new BinaryFormatter();
-                    using (FileStream File = new FileStream("1.dat", FileMode.Create))
-                    {
-                        Formatter.Serialize(File, this);
-                    }
+                    Methods.SerializeNetwork(this, "1.dat");
                     File.WriteAllText("PreviousError.txt", _StandardError.ToString());
                 }
-                Console.WriteLine(this._StandardError);
+                if (CopiedNetwork._StandardError <= _StandardError)
+                {
+                    CopiedNetwork._Layers = _Layers;
+                    CopiedNetwork._StandardError = _StandardError;
+                    continue;
+                }
+                Console.WriteLine(CurrentError);
             }
-            while (this._StandardError > StadardError);
+            while (this._StandardError > StandardError);
         }
     }
 }

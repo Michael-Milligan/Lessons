@@ -10,20 +10,20 @@ namespace Neural_Network_and_AI
 {
     public class Methods
     {
-        public static void SerializeNetwork(ref NeuralNetwork NeuralNetwork)
+        public static void SerializeNetwork(NeuralNetwork NeuralNetwork, string Path)
         {
             BinaryFormatter Formatter;
-            using (FileStream Stream = new FileStream("1.dat", FileMode.Create))
+            using (FileStream Stream = new FileStream(Path, FileMode.Create))
             {
                 Formatter = new BinaryFormatter();
                 Formatter.Serialize(Stream, NeuralNetwork);
             }
         }
 
-        public static void DeserializeNetwork(out NeuralNetwork NeuralNetwork)
+        public static void DeserializeNetwork(out NeuralNetwork NeuralNetwork, string Path)
         {
             BinaryFormatter Formatter;
-            using (FileStream Stream = new FileStream("1.dat", FileMode.Open))
+            using (FileStream Stream = new FileStream(Path, FileMode.Open))
             {
                 Formatter = new BinaryFormatter();
                 NeuralNetwork = Formatter.Deserialize(Stream) as NeuralNetwork;
@@ -48,6 +48,14 @@ namespace Neural_Network_and_AI
                 Expected[i] = Convert.ToDouble(Data[i][^1]);
             }
             return new Tuple<double[], double[][]>(Expected, Dataset);
+        }
+
+        public static void CopyNetwork(NeuralNetwork ToCopy,out NeuralNetwork CopyTo)
+        {
+            SerializeNetwork(ToCopy, "2.dat");
+            NeuralNetwork CopiedNetwork;
+            DeserializeNetwork(out CopiedNetwork, "2.dat");
+            CopyTo = CopiedNetwork;
         }
     }
 }
