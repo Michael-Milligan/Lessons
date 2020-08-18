@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Neural_Network_and_AI
 {
     [Serializable]
     public class Topology
     {
-        public int _InputCount { get;  }
-        public int _OutputCount { get;  }
-        public int[] _HiddenLayers { get;  }
+        public int _InputCount { get; }
+        public int _OutputCount { get; }
+        public int[] _HiddenLayers { get; }
         public double _LearningRate { get; set; }
 
         /// <summary>

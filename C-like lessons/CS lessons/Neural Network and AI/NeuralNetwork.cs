@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Neural_Network_and_AI
 {
@@ -194,27 +190,19 @@ namespace Neural_Network_and_AI
         /// <param name="StandardError"></param>
         public void TrainWhileStandardErrorMoreThan(double[][] Dataset, double[] Expected, int Epochs, double StandardError)
         {
-            File.WriteAllText("PreviousError.txt", TrainNetwork(Dataset, Expected, Epochs).ToString());
+            if (_StandardError == 0) File.WriteAllText("PreviousError.txt", TrainNetwork(Dataset, Expected, Epochs).ToString());
             do
             {
-                NeuralNetwork CopiedNetwork;
-                Methods.CopyNetwork(this, out CopiedNetwork);
-
-                var CurrentError = TrainNetwork(Dataset, Expected, Epochs);
+                TrainNetwork(Dataset, Expected, Epochs);
                 if (_StandardError < Convert.ToDouble(File.ReadAllLines("PreviousError.txt")[0]))
                 {
                     Methods.SerializeNetwork(this, "1.dat");
                     File.WriteAllText("PreviousError.txt", _StandardError.ToString());
+                    Console.WriteLine($"Least Error: {_StandardError}");
                 }
-                if (CopiedNetwork._StandardError <= _StandardError)
-                {
-                    CopiedNetwork._Layers = _Layers;
-                    CopiedNetwork._StandardError = _StandardError;
-                    continue;
-                }
-                Console.WriteLine(CurrentError);
+                Console.WriteLine($"Current Error: {_StandardError}");
             }
-            while (this._StandardError > StandardError);
+            while (_StandardError > StandardError);
         }
     }
 }

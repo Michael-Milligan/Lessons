@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 namespace Neural_Network_and_AI
 {
@@ -6,7 +6,7 @@ namespace Neural_Network_and_AI
     {
         static void Main()
         {
-            
+
         }
     }
 }

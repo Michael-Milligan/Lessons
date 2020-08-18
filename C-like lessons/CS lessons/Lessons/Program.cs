@@ -6,14 +6,14 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            NeuralNetwork NeuralNetwork ;
+            NeuralNetwork NeuralNetwork;
             //= new NeuralNetwork(new Topology(0.001, 13, 1, 420));
             Methods.DeserializeNetwork(out NeuralNetwork, "1.dat");
             //Methods.SerializeNetwork(NeuralNetwork, "1.dat");
 
             var Data = Methods.ReadCSV("heart.csv");
-
-            NeuralNetwork.TrainWhileStandardErrorMoreThan(Data.Item2, Data.Item1, 2000,  1);
+            
+            NeuralNetwork.TrainWhileStandardErrorMoreThan(Data.Item2, Data.Item1, 3000, 1);
 
 
 

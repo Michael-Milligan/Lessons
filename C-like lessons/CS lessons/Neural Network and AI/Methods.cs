@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.IO;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Neural_Network_and_AI
 {
@@ -50,7 +47,7 @@ namespace Neural_Network_and_AI
             return new Tuple<double[], double[][]>(Expected, Dataset);
         }
 
-        public static void CopyNetwork(NeuralNetwork ToCopy,out NeuralNetwork CopyTo)
+        public static void CopyNetwork(NeuralNetwork ToCopy, out NeuralNetwork CopyTo)
         {
             SerializeNetwork(ToCopy, "2.dat");
             NeuralNetwork CopiedNetwork;
