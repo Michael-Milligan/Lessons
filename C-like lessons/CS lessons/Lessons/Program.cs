@@ -1,4 +1,5 @@
 ﻿using Neural_Network_and_AI;
+using System.Linq;
 
 namespace Lessons
 {
@@ -13,7 +14,7 @@ namespace Lessons
 
             var Data = Methods.ReadCSV("heart.csv");
             
-            NeuralNetwork.TrainWhileStandardErrorMoreThan(Data.Item2, Data.Item1, 3000, 1);
+            NeuralNetwork.TrainWhileStandardErrorMoreThan(Methods.ScaleTheData(Data.Item2),Data.Item1, 1500, 1);
 
 
 
