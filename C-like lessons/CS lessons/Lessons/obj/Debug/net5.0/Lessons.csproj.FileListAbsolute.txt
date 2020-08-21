@@ -14,3 +14,4 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csp
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.pdb
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.genruntimeconfig.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\heart.csv

@@ -84,30 +84,30 @@ namespace Neural_Network_and_AI
             return Result;
         }
 
-        public static double[,] NormalizeTheData(double[,] Inputs)
+        public static double[][] NormalizeTheData(double[][] Inputs)
         {
-            var Result = new double[Inputs.GetLength(0), Inputs.GetLength(1)];
+            var Result = new double[Inputs.Length][];
 
-            for (int column = 0; column < Inputs.GetLength(1); ++column)
+            for (int column = 0; column < Inputs[0].Length; ++column)
             {
                 //Average input for neuron
                 var Sum = 0.0;
-                for (int row = 0; row < Inputs.GetLength(0); row++) Sum += Inputs[row, column];
+                for (int row = 0; row < Inputs.Length; row++) Sum += Inputs[row][column];
 
-                var Average = Sum / Inputs.GetLength(0);
+                var Average = Sum / Inputs.Length;
 
                 //Standard deviation for neuron
                 Sum = 0;
-                for (int row = 0; row < Inputs.GetLength(0); row++)
+                for (int row = 0; row < Inputs.Length; row++)
                 {
-                    Sum += Math.Pow(Inputs[row, column] - Average, 2);
+                    Sum += Math.Pow(Inputs[row][column] - Average, 2);
                 }
-                var StandardDeviation = Math.Sqrt(Sum / Inputs.GetLength(0));
+                var StandardDeviation = Math.Sqrt(Sum / Inputs.Length);
 
 
-                for (int row = 0; row < Inputs.GetLength(0); row++)
+                for (int row = 0; row < Inputs.Length; row++)
                 {
-                    Result[row, column] = (Inputs[row, column] - Average) / StandardDeviation;
+                    Result[row][column] = (Inputs[row][column] - Average) / StandardDeviation;
                 }
             }
 
