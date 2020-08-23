@@ -1,0 +1,12 @@
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Client\bin\Release\net5.0\win-x64\Client.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Client\obj\Release\net5.0\win-x64\Client.genruntimeconfig.cache

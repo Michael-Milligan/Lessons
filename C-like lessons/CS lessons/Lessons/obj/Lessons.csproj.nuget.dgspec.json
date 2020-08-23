@@ -1,76 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj": {}
+    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj": {
+    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
+        "projectUniqueName": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
         "projectName": "Lessons",
-        "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\obj\\",
+        "projectPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
+        "packagesPath": "C:\\Users\\комп\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "projectReferences": {
-              "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\Neural Network and AI.csproj": {
-                "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\Neural Network and AI.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.7.20366.6\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\Neural Network and AI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\Neural Network and AI.csproj",
-        "projectName": "Neural Network and AI",
-        "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\Neural Network and AI.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Neural Network and AI\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\комп\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -6,12 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Neural Network and AI\Neural Network and AI.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="heart.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

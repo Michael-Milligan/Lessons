@@ -15,3 +15,16 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.pdb
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.genruntimeconfig.cache
 D:\GitHub\Lessons\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\heart.csv
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\bin\Debug\net5.0\Lessons.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Lessons\obj\Debug\net5.0\Lessons.genruntimeconfig.cache
