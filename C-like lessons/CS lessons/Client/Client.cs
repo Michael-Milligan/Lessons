@@ -14,8 +14,9 @@ namespace Client
         static void Main()
         {
             IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
-            Socket ConnectionSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            ConnectionSocket.Connect(LocalEndPoint);
+            TcpClient Client = new TcpClient();
+            Client.Connect(LocalEndPoint);
+            NetworkStream Stream = Client.GetStream();
 
             byte[] Buffer = new byte[1024];
             Console.WriteLine("Enter your message: ");
@@ -23,20 +24,19 @@ namespace Client
             Buffer = Encoding.UTF8.GetBytes(Console.ReadLine());
             StringBuilder Message = new StringBuilder();
 
-            ConnectionSocket.Send(Buffer);
+            Stream.Write(Buffer);
             Buffer = new byte[1024];
 
             do
             {
-                ConnectionSocket.Receive(Buffer);
-                Buffer = Buffer.Where(item => item != 0).ToArray();
-                Message.Append(Encoding.UTF8.GetString(Buffer));
+                int Length = Stream.Read(Buffer, 0, Buffer.Length);
+                Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
             }
-            while (ConnectionSocket.Available > 0);
+            while (Stream.DataAvailable);
             Console.WriteLine(Message);
 
-            ConnectionSocket.Shutdown(SocketShutdown.Both);
-            ConnectionSocket.Close();
+            Stream.Dispose();
+            Stream.Close();
             Console.ReadLine();
         }
     }

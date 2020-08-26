@@ -15,35 +15,32 @@ namespace Server
         {
             IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
 
-            Socket ListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            TcpListener Server = new TcpListener(LocalEndPoint);
 
             Console.WriteLine("Waiting for connections...");
             Console.WriteLine("The connection dates and messages:");
-            ListenSocket.Bind(LocalEndPoint);
-            ListenSocket.Listen(10);
+            Server.Start(10);
 
             while (true)
             {
-                Socket Handler = ListenSocket.Accept();
+                TcpClient Handler = Server.AcceptTcpClient();
+                NetworkStream Stream = Handler.GetStream();
                 StringBuilder Message = new StringBuilder();
                 byte[] Buffer = new byte[1024];
 
                 do
                 {
-                    Handler.Receive(Buffer);
-                    Buffer = Buffer.Where(item => item != 0).ToArray();
-                    Message.Append(Encoding.UTF8.GetString(Buffer));
+                    int Length = Stream.Read(Buffer);
+                    Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
                 }
                 while (Handler.Available > 0);
 
                 DateTime Now = DateTime.Now;
                 Console.WriteLine($"{Now.Day}/{Now.Month}/{Now.Year} {Now.Hour}:{Now.Minute} {Now.Second}s: {Message}");
-                Handler.Send(Encoding.UTF8.GetBytes("Your message was delivered"));
-                Handler.Shutdown(SocketShutdown.Both);
+                Stream.Write(Encoding.UTF8.GetBytes("Your message was delivered"));
+                Handler.Dispose();
                 Handler.Close();
             }
-            
-
         }
     }
 }
