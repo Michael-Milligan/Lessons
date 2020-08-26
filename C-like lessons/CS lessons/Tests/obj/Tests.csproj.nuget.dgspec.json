@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Tests\\Tests.csproj": {}
+    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Tests\\Tests.csproj": {
+    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Tests\\Tests.csproj",
+        "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Tests\\Tests.csproj",
-        "packagesPath": "C:\\Users\\комп\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Tests\\obj\\",
+        "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Tests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\комп\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

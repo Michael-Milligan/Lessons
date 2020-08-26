@@ -1,0 +1,5 @@
+D:\Google Drive\Test\Client.exe
+D:\Google Drive\Test\Client.dll
+D:\Google Drive\Test\Client.deps.json
+D:\Google Drive\Test\Client.runtimeconfig.json
+D:\Google Drive\Test\Client.pdb

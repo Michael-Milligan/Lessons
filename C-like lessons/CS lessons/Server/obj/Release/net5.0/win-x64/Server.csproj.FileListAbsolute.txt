@@ -10,3 +10,16 @@ D:\GitHub\projects\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\S
 D:\GitHub\projects\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.dll
 D:\GitHub\projects\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.pdb
 D:\GitHub\projects\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.genruntimeconfig.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Release\net5.0\win-x64\Server.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.genruntimeconfig.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Release\net5.0\win-x64\Server.csprojAssemblyReference.cache

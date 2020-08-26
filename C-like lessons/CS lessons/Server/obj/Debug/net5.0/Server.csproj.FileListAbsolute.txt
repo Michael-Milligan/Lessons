@@ -1,0 +1,13 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\bin\Debug\net5.0\Server.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -7,54 +8,42 @@ namespace Server
 {
     class Server
     {
-        const int Port = 8005; // порт для приема входящих запросов
-        static void Main(string[] args)
+        static int Port = 8005;
+        static string IP = "127.0.0.1";
+
+        static void Main()
         {
-            // получаем адреса для запуска сокета
-            IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
 
-            // создаем сокет
-            Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            try
+            Socket ListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+            Console.WriteLine("Waiting for connections...");
+            Console.WriteLine("The connection dates and messages:");
+            ListenSocket.Bind(LocalEndPoint);
+            ListenSocket.Listen(10);
+
+            while (true)
             {
-                // связываем сокет с локальной точкой, по которой будем принимать данные
-                listenSocket.Bind(ipPoint);
+                Socket Handler = ListenSocket.Accept();
+                StringBuilder Message = new StringBuilder();
+                byte[] Buffer = new byte[1024];
 
-                // начинаем прослушивание
-                listenSocket.Listen(10);
-
-                Console.WriteLine("Сервер запущен. Ожидание подключений...");
-
-                while (true)
+                do
                 {
-                    Socket handler = listenSocket.Accept();
-                    // получаем сообщение
-                    StringBuilder builder = new StringBuilder();
-                    int bytes = 0; // количество полученных байтов
-                    byte[] data = new byte[256]; // буфер для получаемых данных
-
-                    do
-                    {
-                        bytes = handler.Receive(data);
-                        builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
-                    }
-                    while (handler.Available > 0);
-
-                    Console.WriteLine(DateTime.Now.ToShortTimeString() + ": " + builder.ToString());
-
-                    // отправляем ответ
-                    string message = "ваше сообщение доставлено";
-                    data = Encoding.Unicode.GetBytes(message);
-                    handler.Send(data);
-                    // закрываем сокет
-                    handler.Shutdown(SocketShutdown.Both);
-                    handler.Close();
+                    Handler.Receive(Buffer);
+                    Buffer = Buffer.Where(item => item != 0).ToArray();
+                    Message.Append(Encoding.UTF8.GetString(Buffer));
                 }
+                while (Handler.Available > 0);
+
+                DateTime Now = DateTime.Now;
+                Console.WriteLine($"{Now.Day}/{Now.Month}/{Now.Year} {Now.Hour}:{Now.Minute} {Now.Second}s: {Message}");
+                Handler.Send(Encoding.UTF8.GetBytes("Your message was delivered"));
+                Handler.Shutdown(SocketShutdown.Both);
+                Handler.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
+
         }
     }
 }

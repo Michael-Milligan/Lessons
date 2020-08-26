@@ -1,0 +1,5 @@
+D:\Google Drive\Test\Server.exe
+D:\Google Drive\Test\Server.dll
+D:\Google Drive\Test\Server.deps.json
+D:\Google Drive\Test\Server.runtimeconfig.json
+D:\Google Drive\Test\Server.pdb

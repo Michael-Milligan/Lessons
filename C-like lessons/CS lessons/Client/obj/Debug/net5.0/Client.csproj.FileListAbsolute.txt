@@ -1,0 +1,13 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\bin\Debug\net5.0\Client.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Client\obj\Debug\net5.0\Client.genruntimeconfig.cache

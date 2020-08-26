@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -7,45 +8,36 @@ namespace Client
 {
     class Client
     {
-        // адрес и порт сервера, к которому будем подключаться
-        static int port = 8005; // порт сервера
-        static string address = "127.0.0.1"; // адрес сервера
-        static void Main(string[] args)
+        static int Port = 8005;
+        static string IP = "127.0.0.1";
+
+        static void Main()
         {
-            try
+            IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
+            Socket ConnectionSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            ConnectionSocket.Connect(LocalEndPoint);
+
+            byte[] Buffer = new byte[1024];
+            Console.WriteLine("Enter your message: ");
+
+            Buffer = Encoding.UTF8.GetBytes(Console.ReadLine());
+            StringBuilder Message = new StringBuilder();
+
+            ConnectionSocket.Send(Buffer);
+            Buffer = new byte[1024];
+
+            do
             {
-                IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse(address), port);
-
-                Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                // подключаемся к удаленному хосту
-                socket.Connect(ipPoint);
-                Console.Write("Введите сообщение:");
-                string message = Console.ReadLine();
-                byte[] data = Encoding.Unicode.GetBytes(message);
-                socket.Send(data);
-
-                // получаем ответ
-                data = new byte[256]; // буфер для ответа
-                StringBuilder builder = new StringBuilder();
-                int bytes = 0; // количество полученных байт
-
-                do
-                {
-                    bytes = socket.Receive(data, data.Length, 0);
-                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
-                }
-                while (socket.Available > 0);
-                Console.WriteLine("ответ сервера: " + builder.ToString());
-
-                // закрываем сокет
-                socket.Shutdown(SocketShutdown.Both);
-                socket.Close();
+                ConnectionSocket.Receive(Buffer);
+                Buffer = Buffer.Where(item => item != 0).ToArray();
+                Message.Append(Encoding.UTF8.GetString(Buffer));
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            Console.Read();
+            while (ConnectionSocket.Available > 0);
+            Console.WriteLine(Message);
+
+            ConnectionSocket.Shutdown(SocketShutdown.Both);
+            ConnectionSocket.Close();
+            Console.ReadLine();
         }
     }
 }
