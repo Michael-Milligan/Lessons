@@ -11,6 +11,11 @@ namespace Client
         static int Port = 8005;
         static string IP = "127.0.0.1";
 
+        public class ClientObject
+        {
+
+        }
+
         static void Main()
         {
             IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
