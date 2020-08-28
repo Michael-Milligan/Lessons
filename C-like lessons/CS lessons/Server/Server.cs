@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -12,47 +13,90 @@ namespace Server
         static int Port = 8005;
         static string IP = "127.0.0.1";
 
-        class ClientObject
+        public class ClientObject
         {
-            public TcpClient Client;
+            internal NetworkStream _Stream;
+            TcpClient _Client;
+            ServerObject _Server;
 
-            public ClientObject(TcpClient client)
+            internal string _ID;
+            string _UserName;
+
+            public ClientObject(TcpClient Client, ServerObject Server, string Name)
             {
-                Client = client ?? throw new ArgumentNullException(nameof(client));
+                _Server = Server ?? throw new ArgumentNullException(nameof(Server));
+                _Stream = Client.GetStream();
+                _Client = Client ?? throw new ArgumentNullException(nameof(Client));
+                _ID = Guid.NewGuid().ToString();
+                _Server.AddConnection(this);
             }
 
             public void Process()
             {
-                NetworkStream Stream = null;
                 try
                 {
+                    _UserName = GetMessage();
+                    var Message = _UserName + " has entered the chat";
+                    _Server.BroadcastMessage(Message, _ID);
                     while (true)
                     {
-                        Stream = Client.GetStream();
-                        StringBuilder Message = new StringBuilder();
-                        byte[] Buffer = new byte[1024];
-
-                        do
-                        {
-                            int Length = Stream.Read(Buffer);
-                            Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
-                        }
-                        while (Stream.DataAvailable);
-
-                        DateTime Now = DateTime.Now;
-                        Console.WriteLine($"{Now.Day}/{Now.Month}/{Now.Year} {Now.Hour}:{Now.Minute} {Now.Second}s| {Message}");
-                        Stream.Write(Encoding.UTF8.GetBytes("Your message was delivered to server"));
+                        Message = $"{_UserName}: {GetMessage()}";
+                        _Server.BroadcastMessage(Message, _ID);
                     }
                 }
-                catch (SocketException Exception)
+                catch
                 {
-                    Console.WriteLine($"The error: {Exception.Message}\nThe Stacktrace: {Exception.StackTrace}\nThe code of error: {Exception.SocketErrorCode}");
+                    var Message = _UserName + " has left the chat";
+                    Console.WriteLine(Message);
+                    _Server.BroadcastMessage(Message, _ID);
                 }
                 finally
                 {
-                    if (Stream != null) Stream.Close();
-                    if (Client != null) Client.Close();
+                    Close();
                 }
+            }
+
+            public string GetMessage()
+            {
+                StringBuilder Message = new StringBuilder();
+                byte[] Buffer = new byte[1024];
+
+                do
+                {
+                    int Length = _Stream.Read(Buffer);
+                    Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
+                }
+                while (_Stream.DataAvailable);
+                return Message.ToString();
+            }
+
+            internal void Close()
+            {
+                if (_Stream != null)
+                    _Stream.Close();
+                if (_Client != null)
+                    _Client.Close();
+            }
+        }
+
+        public class ServerObject
+        {
+            internal NetworkStream _Stream;
+            List<ClientObject> _Clients;
+
+            public void AddConnection(ClientObject Client)
+            {
+                _Clients.Add(Client);
+            }
+
+            public void RemoveConnection(string ID)
+            {
+                _Clients.Remove(_Clients.FirstOrDefault(item => item._ID == ID));
+            }
+
+            public void BroadcastMessage(string Message, string ID)
+            {
+
             }
         }
 
