@@ -85,7 +85,7 @@ namespace Client
             Console.WriteLine("\nEnter your message: ");
             while (true)
             {
-
+                Console.Write("\rYou: ");
                 byte[] Buffer = new byte[1024];
                 Buffer = Encoding.UTF8.GetBytes(Console.ReadLine());
                 _Stream.Write(Buffer);

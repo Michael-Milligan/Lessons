@@ -30,13 +30,13 @@ namespace Server
             {
                 try
                 {
-                    _UserName = GetMessage();
+                    _UserName = GetMessage()[..^1];
                     var Message = _UserName + " has entered the chat";
                     Console.WriteLine(Message);
                     _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                     while (true)
                     {
-                        Message = $"{_UserName}: {GetMessage()}";
+                        Message = $"\r{_UserName}: {GetMessage()}\nYou: ";
                         _Server.BroadcastMessage(Message, _ID);
                     }
                 }
@@ -64,7 +64,7 @@ namespace Server
                     Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
                 }
                 while (_Stream.DataAvailable);
-            Message.Append("\n");
+                Message.Append("\n");
                 return Message.ToString();
             }
 
