@@ -36,7 +36,7 @@ namespace Server
                     _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                     while (true)
                     {
-                        Message = $"\r{_UserName}: {GetMessage()}\nYou: ";
+                        Message = $"\r{_UserName}: {GetMessage()}You: ";
                         _Server.BroadcastMessage(Message, _ID);
                     }
                 }
