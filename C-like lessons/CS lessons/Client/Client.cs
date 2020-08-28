@@ -68,7 +68,8 @@ namespace Client
                         Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
                     }
                     while (_Stream.DataAvailable);
-                    Console.Write(Message);
+                    Console.Beep();
+                    Console.Write(Message.Replace("\n\n", "\n"));
                 }
                 catch (Exception)
                 {

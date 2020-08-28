@@ -32,6 +32,7 @@ namespace Server
                 {
                     _UserName = GetMessage()[..^1];
                     var Message = _UserName + " has entered the chat";
+                    Console.Beep();
                     Console.WriteLine(Message);
                     _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                     while (true)
@@ -43,6 +44,7 @@ namespace Server
                 catch
                 {
                     var Message = _UserName + " has left the chat";
+                    Console.Beep();
                     Console.WriteLine(Message);
                     _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                 }
