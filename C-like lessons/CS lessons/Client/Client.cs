@@ -3,56 +3,94 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace Client
 {
     class Client
     {
-        static int Port = 8005;
-        static string IP = "127.0.0.1";
+        static string _UserName;
+        static int _Port = 8888;
+        static string _IP = "127.0.0.1";
+        static NetworkStream _Stream;
+        static TcpClient _Client;
 
         static void Main()
         {
-            IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
+            IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(_IP), _Port);
 
-            TcpClient Client = null;
+            _Client = new TcpClient();
+            Console.Write("Type your name here: ");
+            _UserName = Console.ReadLine();
             try
             {
-                Console.Write("Type your name here: ");
-                string Name = Console.ReadLine();
-                while (true)
-                {
-                    Client = new TcpClient();
-                    Client.Connect(LocalEndPoint);
-                    NetworkStream Stream = Client.GetStream();
+                _Client.Connect(LocalEndPoint);
+                _Stream = _Client.GetStream();
+                NetworkStream Stream = _Client.GetStream();
+                _Stream.Write(Encoding.UTF8.GetBytes(_UserName));
 
-                    byte[] Buffer = new byte[1024];
-                    Console.WriteLine("\nEnter your message: ");
-
-                    Buffer = Encoding.UTF8.GetBytes($"{Name}: {Console.ReadLine()}");
-                    StringBuilder Message = new StringBuilder();
-
-                    Stream.Write(Buffer);
-                    Buffer = new byte[1024];
-
-                    do
-                    {
-                        int Length = Stream.Read(Buffer, 0, Buffer.Length);
-                        Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
-                    }
-                    while (Stream.DataAvailable);
-                    Console.WriteLine($"Server: {Message}");
-                }
+                Thread ReceiveThread = new Thread(ReceiveMessages);
+                ReceiveThread.Start();
+                Console.WriteLine($"Welcome, {_UserName}");
+                SendMessages();
             }
             catch(SocketException Exception)
             {
-                Console.WriteLine($"The error: {Exception.Message}\nThe Stacktrace: {Exception.StackTrace}\nThe code of error: {Exception.SocketErrorCode}");
+                Console.WriteLine("The connection is lost.");
             }
             finally
             {
-                if (Client != null) Client.Close();
+                if (_Client != null) _Client.Close();
             }
             Console.ReadLine();
+        }
+
+        public static void Disconnect()
+        {
+            if (_Stream != null)
+                _Stream.Close();//отключение потока
+            if (_Client != null)
+                _Client.Close();//отключение клиента
+            Environment.Exit(0); //завершение процесса
+        }
+
+        public static void ReceiveMessages()
+        {
+            while (true)
+            {
+                try
+                {
+                    byte[] Buffer = new byte[1024];
+                    StringBuilder Message = new StringBuilder();
+                    do
+                    {
+                        int Length = _Stream.Read(Buffer, 0, Buffer.Length);
+                        Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
+                    }
+                    while (_Stream.DataAvailable);
+                    Console.Write(Message);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("The connection is lost.");
+                    Console.ReadLine();
+                    Disconnect();
+                }
+            }
+            
+        }
+
+        public static void SendMessages()
+        {
+            Console.WriteLine("\nEnter your message: ");
+            while (true)
+            {
+
+                byte[] Buffer = new byte[1024];
+                Buffer = Encoding.UTF8.GetBytes(Console.ReadLine());
+                _Stream.Write(Buffer);
+
+            }
         }
     }
 }

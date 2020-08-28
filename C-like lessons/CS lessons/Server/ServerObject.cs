@@ -8,21 +8,16 @@ using System.Threading;
 
 namespace Server
 {
-    class Server
+    public class ClientObject
     {
-        static int Port = 8005;
-        static string IP = "127.0.0.1";
-
-        public class ClientObject
-        {
-            internal NetworkStream _Stream;
-            TcpClient _Client;
-            ServerObject _Server;
+        internal NetworkStream _Stream;
+        TcpClient _Client;
+        ServerObject _Server;
 
             internal string _ID;
             string _UserName;
 
-            public ClientObject(TcpClient Client, ServerObject Server, string Name)
+            public ClientObject(TcpClient Client, ServerObject Server)
             {
                 _Server = Server ?? throw new ArgumentNullException(nameof(Server));
                 _Stream = Client.GetStream();
@@ -37,7 +32,8 @@ namespace Server
                 {
                     _UserName = GetMessage();
                     var Message = _UserName + " has entered the chat";
-                    _Server.BroadcastMessage(Message, _ID);
+                    Console.WriteLine(Message);
+                    _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                     while (true)
                     {
                         Message = $"{_UserName}: {GetMessage()}";
@@ -48,10 +44,11 @@ namespace Server
                 {
                     var Message = _UserName + " has left the chat";
                     Console.WriteLine(Message);
-                    _Server.BroadcastMessage(Message, _ID);
+                    _Server.BroadcastMessage($"\r{Message}\nYou: ", _ID);
                 }
                 finally
                 {
+                    _Server.RemoveConnection(_ID);
                     Close();
                 }
             }
@@ -67,6 +64,7 @@ namespace Server
                     Message.Append(Encoding.UTF8.GetString(Buffer, 0, Length));
                 }
                 while (_Stream.DataAvailable);
+            Message.Append("\n");
                 return Message.ToString();
             }
 
@@ -77,45 +75,60 @@ namespace Server
                 if (_Client != null)
                     _Client.Close();
             }
+    }
+
+    public class ServerObject
+    {
+        internal TcpListener _Server;
+        List<ClientObject> _Clients = new List<ClientObject>();
+
+        public void AddConnection(ClientObject Client)
+        {
+            _Clients.Add(Client);
         }
 
-        public class ServerObject
+        public void RemoveConnection(string ID)
         {
-            internal NetworkStream _Stream;
-            List<ClientObject> _Clients;
+            try { _Clients.Remove(_Clients.FirstOrDefault(item => item._ID == ID)); }
+            catch (Exception) { }
 
-            public void AddConnection(ClientObject Client)
+        }
+
+        public void BroadcastMessage(string Message, string ID)
+        {
+            foreach (var Client in _Clients.Where(Client => Client._ID != ID))
             {
-                _Clients.Add(Client);
-            }
-
-            public void RemoveConnection(string ID)
-            {
-                _Clients.Remove(_Clients.FirstOrDefault(item => item._ID == ID));
-            }
-
-            public void BroadcastMessage(string Message, string ID)
-            {
-
+                Client._Stream.Write(Encoding.UTF8.GetBytes(Message, 0, Message.Length));
             }
         }
 
-        static void Main()
+        public void Disconnect()
         {
-            IPEndPoint LocalEndPoint = new IPEndPoint(IPAddress.Parse(IP), Port);
+            foreach (var Client in _Clients)
+            {
+                Client.Close();
+            }
+
+            _Server.Stop();
+
+            Environment.Exit(0);
+
+        }
+
+        public void Listen()
+        {
+            _Server = new TcpListener(IPAddress.Any, 8888);
 
             try
             {
-                TcpListener Server = new TcpListener(LocalEndPoint);
-
                 Console.WriteLine("Waiting for connections...");
                 Console.WriteLine("The connection dates and messages:");
-                Server.Start(10);
+                _Server.Start(10);
 
                 while (true)
                 {
-                    TcpClient Client = Server.AcceptTcpClient();
-                    ClientObject Object = new ClientObject(Client);
+                    TcpClient Client = _Server.AcceptTcpClient();
+                    ClientObject Object = new ClientObject(Client, this);
                     Thread NewThread = new Thread(Object.Process);
                     NewThread.Start();
                 }
@@ -123,10 +136,7 @@ namespace Server
             catch (SocketException Exception)
             {
                 Console.WriteLine($"The error: {Exception.Message}\nThe Stacktrace: {Exception.StackTrace}\nThe code of error: {Exception.SocketErrorCode}");
-            }
-            finally
-            {
-                
+                Disconnect();
             }
         }
     }
