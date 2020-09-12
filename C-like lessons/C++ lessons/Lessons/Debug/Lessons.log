@@ -1,2 +1,7 @@
-﻿  Lessons.cpp
-  Lessons.vcxproj -> D:\GitHub\Lessons\C-like lessons\C++ lessons\Debug\Lessons.exe
+﻿  BinaryTree.cpp
+  Lessons.cpp
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+Lessons.obj : error LNK2019: unresolved external symbol "public: void __thiscall binary_tree<int>::push(int)" (?push@?$binary_tree@H@@QAEXH@Z) referenced in function _main
+Lessons.obj : error LNK2019: unresolved external symbol "public: __thiscall binary_tree<int>::binary_tree<int>(void)" (??0?$binary_tree@H@@QAE@XZ) referenced in function _main
+D:\GitHub\projects\C-like lessons\C++ lessons\Debug\Lessons.exe : fatal error LNK1120: 2 unresolved externals

@@ -151,8 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\CppLinq\Src\CppLinq.h" />
+    <ClInclude Include="BinaryTree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Lessons.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
