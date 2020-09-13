@@ -1,45 +1,75 @@
-#include "BinaryTree.h"
 #include <memory>
 
 template <typename T>
-void binary_tree<T>::push(T Data)
+class binary_tree
 {
-	auto current = this->root;
-	bool is_not_pushed = false;
-	if (root == nullptr)
+public:
+	void push(T Data)
 	{
-		root = new Node();
-		root->data = Data;
-		return;
-	}
-	while (is_not_pushed)
-	{
-		if (Data > current->data)
+		auto current = this->root;
+		bool is_not_pushed = true;
+		if (root == nullptr)
 		{
-			if (current->pLeft != nullptr)
-			current = current->pLeft;
-			else
+			root = new Node();
+			root->data = Data;
+			return;
+		}
+		while (is_not_pushed)
+		{
+			if (Data > current->data)
 			{
-				current->pLeft = new Node();
-				current->pLeft->data = Data;
-				is_not_pushed = false;
+				if (current->pLeft != nullptr)
+					current = current->pLeft;
+				else
+				{
+					current->pLeft = new Node();
+					current->pLeft->data = Data;
+					is_not_pushed = false;
+				}
+			}
+			else if (Data < current->data)
+			{
+				if (current->pRight != nullptr)
+					current = current->pRight;
+				else
+				{
+					current->pRight = new Node();
+					current->pRight->data = Data;
+					is_not_pushed = false;
+				}
 			}
 		}
-		else if (Data < current->data)
-		{
-			if (current->pRight != nullptr)
-			current = current->pRight;
-			else
-			{
-				current->pRight = new Node();
-				current->pRight->data = Data;
-				is_not_pushed = false;
-			}
-		}
 	}
-}
 
-template<typename T>
-void binary_tree<T>::erase(T Data)
-{
-}
+	void erase(T Data)
+	{
+
+	}
+	binary_tree()
+	{
+		root = nullptr;
+	}
+	~binary_tree()
+	{
+
+	}
+private:
+	class Node
+	{
+	public:
+		T data;
+		Node()
+		{
+			pLeft = nullptr;
+			pRight = nullptr;
+		}
+		~Node()
+		{
+			delete pLeft;
+			delete pRight;
+		}
+		Node* pLeft;
+		Node* pRight;
+	};
+	Node* root;
+};

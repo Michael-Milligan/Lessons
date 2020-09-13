@@ -1,56 +1,5 @@
 ﻿  BinaryTree.cpp
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,22): error C2039: 'push': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2447: '{': missing function header (old-style formal list?)
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,6): error C2374: 'binary_tree': redefinition; multiple initialization
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5): message : see declaration of 'binary_tree'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,22): error C2039: 'erase': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2447: '{': missing function header (old-style formal list?)
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,6): error C2374: 'binary_tree': redefinition; multiple initialization
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5): message : see declaration of 'binary_tree'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,22): error C2039: 'push': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2447: '{': missing function header (old-style formal list?)
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,6): error C2374: 'binary_tree': redefinition; multiple initialization
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5): message : see declaration of 'binary_tree'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,22): error C2039: 'erase': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2447: '{': missing function header (old-style formal list?)
   Lessons.cpp
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5,22): error C2039: 'push': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(6,1): error C2447: '{': missing function header (old-style formal list?)
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2988: unrecognizable template declaration/definition
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2143: syntax error: missing ';' before '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,1): error C2182: 'binary_tree': illegal use of type 'void'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,6): error C2374: 'binary_tree': redefinition; multiple initialization
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(5): message : see declaration of 'binary_tree'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,17): error C2059: syntax error: '<'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,22): error C2039: 'erase': is not a member of '`global namespace''
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2143: syntax error: missing ';' before '{'
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(44,1): error C2447: '{': missing function header (old-style formal list?)
 D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(10,17): error C2062: type 'int' unexpected
-D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(13,3): error C2065: 'tree': undeclared identifier
   Generating Code...
+  Lessons.vcxproj -> D:\GitHub\projects\C-like lessons\C++ lessons\x64\Debug\Lessons.exe
