@@ -1,5 +1,8 @@
 ﻿  BinaryTree.cpp
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,15): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(79): message : see reference to class template instantiation 'binary_tree<T>' being compiled
   Lessons.cpp
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(43,15): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(79): message : see reference to class template instantiation 'binary_tree<T>' being compiled
 D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
-  Lessons.vcxproj -> D:\GitHub\projects\C-like lessons\C++ lessons\x64\Debug\Lessons.exe

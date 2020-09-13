@@ -4,6 +4,10 @@ template <typename T>
 class binary_tree
 {
 public:
+	/// <summary>
+	/// Tries to push the data through the tree, if not succeeded makes nothing
+	/// </summary>
+	/// <param name="Data: ">The data to add to the tree</param>
 	void push(T Data)
 	{
 		auto current = this->root;
@@ -38,6 +42,7 @@ public:
 					is_not_pushed = false;
 				}
 			}
+			else return;
 		}
 	}
 
