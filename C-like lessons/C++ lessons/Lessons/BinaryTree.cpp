@@ -21,30 +21,30 @@ public:
 		bool is_not_pushed = true;
 		if (root == nullptr)
 		{
-			root = new Node();
+			root = new node();
 			root->data = Data;
 			return;
 		}
 		while (is_not_pushed)
 		{
-			if (Data > current->data)
+			if (Data < current->data)
 			{
 				if (current->pLeft != nullptr)
 					current = current->pLeft;
 				else
 				{
-					current->pLeft = new Node();
+					current->pLeft = new node();
 					current->pLeft->data = Data;
 					is_not_pushed = false;
 				}
 			}
-			else if (Data < current->data)
+			else if (Data > current->data)
 			{
 				if (current->pRight != nullptr)
 					current = current->pRight;
 				else
 				{
-					current->pRight = new Node();
+					current->pRight = new node();
 					current->pRight->data = Data;
 					is_not_pushed = false;
 				}
@@ -53,7 +53,31 @@ public:
 		}
 	}
 
+	/// <summary>
+	/// Tries to delete the given value, if the value isn't in tree function throws exception
+	/// </summary>
+	/// <param name="Data"></param>
 	void erase(T Data)
+	{
+		if (!search(Data)) throw exception("The element isn't in tree");
+		//to delete is the deepest rightmost element, to replace - the element we want to delete
+		node* to_delete = root, * to_replace = root, * previous_node = root;
+		while (to_delete->pRight != nullptr)
+		{
+			previous_node = to_delete;
+			to_delete = to_delete->pRight;
+		}
+
+		while (to_replace->data != Data && to_replace != nullptr)
+		{
+			if (Data < to_replace->data) to_replace = to_replace->pLeft;
+			else if (Data > to_replace->data) to_replace = to_replace->pRight;
+		}
+		to_replace->data = to_delete->data;
+		previous_node->pRight = nullptr;
+		delete to_delete;
+	}
+	bool search(T Data)
 	{
 
 	}
@@ -69,30 +93,30 @@ private:
 	/// <summary>
 	/// The class of elements of the binary tree
 	/// </summary>
-	class Node
+	class node
 	{
 	public:
 		T data;
-		Node()
+		node()
 		{
 			pLeft = nullptr;
 			pRight = nullptr;
 		}
-		~Node()
+		~node()
 		{
 			delete pLeft;
 			delete pRight;
 		}
-		Node* pLeft;
-		Node* pRight;
+		node* pLeft;
+		node* pRight;
 	};
-	Node* root;
+	node* root;
 
-	int getHeight(Node* node) {
+	int getHeight(node* node) {
 		if (!node) return 0;
 		return 1 + max(getHeight(node->pLeft), getHeight(node->pRight));
 	}
-	void fill(Node* node, vector<vector<T>>& ret, int lvl, int l, int r) {
+	void fill(node* node, vector<vector<T>>& ret, int lvl, int l, int r) {
 		if (!node || node->data == 0)return;
 		ret[lvl][(l + r) / 2] = node->data;
 		fill(node->pLeft, ret, lvl + 1, l, (l + r) / 2);
@@ -100,7 +124,7 @@ private:
 	}
 public:
 	vector<vector<T>> printTree() {
-		Node* root = this->root;
+		node* root = this->root;
 		int h = getHeight(root);
 		int leaves = (1 << h) - 1;
 		vector<vector<T>> ret (h, vector <T>(leaves));
