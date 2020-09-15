@@ -10,6 +10,7 @@ using namespace std;
 template <typename T>
 class binary_tree
 {
+	class node;
 public:
 	/// <summary>
 	/// Tries to push the data through the tree, if not succeeded makes nothing
@@ -59,27 +60,50 @@ public:
 	/// <param name="Data"></param>
 	void erase(T Data)
 	{
-		if (!search(Data)) throw exception("The element isn't in tree");
-		//to delete is the deepest rightmost element, to replace - the element we want to delete
-		node* to_delete = root, * to_replace = root, * previous_node = root;
-		while (to_delete->pRight != nullptr)
+		auto to_delete = search(Data);
+		if (to_delete == nullptr) throw exception("The element isn't in tree");
+
+		if (to_delete->pRight == nullptr && to_delete->pLeft == nullptr) delete to_delete;
+
+		if (to_delete->pRight == nullptr && to_delete->pLeft != nullptr || to_delete->pRight != nullptr && to_delete->pLeft == nullptr)
 		{
-			previous_node = to_delete;
-			to_delete = to_delete->pRight;
+			if (to_delete->pRight == nullptr)
+			{
+				to_delete->data = to_delete->pLeft->data;
+				delete to_delete->pLeft;
+				to_delete->pLeft = nullptr;
+			}
+			else
+			{
+				to_delete->data = to_delete->pRight->data;
+				delete to_delete->pRight;
+				to_delete->pRight = nullptr;
+			}
 		}
 
-		while (to_replace->data != Data && to_replace != nullptr)
+		else
 		{
-			if (Data < to_replace->data) to_replace = to_replace->pLeft;
-			else if (Data > to_replace->data) to_replace = to_replace->pRight;
+			auto current = root;
+			auto previous = root;
+			while (current->pLeft != nullptr)
+			{
+				previous = current;
+				current = current->pLeft;
+			}
+			to_delete->data = current->data;
+			delete current;
+			previous->pLeft = nullptr;
 		}
-		to_replace->data = to_delete->data;
-		previous_node->pRight = nullptr;
-		delete to_delete;
 	}
-	bool search(T Data)
+	node* search(T Data)
 	{
-
+		node* current = root;
+		while (current->data != Data && current != nullptr)
+		{
+			if (Data > current->data) current = current->pRight;
+			else current = current->pLeft;
+		}
+		return current;
 	}
 	binary_tree()
 	{

@@ -25,17 +25,20 @@ int main()
 {
 	srand(time(0));
 	binary_tree<int> tree;
-	for (int i = 0; i < 10; ++i)
-	{
-		tree.push(i);
-	}
+	tree.push(5);
+	tree.push(10);
+	tree.push(4);
+	tree.push(7);
+	tree.push(1);
+	tree.push(2);
+	tree.push(11);
 	auto printer = tree.printTree();
 	
 	for (vector<int>& string: printer)
 	{
 		for (auto& cell : string)
 		{
-			if (cell >= 0)
+			if (cell > 0)
 				cout << cell << " ";
 			else
 				cout << " ";
@@ -45,13 +48,13 @@ int main()
 
 	cout << endl << endl;
 
-	//tree.erase(5);
+	tree.erase(5);
 	printer = tree.printTree();
 	for (vector<int>& string : printer)
 	{
 		for (auto& cell : string)
 		{
-			if (cell != 0)
+			if (cell > 0)
 				cout << cell << " ";
 			else
 				cout << " ";
