@@ -32,6 +32,10 @@ int main()
 	tree.push(1);
 	tree.push(2);
 	tree.push(11);
+	tree.push(3);
+	tree.push(6);
+	tree.push(8);
+	tree.push(9);
 	auto printer = tree.printTree();
 	
 	for (vector<int>& string: printer)
@@ -48,7 +52,7 @@ int main()
 
 	cout << endl << endl;
 
-	tree.erase(5);
+	tree.erase(1);
 	printer = tree.printTree();
 	for (vector<int>& string : printer)
 	{

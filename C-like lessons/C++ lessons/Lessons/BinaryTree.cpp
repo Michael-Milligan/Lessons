@@ -70,14 +70,14 @@ public:
 			if (to_delete->pRight == nullptr)
 			{
 				to_delete->data = to_delete->pLeft->data;
-				delete to_delete->pLeft;
-				to_delete->pLeft = nullptr;
+				to_delete->pRight = to_delete->pLeft->pRight;
+				to_delete->pLeft = to_delete->pLeft->pLeft;
 			}
 			else
 			{
 				to_delete->data = to_delete->pRight->data;
-				delete to_delete->pRight;
-				to_delete->pRight = nullptr;
+				to_delete->pLeft = to_delete->pRight->pLeft;
+				to_delete->pRight = to_delete->pRight->pRight;
 			}
 		}
 
