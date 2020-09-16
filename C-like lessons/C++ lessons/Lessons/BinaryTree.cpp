@@ -35,6 +35,7 @@ public:
 				else
 				{
 					current->pLeft = new node();
+					current->pLeft->pParent = current;
 					current->pLeft->data = Data;
 					is_not_pushed = false;
 				}
@@ -46,6 +47,7 @@ public:
 				else
 				{
 					current->pRight = new node();
+					current->pRight->pParent = current;
 					current->pRight->data = Data;
 					is_not_pushed = false;
 				}
@@ -63,36 +65,42 @@ public:
 		auto to_delete = search(Data);
 		if (to_delete == nullptr) throw exception("The element isn't in tree");
 
-		if (to_delete->pRight == nullptr && to_delete->pLeft == nullptr) delete to_delete;
+		if (to_delete->pRight == nullptr && to_delete->pLeft == nullptr)
+		{
+			if (to_delete->data < to_delete->pParent->data) to_delete->pParent->pLeft = nullptr;
+			else to_delete->pParent->pRight = nullptr;
+			delete to_delete;
+		}
 
+		//TODO: Test from here
 		if (to_delete->pRight == nullptr && to_delete->pLeft != nullptr || to_delete->pRight != nullptr && to_delete->pLeft == nullptr)
 		{
 			if (to_delete->pRight == nullptr)
 			{
 				to_delete->data = to_delete->pLeft->data;
 				to_delete->pRight = to_delete->pLeft->pRight;
+				to_delete->pRight->pParent = to_delete->pLeft->pRight->pParent;
 				to_delete->pLeft = to_delete->pLeft->pLeft;
+				to_delete->pLeft->pParent = to_delete->pLeft->pLeft->pParent;
 			}
 			else
 			{
 				to_delete->data = to_delete->pRight->data;
 				to_delete->pLeft = to_delete->pRight->pLeft;
+				to_delete->pLeft->pParent = to_delete->pRight->pLeft->pParent;
 				to_delete->pRight = to_delete->pRight->pRight;
+				to_delete->pRight->pParent = to_delete->pRight->pRight->pParent;
 			}
 		}
-
+		//TODO: Rework from here
 		else
 		{
-			auto current = root;
-			auto previous = root;
-			while (current->pLeft != nullptr)
-			{
-				previous = current;
-				current = current->pLeft;
-			}
-			to_delete->data = current->data;
-			delete current;
-			previous->pLeft = nullptr;
+			auto successor = get_inorder_successor(to_delete);
+			T temp = successor->data;
+			if (successor->data < successor->pParent->data) erase(successor->pParent->pLeft->data); 
+			else erase(successor->pParent->pRight->data);
+			to_delete->data = temp;
+			delete successor;
 		}
 	}
 	node* search(T Data)
@@ -133,8 +141,31 @@ private:
 		}
 		node* pLeft;
 		node* pRight;
+		node* pParent;
 	};
 	node* root;
+
+	node* get_inorder_successor(node* Root)
+	{
+		node* current = Root;
+		if (current->pRight != nullptr)
+		{
+			current = current->pRight;
+			while (current->pLeft != nullptr)
+			{
+				current = current->pLeft;
+			}
+			return current;
+		}
+		else
+		{
+			while (current->data > current->pParent->data)
+			{
+				current = current->pParent;
+			}
+			return current->pParent;
+		}
+	}
 
 	int getHeight(node* node) {
 		if (!node) return 0;

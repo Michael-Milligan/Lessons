@@ -29,8 +29,6 @@ int main()
 	tree.push(10);
 	tree.push(4);
 	tree.push(7);
-	tree.push(1);
-	tree.push(2);
 	tree.push(11);
 	tree.push(3);
 	tree.push(6);
@@ -52,7 +50,7 @@ int main()
 
 	cout << endl << endl;
 
-	tree.erase(1);
+	tree.erase(tree.root, 7);
 	printer = tree.printTree();
 	for (vector<int>& string : printer)
 	{
