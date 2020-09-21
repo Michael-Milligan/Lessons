@@ -50,7 +50,7 @@ int main()
 
 	cout << endl << endl;
 
-	tree.erase(tree.root, 7);
+	tree.erase(7);
 	printer = tree.printTree();
 	for (vector<int>& string : printer)
 	{

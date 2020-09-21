@@ -1,5 +1,0 @@
-﻿  BinaryTree.cpp
-  Lessons.cpp
-D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\Lessons.cpp(26,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  Lessons.vcxproj -> D:\GitHub\Lessons\C-like lessons\C++ lessons\x64\Debug\Lessons.exe
