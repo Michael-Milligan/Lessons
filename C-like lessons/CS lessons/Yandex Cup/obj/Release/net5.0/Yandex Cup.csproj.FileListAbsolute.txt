@@ -1,0 +1,13 @@
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.exe
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.deps.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.runtimeconfig.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.runtimeconfig.dev.json
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\bin\Release\net5.0\Yandex Cup.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.csprojAssemblyReference.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.AssemblyInfoInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.AssemblyInfo.cs
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.csproj.CoreCompileInputs.cache
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.dll
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.pdb
+D:\GitHub\Lessons\C-like lessons\CS lessons\Yandex Cup\obj\Release\net5.0\Yandex Cup.genruntimeconfig.cache

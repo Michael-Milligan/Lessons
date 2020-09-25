@@ -1,15 +1,16 @@
-function plus1(x)
+class Book
 {
-    return x + 1
+    constructor(pages, topic) 
+    {
+        this.pages = pages;
+        this.topic = topic;
+    }
+
+    toString()
+    {
+        return `This book is about ${this.topic} and has ${this.pages} pages`;
+    }
 }
 
-let book =
-{
-    pages: 251,
-    topic: 'JavaScript',
-    contents: {}
-}
-let a = []
-a.push([1,2,3])
-const square = x => {return x*x}
-console.log('The field pages is equal to ' + a)
+a = new Book(251, 'Chemistry');
+console.log(a.toString());

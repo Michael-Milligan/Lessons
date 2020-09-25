@@ -21,9 +21,38 @@ int Factorial()
 	return 0;
 }
 
+bool CheckforSimplicity(int Number)
+{
+	if (Number == 1) return true;
+	for (int i = 2; i < Number; i++)
+	{
+		if (Number % i == 0) return false;
+	}
+	return true;
+}
+
+void SwapDigits(int Number)
+{
+	int Remainder = 0;
+	if (Number == 0)
+		cout << "Error";
+	else
+	{
+		for (; Number % 10 == 0; )
+			Number = Number / 10;
+		while (Number != 0)
+		{
+			Remainder = Number % 10;
+			Number = Number / 10;
+			cout << Remainder;
+		}
+	}
+	return;
+}
+
 int main()
 {
-	srand(time(0));
+	/*srand(time(0));
 	binary_tree<int> tree;
 	tree.push(5);
 	tree.push(10);
@@ -62,6 +91,18 @@ int main()
 				cout << " ";
 		}
 		cout << endl;
+	}*/
+
+
+	int n;
+	cout << "Enter number n" << endl;
+	cin >> n;
+	if (n <= 0)
+		cout << "Error";
+	
+	for (int i = 1; i < n; i++)
+	{
+		if (CheckforSimplicity(i)) cout << i << " ";
 	}
 
 	return 0;
