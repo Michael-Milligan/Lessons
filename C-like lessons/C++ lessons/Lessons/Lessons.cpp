@@ -1,25 +1,30 @@
 #include <iostream>
 #include <ctime>
+#include <cmath>
 #include <vector>
 #include "BinaryTree.cpp"
 using namespace std;
 
-int Factorial()
+double Factorial(int Number)
 {
-	int number, result = 1;
-	cin >> number;
-	if (number < 0)
+	double result = 1;
+	if (Number < 0)
 	{
 		cout << "Error! You must enter natural number only";
 		return -1;
 	}
-	for (int i = 1; i <= number; i = i + 1)
+	for (double i = 1; i <= Number; i++)
 	{
-		result = result * i;
+		result *= i;
 	}
-	cout << result;
-	return 0;
+	return result;
 }
+
+//int factorial(int n)
+//{
+//	return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
+//}
+
 
 bool CheckforSimplicity(int Number)
 {
@@ -93,17 +98,19 @@ int main()
 		cout << endl;
 	}*/
 
-
-	int n;
-	cout << "Enter number n" << endl;
-	cin >> n;
-	if (n <= 0)
-		cout << "Error";
-	
-	for (int i = 1; i < n; i++)
+	double x, a = 1, e = 0;
+	double b, c;
+	double eps;
+	cin >> x >> eps;
+	for (int i = 1; abs(a) >= eps; i++)
 	{
-		if (CheckforSimplicity(i)) cout << i << " ";
+		e += a;
+		b = pow(x, i);
+		c = Factorial(i);
+		a = b / c;
 	}
+	cout << e;
+
 
 	return 0;
 }

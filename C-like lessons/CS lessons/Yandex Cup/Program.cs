@@ -29,10 +29,25 @@ namespace Yandex_Cup
             }
 
             var DocGroups = DistinctDocs.GroupBy(item => item.QueryID).ToArray();
+            var Max = new
+            {
+                Query = "",
+                Found = 0.0
+            };
             foreach (var group in DocGroups)
             {
-                
+                var temp = pFound(group);
+                if (temp > Max.Found)
+                {
+                    Max = new
+                    {
+                        Query = group.Key,
+                        Found = temp
+                    };
+                }
             }
+            Console.WriteLine(Max.Query);
+
         }
 
         #region 1
@@ -168,9 +183,23 @@ namespace Yandex_Cup
 
         }
 
-        public static double pLook(double Number)
+        public static double pFound(IGrouping<string, Document> group)
         {
-            if (Number == 1) return 1;
+            var Query = group.Key;
+            var Docs = group.ToArray().OrderByDescending(item => item.Relevance).ToArray().Take(10).ToArray();
+
+            double Sum = 0;
+            for (int i = 0; i < Docs.Length; i++)
+            {
+                Sum += pLook(Docs, i);
+            }
+            return Sum;
+        }
+
+        public static double pLook(Document[] Docs, int Index)
+        {
+            if (Index == 1) return 1;
+            return pLook(Docs, Index - 1) * (1 - Convert.ToInt32(Docs[Index - 1].Relevance)) * (1 - 0.15);
         }
     }
 }
