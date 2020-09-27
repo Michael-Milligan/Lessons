@@ -46,7 +46,7 @@ namespace Yandex_Cup
                     };
                 }
             }
-            Console.WriteLine(Max.Query);
+            Console.WriteLine(Queries.First(item => item.ID == Max.Query).Text);
 
         }
 
@@ -178,11 +178,6 @@ namespace Yandex_Cup
             }
         }
 
-        public static void PrintMaxpFound()
-        {
-
-        }
-
         public static double pFound(IGrouping<string, Document> group)
         {
             var Query = group.Key;
@@ -191,15 +186,15 @@ namespace Yandex_Cup
             double Sum = 0;
             for (int i = 0; i < Docs.Length; i++)
             {
-                Sum += pLook(Docs, i);
+                Sum += pLook(Docs, i) * Convert.ToDouble(Docs[i].Relevance.Replace('.',','));
             }
             return Sum;
         }
 
         public static double pLook(Document[] Docs, int Index)
         {
-            if (Index == 1) return 1;
-            return pLook(Docs, Index - 1) * (1 - Convert.ToInt32(Docs[Index - 1].Relevance)) * (1 - 0.15);
+            if (Index == 0) return 1;
+            return pLook(Docs, Index - 1) * (1 - Convert.ToDouble(Docs[Index - 1].Relevance.Replace('.',','))) * (1 - 0.15);
         }
     }
 }
