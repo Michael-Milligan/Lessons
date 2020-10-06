@@ -35,28 +35,26 @@ namespace Yandex_Cup
 
             try
             {
-                int NeededLength = Palindromes.Min(item => item.Length);
+                int NeededLength = Palindromes.AsParallel().Min(item => item.Length);
 
-                Palindromes = Palindromes.
+                Palindromes = Palindromes.AsParallel().
                     Where(item => item.Length == NeededLength).
                     ToList();
 
-                Palindromes = Palindromes.OrderBy(item => item[0]).ToList();
-
-                try
+                Palindromes = Palindromes.AsParallel().OrderBy(item => item[0]).ToList();
+            }
+            catch { }
+            try
                 {
                     Console.WriteLine(Palindromes[0]);
                 }
-                catch (Exception) { }
-            }
-            catch { Console.WriteLine(-1); }
+                catch (Exception) { Console.WriteLine(-1); }
         }
 
         public static bool IsPalindrome(string Data)
         {
             int temp = Data.Length;
-            if (temp <= 1) throw new ArgumentException("The " +
-                "string had only one symbol");
+            if (temp <= 1) throw new Exception();
             int Max = (int)(temp / 2);
             for (int i = 0; i < Max; ++i)
             {
