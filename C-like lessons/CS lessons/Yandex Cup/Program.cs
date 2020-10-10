@@ -8,7 +8,7 @@ namespace Yandex_Cup
     class Program
     {
 
-        static void  Main()
+        static void Main()
         {
             string Input = Console.ReadLine();
             List<string> Palindromes = new List<string>();
@@ -44,10 +44,8 @@ namespace Yandex_Cup
 
             try
             {
-                int NeededLength = Palindromes.Min(item => item.Length);
-
                 Palindromes = Palindromes.AsParallel().
-                    Where(item => item.Length == NeededLength).
+                    Where(item => item.Length == Min).
                     ToList();
 
                 Palindromes = Palindromes.OrderBy(item => item[0]).ToList();
