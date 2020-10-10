@@ -75,5 +75,11 @@ namespace Yandex_Cup
 
         public static async Task<bool> IsPalindromeAsync(string Data) =>
             await Task.Run(() => IsPalindrome(Data));
+
+        public static List<string> RadixSort(List<string> Data)
+        {
+            Dictionary<char, List<string>> temp = new Dictionary<char, List<string>>();
+
+        }
     }
 }
