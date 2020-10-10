@@ -8,22 +8,29 @@ namespace Yandex_Cup
     class Program
     {
 
-        static void Main()
+        static void  Main()
         {
             string Input = Console.ReadLine();
             List<string> Palindromes = new List<string>();
+            int Min = 1000;
 
             for (int i = 0; i < Input.Length; ++i)
             {
-                for (int j = 0; j < Input.Length + 1; ++j)
+                for (int j = 0; j <= Input.Length; ++j)
                 {
-                    try
+                    if (j > 1 && j <= Min)
                     {
-                        string temp = Input.Substring(i, j);
-                        if (IsPalindromeAsync(temp).Result)
-                            Palindromes.Add(temp);
+                        try
+                        {
+                            string temp = Input.Substring(i, j);
+                            if (IsPalindromeAsync(temp).Result)
+                            {
+                                Palindromes.Add(temp);
+                                Min = temp.Length;
+                            }
+                        }
+                        catch { }
                     }
-                    catch { }
                 }
             }
 
