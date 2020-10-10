@@ -14,6 +14,7 @@ namespace Yandex_Cup
             List<string> Palindromes = new List<string>();
             int Min = 1000;
 
+
             for (int i = 0; i < Input.Length; ++i)
             {
                 for (int j = 0; j <= Input.Length; ++j)
@@ -34,6 +35,7 @@ namespace Yandex_Cup
                 }
             }
 
+
             if (Palindromes.Count == 1)
             {
                 Console.WriteLine(Palindromes[0]);
@@ -42,20 +44,23 @@ namespace Yandex_Cup
 
             try
             {
-                int NeededLength = Palindromes.AsParallel().Min(item => item.Length);
+                int NeededLength = Palindromes.Min(item => item.Length);
 
                 Palindromes = Palindromes.AsParallel().
                     Where(item => item.Length == NeededLength).
                     ToList();
 
-                Palindromes = Palindromes.AsParallel().OrderBy(item => item[0]).ToList();
+                Palindromes = Palindromes.OrderBy(item => item[0]).ToList();
             }
             catch { }
             try
-                {
-                    Console.WriteLine(Palindromes[0]);
-                }
-                catch (Exception) { Console.WriteLine(-1); }
+            {
+                Console.WriteLine(Palindromes[0]);
+            }
+            catch (Exception) 
+            {
+                Console.WriteLine(-1);
+            }
         }
 
         public static bool IsPalindrome(string Data)
