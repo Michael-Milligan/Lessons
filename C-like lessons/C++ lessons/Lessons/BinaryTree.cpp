@@ -62,46 +62,12 @@ public:
 	/// <param name="Data"></param>
 	void erase(T Data)
 	{
-		auto to_delete = search(Data);
-		if (to_delete == nullptr) throw exception("The element isn't in tree");
+		node* to_erase = search(Data);
+		if (to_erase->pParent->data > to_erase->data) to_erase->pParent->pLeft = nullptr;
+		else to_erase->pParent->pRight = nullptr;
+		to_erase->pParent = nullptr;
 
-		if (to_delete->pRight == nullptr && to_delete->pLeft == nullptr)
-		{
-			if (to_delete->data < to_delete->pParent->data) to_delete->pParent->pLeft = nullptr;
-			else to_delete->pParent->pRight = nullptr;
-			delete to_delete;
-		}
-
-		//TODO: Test from here
-		if (to_delete->pRight == nullptr && to_delete->pLeft != nullptr || to_delete->pRight != nullptr && to_delete->pLeft == nullptr)
-		{
-			if (to_delete->pRight == nullptr)
-			{
-				to_delete->data = to_delete->pLeft->data;
-				to_delete->pRight = to_delete->pLeft->pRight;
-				to_delete->pRight->pParent = to_delete->pLeft->pRight->pParent;
-				to_delete->pLeft = to_delete->pLeft->pLeft;
-				to_delete->pLeft->pParent = to_delete->pLeft->pLeft->pParent;
-			}
-			else
-			{
-				to_delete->data = to_delete->pRight->data;
-				to_delete->pLeft = to_delete->pRight->pLeft;
-				to_delete->pLeft->pParent = to_delete->pRight->pLeft->pParent;
-				to_delete->pRight = to_delete->pRight->pRight;
-				to_delete->pRight->pParent = to_delete->pRight->pRight->pParent;
-			}
-		}
-		//TODO: Rework from here
-		else
-		{
-			auto successor = get_inorder_successor(to_delete);
-			T temp = successor->data;
-			if (successor->data < successor->pParent->data) erase(successor->pParent->pLeft->data); 
-			else erase(successor->pParent->pRight->data);
-			to_delete->data = temp;
-			delete successor;
-		}
+		transforming_traversal(&binary_tree::push, to_erase);
 	}
 	node* search(T Data)
 	{
@@ -186,8 +152,10 @@ public:
 		fill(root, ret, 0, 0, leaves);
 		return ret;
 	}
-	int max(int first_number, int second_number)
+	void transforming_traversal(void (*function)(T data), node* nod)
 	{
-		return first_number > second_number ? first_number : second_number;
+		function(nod->data);
+		if (nod->pLeft != nullptr) transforming_traversal(function, nod->pLeft);
+		if (nod->pRight != nullptr) transforming_traversal(function, nod->pRight);
 	}
 };

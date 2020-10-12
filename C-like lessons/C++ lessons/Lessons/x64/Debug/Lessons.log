@@ -1,2 +1,22 @@
-﻿  Lessons.cpp
-  Lessons.vcxproj -> D:\GitHub\Lessons\C-like lessons\C++ lessons\x64\Debug\Lessons.exe
+﻿  BinaryTree.cpp
+  Lessons.cpp
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(70,1): error C2664: 'void binary_tree<int>::transforming_traversal(void (__cdecl *)(T),binary_tree<T>::node *)': cannot convert argument 1 from 'void (__cdecl binary_tree<int>::* )(T)' to 'void (__cdecl *)(T)'
+          with
+          [
+              T=int
+          ]
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(70,26): message : There is no context in which this conversion is possible
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(155,7): message : see declaration of 'binary_tree<int>::transforming_traversal'
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\BinaryTree.cpp(64): message : while compiling class template member function 'void binary_tree<int>::erase(T)'
+          with
+          [
+              T=int
+          ]
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(37): message : see reference to function template instantiation 'void binary_tree<int>::erase(T)' being compiled
+          with
+          [
+              T=int
+          ]
+D:\GitHub\projects\C-like lessons\C++ lessons\Lessons\Lessons.cpp(11): message : see reference to class template instantiation 'binary_tree<int>' being compiled
+  Generating Code...
