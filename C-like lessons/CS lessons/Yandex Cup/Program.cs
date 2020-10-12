@@ -14,6 +14,7 @@ namespace Yandex_Cup
             List<string> Palindromes = new List<string>();
             int Min = 1000;
 
+            object x = new object();
 
             for (int i = 0; i < Input.Length; ++i)
             {
@@ -26,7 +27,10 @@ namespace Yandex_Cup
                             string temp = Input.Substring(i, j);
                             if (IsPalindromeAsync(temp).Result)
                             {
-                                Palindromes.Add(temp);
+                                lock (object)
+                                {
+                                    Palindromes.Add(temp);
+                                }
                                 Min = temp.Length;
                             }
                         }
@@ -75,11 +79,5 @@ namespace Yandex_Cup
 
         public static async Task<bool> IsPalindromeAsync(string Data) =>
             await Task.Run(() => IsPalindrome(Data));
-
-        public static List<string> RadixSort(List<string> Data)
-        {
-            Dictionary<char, List<string>> temp = new Dictionary<char, List<string>>();
-
-        }
     }
 }
