@@ -67,7 +67,7 @@ public:
 		else to_erase->pParent->pRight = nullptr;
 		to_erase->pParent = nullptr;
 
-		transforming_traversal(&binary_tree::push, to_erase);
+		transforming_traversal(to_erase);
 	}
 	node* search(T Data)
 	{
@@ -152,10 +152,10 @@ public:
 		fill(root, ret, 0, 0, leaves);
 		return ret;
 	}
-	void transforming_traversal(void (*function)(T data), node* nod)
+	void transforming_traversal(node* nod)
 	{
-		function(nod->data);
-		if (nod->pLeft != nullptr) transforming_traversal(function, nod->pLeft);
-		if (nod->pRight != nullptr) transforming_traversal(function, nod->pRight);
+		push(nod->data);
+		if (nod->pLeft != nullptr) transforming_traversal(nod->pLeft);
+		if (nod->pRight != nullptr) transforming_traversal(nod->pRight);
 	}
 };
