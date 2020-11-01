@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\projects\C-like lessons\CS lessons\WPF_Lessons\obj\Debug\net5.0\
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF_Lessons\obj\Debug\net5.0\
 WPF_Lessons
 none
 false
 TRACE;DEBUG;NET;NET5_0
-D:\GitHub\projects\C-like lessons\CS lessons\WPF_Lessons\App.xaml
+D:\GitHub\Lessons\C-like lessons\CS lessons\WPF_Lessons\App.xaml
 11151548125
 
 5295139304
 193-1231324107
 MainWindow.xaml;
 
-False
+True
 
