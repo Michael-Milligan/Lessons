@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\комп\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
+      "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
       "projectName": "Lessons",
-      "projectPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
-      "packagesPath": "C:\\Users\\комп\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Lessons\\obj\\",
+      "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\Lessons.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Lessons\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\комп\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
