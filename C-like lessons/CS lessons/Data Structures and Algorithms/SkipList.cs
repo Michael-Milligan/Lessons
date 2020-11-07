@@ -94,6 +94,20 @@ namespace Data_Structures_and_Algorithms
             }
             throw new Exception("There wasn't such a node");
         }
+
+        public void PrintList()
+        {
+            for (int i = _MaxLevel - 1; i >= 0; --i)
+            {
+                Node<T> Current = _Head;
+                while (Current._Pointers[i] != null)
+                {
+                    Console.Write(Current._Data + "\t");
+                    Current = Current._Pointers[i];
+                }
+                Console.WriteLine();
+            }
+        }
     }
 
     public class Node<T>
