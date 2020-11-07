@@ -6,8 +6,8 @@ namespace Data_Structures_and_Algorithms
     {
         static void Main()
         {
-            SkipList<int> SL = new SkipList<int>(4);
-            for (int i = 0; i <= 16; ++i)
+            SkipList<int> SL = new SkipList<int>(5);
+            for (int i = 0; i <= 24; ++i)
             {
                 SL.Add(i);
             }
