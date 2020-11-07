@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Data_Structures_and_Algorithms
 {
-    public class SkipList<T> : IEnumerable<T>
+    public class SkipList<T> //: IEnumerable<T>
     {
         public int _MaxLevel { get; private set; }
         public Node<T> _Head { get; private set; }
@@ -22,49 +22,43 @@ namespace Data_Structures_and_Algorithms
         {
             Node<T>[] Current = new Node<T>[]{ _Head, _Head, _Head, _Head};
             Node<T> New = new Node<T>(this, Data);
-            if (_Head._Pointers.Where(item => item != default).Count() == 0)
-
+            if (_NodesNumber == 0)
             {
                 _Head._Data = Data;
+                ++_NodesNumber;
                 return;
             }
 
-            //for (int j = 1; j < _MaxLevel; ++j)
-            //{
-            //    while (Current[^j]._Pointers[^j] != null)
-            //    Current[^j] = Current[^j]._Pointers[^j];
-            //}
+            for (int j = 1; j < _MaxLevel; ++j)
+            {
+                while (Current[^j]._Pointers[^j] != null)
+                    Current[^j] = Current[^j]._Pointers[^j];
+            }
 
-            //++_NodesNumber;
-            //double HighLevelFrequency = _MaxLevel != 2 ? (_MaxLevel - 2) * 4 : 2;
-            //double OrderNumber = _NodesNumber % HighLevelFrequency;
-            //if (OrderNumber  == 0)
-            //    {
-            //        Current[^1]._Pointers[^1] = New;
-            //        return;
-            //    }
-            //if (OrderNumber == HighLevelFrequency / 2)
-            //    { 
-            //        Current[^2]._Pointers[^2] = New;
-            //        return;
-            //    }
+            ++_NodesNumber;
+            double HighLevelFrequency = _MaxLevel != 2 ? (_MaxLevel - 2) * 4 : 2;
+            double OrderNumber = _NodesNumber > HighLevelFrequency ? 
+                _NodesNumber % HighLevelFrequency : _NodesNumber - 1;
+            if (OrderNumber == 0) Current[^1]._Pointers[^1] = New;
+            if (OrderNumber == HighLevelFrequency / 2) Current[^2]._Pointers[^2] = New;      
 
-            //for (int j = Current.Length - 3, k = _MaxLevel - 2; j <= 1; --j, --k)
-            //{
-            //    if (OrderNumber < HighLevelFrequency / 2)
-            //    {
-            //        if (OrderNumber == (j + k))
-            //            Current[j]._Pointers[j] = New;
-            //    }
-            //    else
-            //    {
-            //        if (OrderNumber == (HighLevelFrequency - (j + k)))
-            //                Current[j]._Pointers[j] = New;
-            //    }
-                    
-            //}
-            //if (OrderNumber % 2 == 0) Current[0]._Pointers[0] = New;
-            
+            for (int j = Current.Length - 3, k = _MaxLevel - 2; j >= 1; --j, --k)
+            {
+                if (OrderNumber < HighLevelFrequency / 2)
+                {
+                    if (OrderNumber == (j + k))
+                        Current[j]._Pointers[j] = New;
+                }
+                else
+                {
+                    if (OrderNumber == (HighLevelFrequency - (j + k)))
+                        Current[j]._Pointers[j] = New;
+                }
+
+            }
+            if (OrderNumber % 2 == 1 || OrderNumber == 1) { Current[0]._Pointers[0] = New; return; }
+
+            --_NodesNumber;
             throw new Exception("Operation wasn't successful");
         }
 
