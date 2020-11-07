@@ -20,7 +20,10 @@ namespace Data_Structures_and_Algorithms
 
         public void Add(T Data)
         {
-            Node<T>[] Current = new Node<T>[]{ _Head, _Head, _Head, _Head};
+            Node<T>[] Current = new Node<T>[_MaxLevel];
+            for (int i = 0; i < Current.Length; ++i)
+                Current[i] = _Head;
+
             Node<T> New = new Node<T>(this, Data);
             if (_NodesNumber == 0)
             {
@@ -29,7 +32,7 @@ namespace Data_Structures_and_Algorithms
                 return;
             }
 
-            for (int j = 1; j < _MaxLevel; ++j)
+            for (int j = 1; j <= _MaxLevel; ++j)
             {
                 while (Current[^j]._Pointers[^j] != null)
                     Current[^j] = Current[^j]._Pointers[^j];
@@ -42,7 +45,7 @@ namespace Data_Structures_and_Algorithms
             if (OrderNumber == 0) Current[^1]._Pointers[^1] = New;
             if (OrderNumber == HighLevelFrequency / 2) Current[^2]._Pointers[^2] = New;      
 
-            for (int j = Current.Length - 3, k = _MaxLevel - 2; j >= 1; --j, --k)
+            for (int j = Current.Length - 3, k = _MaxLevel - 3; j >= 1; --j, --k)
             {
                 if (OrderNumber < HighLevelFrequency / 2)
                 {
@@ -56,10 +59,7 @@ namespace Data_Structures_and_Algorithms
                 }
 
             }
-            if (OrderNumber % 2 == 1 || OrderNumber == 1) { Current[0]._Pointers[0] = New; return; }
-
-            --_NodesNumber;
-            throw new Exception("Operation wasn't successful");
+            Current[0]._Pointers[0] = New;
         }
 
         /// <summary>
