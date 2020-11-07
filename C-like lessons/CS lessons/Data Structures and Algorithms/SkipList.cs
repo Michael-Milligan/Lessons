@@ -41,7 +41,7 @@ namespace Data_Structures_and_Algorithms
             ++_NodesNumber;
             double HighLevelFrequency = _MaxLevel != 2 ? (_MaxLevel - 2) * 4 : 2;
             double OrderNumber = _NodesNumber > HighLevelFrequency ? 
-                _NodesNumber % HighLevelFrequency : _NodesNumber - 1;
+                (_NodesNumber % HighLevelFrequency) - 1 : _NodesNumber - 1;
             if (OrderNumber == 0) Current[^1]._Pointers[^1] = New;
             if (OrderNumber == HighLevelFrequency / 2) Current[^2]._Pointers[^2] = New;      
 
@@ -100,7 +100,7 @@ namespace Data_Structures_and_Algorithms
             for (int i = _MaxLevel - 1; i >= 0; --i)
             {
                 Node<T> Current = _Head;
-                while (Current._Pointers[i] != null)
+                while (Current != null)
                 {
                     Console.Write(Current._Data + "\t");
                     Current = Current._Pointers[i];
