@@ -12,6 +12,9 @@ namespace Data_Structures_and_Algorithms
                 SL.Add(i);
             }
             SL.PrintList();
+            SL.Delete(4);
+            Console.WriteLine();
+            SL.PrintList();
         }
     }
 }
