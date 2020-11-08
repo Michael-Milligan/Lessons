@@ -32,6 +32,20 @@ namespace Data_Structures_and_Algorithms
                 return;
             }
 
+            Node<T> ToFind = new Node<T>(this);
+            try
+            {
+                Find(default, out ToFind);
+            }
+            catch (Exception) { }
+            
+            if (ToFind._Pointers.Where(item => item != null).Count() != 0 && EqualityComparer<T>.Default.Equals(ToFind._Data, default))
+            {
+                ToFind._Data = Data;
+                return;
+            }
+
+
             for (int j = 1; j <= _MaxLevel; ++j)
             {
                 while (Current[^j]._Pointers[^j] != null)
@@ -68,7 +82,7 @@ namespace Data_Structures_and_Algorithms
         /// <param name="Data: ">The data to delete node with</param>
         public void Delete(T Data)
         {
-            GetElement(Data, out Node<T> ToDelete);
+            Find(Data, out Node<T> ToDelete);
             ToDelete._Data = default;
         }
 
@@ -77,7 +91,7 @@ namespace Data_Structures_and_Algorithms
         /// </summary>
         /// <param name="Data: ">The data with which the node must be found</param>
         /// <param name="ToFind">The node to assign result to</param>
-        public void GetElement(T Data, out Node<T> ToFind)
+        public void Find(T Data, out Node<T> ToFind)
         {
             for (int i = _MaxLevel - 1; i >= 0; --i)
             {
