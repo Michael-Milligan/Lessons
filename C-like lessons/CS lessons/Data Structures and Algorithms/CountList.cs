@@ -1,6 +1,9 @@
-﻿namespace Data_Structures_and_Algorithms
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Data_Structures_and_Algorithms
 {
-    class CountList<T>
+    class CountList<T> : IEnumerable<T>
     {
         CountListNode<T> _Head;
 
@@ -14,12 +17,31 @@
 
 
         }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var Current = _Head;
+            while (Current != null)
+            {
+                yield return Current._Data;
+                Current = Current._pNext;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            var Current = _Head;
+            while (Current != null)
+            {
+                yield return Current._Data;
+                Current = Current._pNext;
+            }
+        }
     }
 
     class CountListNode<T>
     {
-        T _Data;
-        CountListNode<T> pNext;
+        public T _Data { get; set; }
+        public CountListNode<T> _pNext { get; set; }
 
         public CountListNode(T data)
         {

@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Data_Structures_and_Algorithms
 {
-    public class SkipList<T> //: IEnumerable<T>
+    public class SkipList<T> : IEnumerable<T>
     {
         public int _MaxLevel { get; private set; }
         public Node<T> _Head { get; private set; }
@@ -38,7 +39,7 @@ namespace Data_Structures_and_Algorithms
                 Find(default, out ToFind);
             }
             catch (Exception) { }
-            
+
             if (ToFind._Pointers.Where(item => item != null).Count() != 0 && EqualityComparer<T>.Default.Equals(ToFind._Data, default))
             {
                 ToFind._Data = Data;
@@ -54,10 +55,10 @@ namespace Data_Structures_and_Algorithms
 
             ++_NodesNumber;
             double HighLevelFrequency = _MaxLevel != 2 ? (_MaxLevel - 2) * 4 : 2;
-            double OrderNumber = _NodesNumber > HighLevelFrequency ? 
+            double OrderNumber = _NodesNumber > HighLevelFrequency ?
                 (_NodesNumber % HighLevelFrequency) - 1 : _NodesNumber - 1;
             if (OrderNumber == 0) Current[^1]._Pointers[^1] = New;
-            if (OrderNumber == HighLevelFrequency / 2) Current[^2]._Pointers[^2] = New;      
+            if (OrderNumber == HighLevelFrequency / 2) Current[^2]._Pointers[^2] = New;
 
             for (int j = Current.Length - 3, k = _MaxLevel - 3; j >= 1; --j, --k)
             {
@@ -99,7 +100,7 @@ namespace Data_Structures_and_Algorithms
                 while (Current._Pointers[i] != null)
                 {
                     if (EqualityComparer<T>.Default.Equals(Current._Data, Data))
-                    { 
+                    {
                         ToFind = Current;
                         return;
                     }
@@ -122,16 +123,36 @@ namespace Data_Structures_and_Algorithms
                 Console.WriteLine();
             }
         }
-    }
 
-    public class Node<T>
-    {
-        public T _Data { get; set; }
-        public Node<T>[] _Pointers { get; private set; }
-        public Node(SkipList<T> Outer, T Data = default)
+        public IEnumerator<T> GetEnumerator()
         {
-            _Data = Data;
-            _Pointers = new Node<T>[Outer._MaxLevel];
+            Node<T> Current = _Head;
+            while (Current != null)
+            {
+                 yield return Current._Data;
+                Current = Current._Pointers[0];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            Node<T> Current = _Head;
+            while (Current != null)
+            {
+                yield return Current._Data;
+                Current = Current._Pointers[0];
+            }
+        }
+
+        public class Node<T>
+        {
+            public T _Data { get; set; }
+            public Node<T>[] _Pointers { get; private set; }
+            public Node(SkipList<T> Outer, T Data = default)
+            {
+                _Data = Data;
+                _Pointers = new Node<T>[Outer._MaxLevel];
+            }
         }
     }
 }
