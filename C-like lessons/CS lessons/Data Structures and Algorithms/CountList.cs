@@ -1,26 +1,42 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Data_Structures_and_Algorithms
 {
-    class CountList<T> : IEnumerable<T>
+    public class CountList<T> : IEnumerable<T>
     {
-        CountListNode<T> _Head;
+        Node<T> _Head;
 
         public void Add(T Data)
         {
+            _ = Data ?? throw new ArgumentNullException(nameof(Data));
+
             if (_Head == null)
             {
-                _Head = new CountListNode<T>(Data);
+                _Head = new Node<T>(Data);
                 return;
             }
+
+            Node<T> Current = _Head;
+            while (Current._pNext != null)
+            {
+                Current = Current._pNext;
+            }
+
+            Current._pNext = new Node<T>(Data);
+        }
+
+        public Node<T> GetElement(T Data)
+        {
+            _ = Data ?? throw new ArgumentNullException(nameof(Data));
 
 
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            var Current = _Head;
+            Node<T> Current = _Head;
             while (Current != null)
             {
                 yield return Current._Data;
@@ -29,23 +45,26 @@ namespace Data_Structures_and_Algorithms
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
-            var Current = _Head;
+            Node<T> Current = _Head;
             while (Current != null)
             {
                 yield return Current._Data;
                 Current = Current._pNext;
             }
         }
-    }
 
-    class CountListNode<T>
-    {
-        public T _Data { get; set; }
-        public CountListNode<T> _pNext { get; set; }
-
-        public CountListNode(T data)
+        class Node<T>
         {
-            _Data = data;
+            public T _Data { get; set; }
+            public Node<T> _pNext { get; set; }
+
+            public Node(T data)
+            {
+                _Data = data;
+            }
+
         }
     }
+
+    
 }
