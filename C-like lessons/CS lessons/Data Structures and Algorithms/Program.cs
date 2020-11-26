@@ -6,32 +6,17 @@ namespace Data_Structures_and_Algorithms
     {
         static void Main()
         {
-            PriorityQueue<int> queue = new PriorityQueue<int>();
-            queue.Add(4, 0);
-            queue.Add(5, 1);
-            queue.Add(6, 2);
-            queue.Add(7, 1);
-            queue.Add(8, 0);
-
-            foreach (int item in queue)
+            BinaryTree<int> tree = new BinaryTree<int>();
+            Random random = new Random();
+            for (int i = 0; i < 10; ++i)
             {
-                Console.Write(item.ToString() + '\t');
+                try
+                {
+                    tree.Add(random.Next(0, 50));
+                }
+                catch (Exception) { }
             }
-
-            Console.WriteLine();
-            var a = queue.GetTop();
-            foreach (int item in queue)
-            {
-                Console.Write(item.ToString() + '\t');
-            }
-
-            Console.WriteLine();
-            _ = queue.PopTop();
-            foreach (int item in queue)
-            {
-                Console.Write(item.ToString() + '\t');
-            }
-            Console.WriteLine();
+            tree.print2D(tree._Root);
         }
     }
 }

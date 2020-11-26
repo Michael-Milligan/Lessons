@@ -1,42 +1,33 @@
 #include <iostream>
 using namespace std;
 
-int index_min(int* array, int length)
-{
-    int result = array[0], result_i = 0;
-    for (int i = 0; i < length; ++i)
-    {
-        if (array[i] < result)
-        {
-            result = array[i];
-            result_i = i;
-        }
-    }
-    return result_i;
-}
+int dictionary[50][2];
 
-void selection_sort(int* array, const int size)
+void increment_dictionary_value(char symbol)
 {
-    for (int i = 0; i < size - 1; i++)
-    {
-        int index_of_min = i;
-        index_of_min = index_min(array + i, size - i) + i;
-
-        if (index_of_min != i)
-        {
-            swap(array[i], array[index_of_min]);
-        }
-    }
-    return;
+	for (int i = 0; i < 50; ++i)
+	{
+		if (dictionary[0][i] == (int)symbol)
+		{
+			dictionary[1][i] = dictionary[1][i] + 1;
+			return;
+		}
+	}
 }
 
 int main()
 {
-    int* array = new int[5]{5,7,2,9,1};
-    selection_sort(array, 5);
-    for (int i = 0; i < 5; ++i)
-    {
-        cout << array[i];
-    }
-    return 0;
+	string input;
+	cin >> input;
+	for (int i = 0; i < length; i++)
+	{
+
+	}
 }
+
+//dict[]
+//[](dict)
+//1 //0
+
+//int a[5]{1,2,3,4,5}
+//a[2] = a[2] + 1
