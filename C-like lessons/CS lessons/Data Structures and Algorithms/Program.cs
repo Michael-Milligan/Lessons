@@ -16,6 +16,7 @@ namespace Data_Structures_and_Algorithms
                 }
                 catch (Exception) { }
             }
+
             tree.print2D(tree._Root);
         }
     }

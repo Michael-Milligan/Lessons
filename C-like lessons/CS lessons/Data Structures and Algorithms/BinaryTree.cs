@@ -71,6 +71,22 @@ namespace Data_Structures_and_Algorithms
         }
         #endregion
 
+        public Node Find(T Data)
+        {
+            Node Current = _Root;
+            while (Current != null)
+            {
+                if (Operator.Equal(Current._Data, Data)) return Current;
+                else Current = Operator.LessThan(Current._Data, Data) ? 
+                        Current._pRight : Current._pLeft;
+            }
+            throw new Exception(message: "There wasn't such a node");
+        }
+
+        public void InorderTraversal()
+        {
+
+        }
 
         public class Node
         {
