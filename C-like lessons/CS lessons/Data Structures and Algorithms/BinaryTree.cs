@@ -83,10 +83,30 @@ namespace Data_Structures_and_Algorithms
             throw new Exception(message: "There wasn't such a node");
         }
 
-        public void InorderTraversal()
+        #region Traversals
+        public void InorderTraversal(Node Current, dynamic Function)
         {
-
+            if (Current._pLeft != null) _ = InorderTraversal(Current._pLeft, Function);
+            if (Current != null) _ = Function(Current);
+            if (Current._pRight != null) _ = InorderTraversal(Current._pRight, Function);
         }
+
+        public void PreorderTraversal(Node Current, dynamic Function)
+        {
+            if (Current != null) _ = Function(Current);
+            if (Current._pLeft != null) _ = InorderTraversal(Current._pLeft, Function);
+            if (Current._pRight != null) _ = InorderTraversal(Current._pRight, Function);
+        }
+
+        public void PostorderTraversal(Node Current, dynamic Function)
+        {
+            if (Current._pLeft != null) _ = InorderTraversal(Current._pLeft, Function);
+            if (Current._pRight != null) _ = InorderTraversal(Current._pRight, Function);
+            if (Current != null) _ = Function(Current);
+        }
+        #endregion
+
+
 
         public class Node
         {
