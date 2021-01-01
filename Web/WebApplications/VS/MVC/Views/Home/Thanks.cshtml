@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-    <div>
+    <div class="text-center">
         <h1>Thank you, @Model.Name!</h1>
         @if (Model.WillAttend.HasValue && Model.WillAttend.Value)
         {
@@ -20,6 +20,7 @@
         { 
             @: Sorry that you can't come, but thanks for response!
         }
+        <br />
+        Click <a asp-action="ListResponses">here</a> if you want to know other guests.
     </div>
-    Click <a asp-action="ListResponses">here</a> if you want to know other guests.
 </body>
