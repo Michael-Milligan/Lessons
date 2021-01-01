@@ -39,3 +39,5 @@ D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\MVC.pdb
 D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\MVC.genruntimeconfig.cache
 D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\MVC.csproj.CopyComplete
 D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\Razor\Views\Home\RsvpForm.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\Razor\Views\Home\Thanks.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\MVC\obj\Debug\net5.0\Razor\Views\Home\ListResponses.cshtml.g.cs

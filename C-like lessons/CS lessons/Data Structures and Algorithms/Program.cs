@@ -1,4 +1,5 @@
 ﻿using System;
+using Data_Structures_and_Algorithms.Structures;
 
 namespace Data_Structures_and_Algorithms
 {

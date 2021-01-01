@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Data_Structures_and_Algorithms
+namespace Data_Structures_and_Algorithms.Structures
 {
     public class CountList<T> : IEnumerable<T>
     {

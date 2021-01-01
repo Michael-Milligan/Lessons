@@ -16,3 +16,21 @@ D:\GitHub\Lessons\C-like lessons\CS lessons\Data Structures and Algorithms\bin\D
 D:\GitHub\Lessons\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\ref\Data Structures and Algorithms.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\MiscUtil.dll
 D:\GitHub\Lessons\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.csproj.CopyComplete
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\ref\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\ref\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\Data Structures and Algorithms.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Debug\net5.0\MiscUtil.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.csproj.CopyComplete
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Debug\net5.0\Data Structures and Algorithms.genruntimeconfig.cache

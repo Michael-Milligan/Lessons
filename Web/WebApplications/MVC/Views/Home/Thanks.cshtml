@@ -1,0 +1,24 @@
+﻿@model MVC.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Thanks :)</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend.HasValue && Model.WillAttend.Value)
+        {
+            @: It's great that you're coming! Drinks are already in the fridge!
+        }
+        else 
+        { 
+            @: Sorry that you can't come, but thanks for response!
+        }
+    </div>
+    Click <a asp-action="ListResponses">here</a> if you want to know other guests.
+</body>

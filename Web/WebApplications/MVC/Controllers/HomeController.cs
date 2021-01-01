@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVC.Models;
+using System.Linq;
 
 namespace PartyInvites.Controllers
 {
@@ -16,11 +17,20 @@ namespace PartyInvites.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public ViewResult RsvpForm(GuestResponse Response)
         {
-            //TODO: store response from the guest
-            return View();
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponse(Response);
+                return View("Thanks", Response);
+            }
+            else return View();
+        }
+
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses.Where(item => item.WillAttend == true));
         }
     }
 }

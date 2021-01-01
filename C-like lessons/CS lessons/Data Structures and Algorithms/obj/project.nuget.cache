@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bFCdKcDIpHbqIP0e4ogexRPdPNo9dxtosL/3Bro23R5r+uqR0Q7HLePDfaOuQAyqusf01+Bskm1/tMiM00geOw==",
+  "dgSpecHash": "gr1weU9sH2fdmgZpCbzcydR2bkEzK6I1NT6a/hV81o3RzvGsYxVqIW8Msa5+bn2PQAcrCjop2fc1OOCZYC6krg==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
+  "projectFilePath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\jonskeet.miscutil\\0.2.0\\jonskeet.miscutil.0.2.0.nupkg.sha512"
+    "C:\\Users\\комп\\.nuget\\packages\\jonskeet.miscutil\\0.2.0\\jonskeet.miscutil.0.2.0.nupkg.sha512"
   ],
   "logs": [
     {
