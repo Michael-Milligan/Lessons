@@ -1,0 +1,39 @@
+﻿@model MVC.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Party!</title>
+</head>
+<body>
+    <form asp-action="RsvpForm" method="post">
+        <div>
+            <label asp-for="Name">Your name:</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="Email">Your e-mail:</label>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+            <label asp-for="Phone">Your phone:</label>
+            <input asp-for="Phone" />
+        </div>
+
+        <div>
+            <label asp-for="WillAttend">Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose answer</option>
+                <option value="true">Yes, of course</option>
+                <option value="false">No, sorry</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

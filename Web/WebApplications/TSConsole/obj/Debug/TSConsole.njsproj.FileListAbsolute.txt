@@ -1,3 +1,0 @@
-D:\GitHub\Lessons\Web\WebApplications\TSConsole\obj\Debug\TSConsole.njsprojAssemblyReference.cache
-D:\GitHub\Lessons\Web\WebApplications\TSConsole\obj\Debug\TSConsole.njsproj.CoreCompileInputs.cache
-D:\GitHub\Lessons\Web\WebApplications\TSConsole\bin\Microsoft.NodejsTools.WebRole.dll

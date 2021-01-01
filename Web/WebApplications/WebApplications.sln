@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "TSConsole", "TSConsole\TSConsole.njsproj", "{8280CC53-FE2D-49BB-AF6B-D3C661CC4A0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC\MVC.csproj", "{6C9730D3-BD47-461C-B15E-DCC82778D90A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8280CC53-FE2D-49BB-AF6B-D3C661CC4A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8280CC53-FE2D-49BB-AF6B-D3C661CC4A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8280CC53-FE2D-49BB-AF6B-D3C661CC4A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8280CC53-FE2D-49BB-AF6B-D3C661CC4A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C9730D3-BD47-461C-B15E-DCC82778D90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9730D3-BD47-461C-B15E-DCC82778D90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9730D3-BD47-461C-B15E-DCC82778D90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9730D3-BD47-461C-B15E-DCC82778D90A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
