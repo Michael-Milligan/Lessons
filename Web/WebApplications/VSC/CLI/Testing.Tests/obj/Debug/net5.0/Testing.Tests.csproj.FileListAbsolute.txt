@@ -104,3 +104,5 @@ D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\obj\Debug\net5.0\Te
 D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\obj\Debug\net5.0\ref\Testing.Tests.dll
 D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\obj\Debug\net5.0\Testing.Tests.pdb
 D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\obj\Debug\net5.0\Testing.Tests.genruntimeconfig.cache
+D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\bin\Debug\net5.0\Castle.Core.dll
+D:\GitHub\projects\Web\WebApplications\VSC\CLI\Testing.Tests\bin\Debug\net5.0\Moq.dll
