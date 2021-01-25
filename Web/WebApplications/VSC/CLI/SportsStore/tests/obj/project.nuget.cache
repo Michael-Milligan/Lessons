@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aAwukAsDpbQsSgEk1vanMJTOdDI9CJgrEuWSxK0eumoz0AoMWjqpq4+ceNAUmSuUPLQ3xF/niJSz9Bq9vqEOvQ==",
+  "dgSpecHash": "PTvKVkJk2F3/bhBNZZ4l4I72Ke6nhEx2JhXZNGDBWCiKcOMrZZZACFQYH1ut71L8mJ26kuzUVG4xhaZZQrFxuQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\sportsstore\\tests\\tests.csproj",
+  "projectFilePath": "D:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\SportsStore\\tests\\tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\комп\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\комп\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace main
+namespace SportsStore
 {
     public class Startup
     {
@@ -23,10 +23,10 @@ namespace main
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDeveloperExceptionPage();
-            app.UseRouting();
-            app.UseStaticFiles();
             app.UseStatusCodePages();
 
+            app.UseStaticFiles();
+            app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();

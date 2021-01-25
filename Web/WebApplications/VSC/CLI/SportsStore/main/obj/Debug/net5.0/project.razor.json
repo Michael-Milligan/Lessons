@@ -15601,6 +15601,27 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "main",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "d:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\SportsStore\\main\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\SportsStore\\main\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\SportsStore\\main\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\GitHub\\projects\\Web\\WebApplications\\VSC\\CLI\\SportsStore\\main\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
