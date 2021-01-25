@@ -22,3 +22,17 @@ D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.
 D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\ref\SportsStore.dll
 D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.pdb
 D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.genruntimeconfig.cache
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\bin\Debug\net5.0\SportsStore.Views.dll
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\bin\Debug\net5.0\SportsStore.Views.pdb
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.RazorAssemblyInfo.cache
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.RazorAssemblyInfo.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.TagHelpers.input.cache
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.TagHelpers.output.cache
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.RazorCoreGenerate.cache
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.RazorTargetAssemblyInfo.cs
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.Views.pdb
+D:\GitHub\projects\Web\WebApplications\VSC\SportsSln\SportsStore\obj\Debug\net5.0\SportsStore.csproj.CopyComplete
