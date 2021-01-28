@@ -1074,24 +1074,26 @@
     ]
   },
   "packageFolders": {
-    "/home/michel/.nuget/packages/": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/michel/dev/GitHub/Lessons/Web/WebApplications/VSC/SportsSln/SportsStore/SportsStore.csproj",
+      "projectUniqueName": "D:\\GitHub\\Lessons\\Web\\WebApplications\\VSC\\SportsSln\\SportsStore\\SportsStore.csproj",
       "projectName": "SportsStore",
-      "projectPath": "/home/michel/dev/GitHub/Lessons/Web/WebApplications/VSC/SportsSln/SportsStore/SportsStore.csproj",
-      "packagesPath": "/home/michel/.nuget/packages/",
-      "outputPath": "/home/michel/dev/GitHub/Lessons/Web/WebApplications/VSC/SportsSln/SportsStore/obj/",
+      "projectPath": "D:\\GitHub\\Lessons\\Web\\WebApplications\\VSC\\SportsSln\\SportsStore\\SportsStore.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Lessons\\Web\\WebApplications\\VSC\\SportsSln\\SportsStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/michel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1143,7 +1145,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/107/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
