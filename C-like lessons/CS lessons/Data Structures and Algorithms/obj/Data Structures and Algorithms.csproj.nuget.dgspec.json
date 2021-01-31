@@ -40,9 +40,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "JonSkeet.MiscUtil": {
+            "BenchmarkDotNet": {
               "target": "Package",
-              "version": "[0.2.0, )"
+              "version": "[0.12.1, )"
             }
           },
           "imports": [

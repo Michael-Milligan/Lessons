@@ -12,7 +12,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JonSkeet.MiscUtil" Version="0.2.0" />
+    <Compile Remove="Structures\BinaryTree.cs" />
+    <Compile Remove="Structures\CountList.cs" />
+    <Compile Remove="Structures\PriorityQueue.cs" />
+    <Compile Remove="Structures\SkipList.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Structures\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
   </ItemGroup>
 
 </Project>

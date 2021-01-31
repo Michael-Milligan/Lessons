@@ -1,0 +1,66 @@
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\TraceReloggerLib.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Dia2Lib.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\OSExtensions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\x86\KernelTraceControl.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\x86\KernelTraceControl.Win61.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\x86\msdia140.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\amd64\KernelTraceControl.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\amd64\msdia140.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.exe
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.deps.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.runtimeconfig.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.runtimeconfig.dev.json
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ref\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Data Structures and Algorithms.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\BenchmarkDotNet.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\BenchmarkDotNet.Annotations.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\CommandLine.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Iced.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.Diagnostics.NETCore.Client.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.Diagnostics.Runtime.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.Diagnostics.FastSerialization.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\Perfolizer.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\System.CodeDom.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\System.Management.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\bin\Release\net5.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.csprojAssemblyReference.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.AssemblyInfoInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.AssemblyInfo.cs
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.csproj.CoreCompileInputs.cache
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.csproj.CopyComplete
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\ref\Data Structures and Algorithms.dll
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.pdb
+D:\GitHub\projects\C-like lessons\CS lessons\Data Structures and Algorithms\obj\Release\net5.0\Data Structures and Algorithms.genruntimeconfig.cache
