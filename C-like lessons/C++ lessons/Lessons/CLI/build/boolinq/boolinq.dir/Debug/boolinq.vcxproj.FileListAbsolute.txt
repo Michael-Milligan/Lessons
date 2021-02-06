@@ -1,0 +1,2 @@
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\CLI\build\boolinq\Debug\boolinq.pdb
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\CLI\build\boolinq\boolinq.dir\Debug\boolinq.pdb

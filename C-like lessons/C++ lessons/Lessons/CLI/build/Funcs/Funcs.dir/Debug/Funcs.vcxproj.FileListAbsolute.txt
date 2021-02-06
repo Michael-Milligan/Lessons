@@ -1,0 +1,2 @@
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\CLI\build\Funcs\Debug\Funcs.pdb
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Lessons\CLI\build\Funcs\Funcs.dir\Debug\Funcs.pdb

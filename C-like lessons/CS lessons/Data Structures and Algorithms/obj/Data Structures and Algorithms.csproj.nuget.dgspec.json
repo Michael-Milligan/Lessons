@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj": {}
+    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj": {
+    "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
+        "projectUniqueName": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
         "projectName": "Data Structures and Algorithms",
-        "projectPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
-        "packagesPath": "C:\\Users\\комп\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\projects\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\obj\\",
+        "projectPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\комп\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
