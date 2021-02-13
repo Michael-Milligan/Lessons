@@ -23,4 +23,5 @@ std::list<std::string> get_args(int argc, char *argv[])
    {
       args.push_back(std::string(argv[i]));
    }
+   return args;
 }

@@ -12,4 +12,7 @@
    std::cout << boolinq::from(int_list).
       sum()
    << std::endl;
+
+   double x = (double)6/9;
+   std::cout << x << std::endl;
  }
