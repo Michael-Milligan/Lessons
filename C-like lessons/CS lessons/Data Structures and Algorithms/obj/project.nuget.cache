@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RygjqlLpQAJzkNLr0jpjbO7y9amnOVXlka6DoYLUv/sXxorqS6xDKdTpJBUg24rf4tJQoaSAw41OH/wsTXUqkA==",
+  "dgSpecHash": "PVe/kx0/Grk3U+KSK8Jf31oj/q3OAUxdKgIm9sedHWDLrmrDDp80JlrfIjqmAjh1djkTXpKN/uSJP+2dGVk61g==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\Lessons\\C-like lessons\\CS lessons\\Data Structures and Algorithms\\Data Structures and Algorithms.csproj",
   "expectedPackageFiles": [
@@ -97,7 +97,8 @@
     "C:\\Users\\User\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.2\\microsoft.netcore.app.host.win-x64.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
