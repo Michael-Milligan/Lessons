@@ -1,1 +1,0 @@
-alert("Are you sure?")

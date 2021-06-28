@@ -1,0 +1,8 @@
+@using SportsStore.Models
+@using Microsoft.EntityFrameworkCore
+
+<h1>Welcome to Sports Store 
+    @{
+        var builder = new DbContextOptionsBuilder<SportsStore.Models.StoreDbContext>();
+    var context = new StoreDbContext(builder.UseSqlite("Data Source=Db.db").Options);
+    }</h1>
