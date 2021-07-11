@@ -1,5 +1,0 @@
-D:/GitHub/Lessons/C-like lessons/C++ lessons/Lessons/CLI/build/CMakeFiles/app.dir
-D:/GitHub/Lessons/C-like lessons/C++ lessons/Lessons/CLI/build/CMakeFiles/ALL_BUILD.dir
-D:/GitHub/Lessons/C-like lessons/C++ lessons/Lessons/CLI/build/CMakeFiles/ZERO_CHECK.dir
-D:/GitHub/Lessons/C-like lessons/C++ lessons/Lessons/CLI/build/boolinq/CMakeFiles/boolinq.dir
-D:/GitHub/Lessons/C-like lessons/C++ lessons/Lessons/CLI/build/Funcs/CMakeFiles/Funcs.dir

@@ -1,0 +1,12 @@
+﻿  main.cpp
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(39,27): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(54,14): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(67,27): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(72,44): warning C4018: '<': signed/unsigned mismatch
+  mystring.cpp
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(39,27): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(54,14): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(67,27): warning C4018: '<': signed/unsigned mismatch
+D:\GitHub\Lessons\C-like lessons\C++ lessons\Structures\mystring.cpp(72,44): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Structures.vcxproj -> D:\GitHub\Lessons\C-like lessons\C++ lessons\Debug\Structures.exe

@@ -1,2 +1,0 @@
-#define app_VERSION_MAJOR @app_VERSION_MAJOR
-#define app_VERSION_MINOR @app_VERSION_MINOR
