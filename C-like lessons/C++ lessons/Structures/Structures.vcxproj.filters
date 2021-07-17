@@ -18,12 +18,18 @@
     <ClInclude Include="boolinq.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mystring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bst.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

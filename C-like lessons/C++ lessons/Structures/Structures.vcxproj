@@ -139,9 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bst.h" />
     <ClInclude Include="boolinq.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bst.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
   </ItemGroup>

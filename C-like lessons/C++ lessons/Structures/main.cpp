@@ -1,10 +1,11 @@
 #include <iostream>
-#include "mystring.cpp"
+#include "bst.cpp"
 
 int main()
 {
-    mystring a("hello\0");
-    mystring b(" world\0");
-    std::cout << (a + b).toString() << std::endl;
-    std::cout << (a*3).toString() << std::endl;
+    bst<int> tree;
+    tree.add(5);
+    tree.add(51);
+    tree.add(1);
+    tree.add(253);
 }
